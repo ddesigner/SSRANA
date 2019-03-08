@@ -6123,14 +6123,14 @@ ul.listing li:hover {
 
 @-webkit-keyframes box-shadow-hover {
   0% {
-    box-shadow: 0 0 0 0 rgba(219, 187, 104, 0.2);
-    -webkit-box-shadow: 0 0 0 0 rgba(219, 187, 104, 0.2); }
+    box-shadow: 0px 0px 3px 0 rgba(219, 187, 104, 0);
+    -webkit-box-shadow: 0px 0px 3px 0 rgba(219, 187, 104, 0); }
   70% {
-    box-shadow: 0 0 0 0 rgba(219, 187, 104, 0.5);
-    -webkit-box-shadow: 0 0 0 0 rgba(219, 187, 104, 0.5); }
+    box-shadow: 0px 0px 3px 0 rgba(219, 187, 104, 0.5);
+    -webkit-box-shadow: 0px 0px 3px 0 rgba(219, 187, 104, 0.5); }
   100% {
-    box-shadow: 0 0 0 0 rgba(219, 187, 104, 0.5);
-    -webkit-box-shadow: 0 0 0 0 #dbbb68; } }
+    box-shadow: 0px 0px 3px 0 #dbbb68;
+    -webkit-box-shadow: 0px 0px 3px 0 #dbbb68; } }
 
 /* Slider */
 .slick-slider {
@@ -6259,21 +6259,29 @@ a {
     position: relative;
     top: 5px;
     margin-right: 0.625rem; }
+  .learn-more-br:hover {
+    color: #fff; }
+    .learn-more-br:hover:before {
+      background-position: 0 -91px; }
 
 .learn-more-wh {
-  color: #dbbb68;
+  color: #fff;
   font-size: 0.875rem;
   text-transform: uppercase;
   font-family: 'DINProMedium', serif; }
   .learn-more-wh:before {
     content: '';
-    background: url(../images/sprite.png) no-repeat 0 0;
+    background: url(../images/sprite.png) no-repeat 0 -91px;
     width: 21px;
     height: 21px;
     display: inline-block;
     position: relative;
     top: 5px;
     margin-right: 0.625rem; }
+  .learn-more-wh:hover {
+    color: #dbbb68; }
+    .learn-more-wh:hover:before {
+      background-position: 0 0; }
 
 .learn-more-bl {
   color: #0c3a73;
@@ -6282,13 +6290,17 @@ a {
   font-family: 'DINProMedium', serif; }
   .learn-more-bl:before {
     content: '';
-    background: url(../images/sprite.png) no-repeat -21px 0;
+    background: url(../images/sprite.png) no-repeat -22px 0;
     width: 21px;
     height: 21px;
     display: inline-block;
     position: relative;
     top: 5px;
     margin-right: 0.625rem; }
+  .learn-more-bl:hover {
+    color: #dbbb68; }
+    .learn-more-bl:hover:before {
+      background-position: 1px 0; }
 
 .btn-primary {
   border-radius: 0;
@@ -6373,7 +6385,8 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(../images/corporate-law-banner.jpg) no-repeat 0 0;
+  background-repeat: no-repeat;
+  background-position: 0 0;
   background-size: cover; }
   .inner-banner .row {
     height: 100%; }
@@ -6382,6 +6395,12 @@ p {
     font-size: 3.75rem;
     font-weight: 700;
     color: #fff; }
+  .inner-banner h2 {
+    font-family: 'DINProBold', serif;
+    font-size: 0.8125rem;
+    color: #fff;
+    margin: 0;
+    padding: 0; }
 
 .inner-sub-link {
   background: #fff;
@@ -6454,9 +6473,18 @@ p {
         content: "";
         border-bottom: solid #dbbb68 4px;
         position: absolute;
-        bottom: 0;
+        bottom: -5px;
         width: 0;
         transition: all 0.5s ease-in-out; }
+      .nav .cbp-hrmenu ul > li li {
+        display: block; }
+        .nav .cbp-hrmenu ul > li li a {
+          font-family: 'DINProLight', serif;
+          color: #0c3a73; }
+          .nav .cbp-hrmenu ul > li li a:hover {
+            color: #dbbb68; }
+    .nav .cbp-hrmenu p {
+      padding-bottom: 0; }
   .nav.fixedHeader {
     position: fixed;
     top: 0;
@@ -6476,7 +6504,10 @@ p {
   position: absolute;
   background: #fff;
   width: 100%;
-  left: 0; }
+  left: 0;
+  box-shadow: inset 0 7px 9px -7px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  overflow-y: auto; }
 
 .cbp-hropen:after {
   width: 100% !important; }
@@ -6484,9 +6515,6 @@ p {
 .cbp-hropen .cbp-hrsub {
   display: block;
   padding-bottom: 3em; }
-
-.cbp-hrmenu .cbp-hrsub-inner > div {
-  padding: 0 1rem 0; }
 
 .cbp-hrmenu .cbp-hrsub-inner:before, .cbp-hrmenu .cbp-hrsub-inner:after {
   content: " ";
@@ -6507,37 +6535,6 @@ p {
   text-transform: uppercase; }
 
 /* Examples for media queries */
-@media screen and (max-width: 52.75em) {
-  .cbp-hrmenu {
-    font-size: 80%; } }
-
-@media screen and (max-width: 43em) {
-  .cbp-hrmenu {
-    font-size: 120%;
-    border: none; }
-  .cbp-hrmenu > ul, .cbp-hrmenu .cbp-hrsub-inner {
-    width: 100%;
-    padding: 0; }
-  .cbp-hrmenu .cbp-hrsub-inner {
-    padding: 0 2em;
-    font-size: 75%; }
-  .cbp-hrmenu > ul > li {
-    display: block;
-    border-bottom: 4px solid #47a3da; }
-  .cbp-hrmenu > ul > li > a {
-    display: block;
-    padding: 1em 3em; }
-  .cbp-hrmenu .cbp-hrsub {
-    position: relative; }
-  .cbp-hrsub h4 {
-    padding-top: 0.6em; } }
-
-@media screen and (max-width: 36em) {
-  .cbp-hrmenu .cbp-hrsub-inner > div {
-    width: 100%;
-    float: none;
-    padding: 0 2em; } }
-
 .nav-right {
   color: #0c3a73;
   padding: 1.875rem 0 1.75rem 0;
@@ -6989,8 +6986,7 @@ footer {
       .knowledge-wraper .knowledge-rt .icon-set .icon {
         width: 60px;
         height: 63px;
-        display: inline-block;
-        background: url(../images/sprite.png) no-repeat 4px -23px; }
+        display: inline-block; }
         .knowledge-wraper .knowledge-rt .icon-set .icon.Litigation {
           width: 75px;
           height: 63px;
@@ -7030,9 +7026,9 @@ footer {
     border: solid #ededed 1px;
     padding: 2.1875rem 2.1875rem 1.25rem 2.1875rem;
     text-align: left;
+    box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.2);
     height: 100%;
-    margin-bottom: 3.125rem;
-    animation: box-shadow 1s normal forwards ease-in-out; }
+    margin-bottom: 3.125rem; }
     .leadership .bx h3 {
       font-family: 'DINProBold',serif;
       font-size: 0.875rem;
@@ -7055,7 +7051,10 @@ footer {
   .leadership a {
     text-decoration: none; }
     .leadership a:hover .bx {
-      animation: box-shadow-hover 1s normal forwards ease-in-out; }
+      box-shadow: inset 0 0 0 4px #dbbb68; }
+
+.corporate-wraper .leadership .screenDivider {
+  top: 0; }
 
 .corporate-law {
   background: #0c3a73;
@@ -7092,8 +7091,7 @@ footer {
       .corporate-law .corporte-detail .bx .icon-set .icon {
         width: 60px;
         height: 63px;
-        display: inline-block;
-        background: url(../images/sprite.png) no-repeat 4px -23px; }
+        display: inline-block; }
         .corporate-law .corporte-detail .bx .icon-set .icon.tax {
           width: 50px;
           height: 63px;
@@ -7135,3 +7133,6 @@ footer {
       @media screen and (min-width: 786px) {
         .corporate-law .corporte-detail .bx .detail {
           padding-bottom: 0; } }
+
+.info-wraper {
+  padding: 3.125rem; }

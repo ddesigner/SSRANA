@@ -354,8 +354,9 @@ var cbpHorizontalMenu = (function() {
             current = -1;
         } else {
             var left =$item.offset().left;
-            console.log(left);
-            $item.find('.cbp-hrsub').css({'width':$(window).width(), 'left':-left});
+            var top =$('.nav').outerHeight(true);
+            var height =$(window).height();
+              $item.find('.cbp-hrsub').css({'width':$(window).width(), 'left':-left, 'top':top, 'max-height':height-top});
             $item.addClass('cbp-hropen');
             
             current = idx;
