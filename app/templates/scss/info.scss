@@ -1,3 +1,44 @@
-.info-wraper{
+.info-wrap{
     padding:rem(50);
 }
+
+.info-lt{
+    font-family: 'DINProMedium', serif;  font-size:rem(13); color:$defaultBlue;
+    h3{
+        background:$defaultBlue; color:$whiteColor; text-transform: uppercase; 
+       margin:0; padding:rem(20) rem(17); line-height: 1; font-size:rem(13); 
+         
+    }
+
+  
+}
+
+
+.info-rt{
+    p{
+        padding-bottom: rem(30); margin-bottom: 0;
+    }
+
+    h3{
+        color:#325989; font-size: rem(33);
+    }
+    .accordion{
+        > ul  
+        > li {
+            border-bottom: solid #e6ebf1 4px;
+            > a{
+                background: $whiteColor; text-transform: inherit; font-size: rem(17);
+            }
+        }
+       p{
+           padding:rem(20);
+       }
+       .learn-more-bl{
+        padding: 2rem 0;
+        display: inline-block;
+        float: right;
+        }
+    }
+  
+}
+

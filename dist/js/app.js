@@ -15,6 +15,10 @@ $(document).ready(function(){
      });
 
 
+     $('.accordion ul li a').on('click',function(){
+         $(this).toggleClass('expanded');
+      });
+
 });
 /* * *****************************************************************************
  *                JQUERY CODE FOR CUSTOM SELECT BOX 
