@@ -1,0 +1,186 @@
+body{
+    font-size:rem(16)!important;
+    font-family:'DINProRegular';
+}
+html{font-size:16px!important;}
+@media (min-width: 1200px){
+.container {
+    width: 1240px;
+    max-width: 100%;
+}
+}
+a{
+    transition: all 0.5s ease-in-out;
+}
+    .learn-more-br{
+        color:$learnMore;
+        font-size:rem(14); text-transform: uppercase; font-family: 'DINProMedium', serif;
+        &:before{
+            content:'';
+            background:url(../images/sprite.png) no-repeat 0 0;
+            width:21px; height:21px; display:inline-block;
+            position: relative;
+            top: 5px;
+            margin-right:rem(10);
+        }
+        &:hover{
+            &:before{
+                background-position:0 -91px; 
+            }
+            color:$whiteColor;
+        }
+    }
+    .learn-more-wh{
+        color:$whiteColor;
+        font-size:rem(14); text-transform: uppercase; font-family: 'DINProMedium', serif;
+        &:before{
+            content:'';
+            background:url(../images/sprite.png) no-repeat 0 -91px;
+            width:21px; height:21px; display:inline-block;
+            position: relative;
+            top: 5px;
+            margin-right:rem(10);
+        }
+
+        &:hover{
+            &:before{
+                background-position: 0 0;
+            }
+            color:$activeColor;
+        }
+    }
+
+    .learn-more-bl{
+        color:$defaultBlue;
+        font-size:rem(14); text-transform: uppercase; font-family: 'DINProMedium', serif;
+        &:before{
+            content:'';
+            background:url(../images/sprite.png) no-repeat -22px 0;
+            width:21px; height:21px; display:inline-block;
+            position: relative;
+            top: 5px;
+            margin-right:rem(10);
+        }
+
+        &:hover{
+            &:before{
+                background-position:1px 0;
+           }
+           color:$activeColor;
+        }
+    }
+
+    .btn-primary{
+        border-radius:0;
+        border:none;
+        background: $btnPrimaryColor;
+        color:$btnPrimaryColorText;
+        font-size:rem(14);
+        text-transform: uppercase;
+        font-family: 'DINProMedium', serif;
+        box-shadow:3px 3px 5px 0 rgba(0,0,0,0.5);
+        padding:rem(20) rem(40);
+        
+    }
+
+    h2{ color:$defaultBlue; font-size: rem(50); font-family: 'Playfair Display', serif; padding-bottom:40px;}
+    h3{ color:$grayColor; font-size: rem(24); line-height:rem(35);  font-family: 'DINProMedium', serif; padding-bottom:30px;}
+    p{color:$grayColor; font-size: rem(18); line-height:rem(26);  font-family: 'DINProLight', serif;  padding-bottom:40px;}
+
+    .screenDivider {
+        width: 2px;
+        height:70px;
+        background-color: $activeColor;
+        margin: 0 auto;
+        display:none;
+        @media screen and (min-width:$ipad){
+            display:block;
+        }
+    }
+
+    .screenDivider-hr{
+        background-color: $activeColor;
+        margin: 0 auto;
+     
+         height:rem(2); width:rem(100);
+    }
+
+
+    .link {
+        position: relative;
+        display: block;
+        color: $arrow-color;
+        
+        &:after, &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          transition: all 0.5s ease-in-out;
+        }
+        &:before {
+          top: 50%;
+          right: $arrow-size;
+          width: $arrow-size;
+          height: $arrow-size;
+          transform-origin: 50% 50%;
+          transform:  translate(0, -($arrow-size / 2)) rotate(45deg);
+          box-shadow: inset -#{$arrow-border} $arrow-border 0 0 $arrow-color;
+          border-radius: 0 $arrow-size*0.15 0 0;
+        }
+        
+        &:after {
+          top: 50%;
+          right: 0.7rem;
+          width: $arrow-size * 1.3;
+          height: $arrow-border;
+          transform:  translate(0, -($arrow-border / 2));
+          background-color: $arrow-color;
+        }
+        &:hover {
+          &:before {
+            transform:  translate(0.5em, -($arrow-size / 2)) rotate(45deg);
+          }
+          &:after {
+            transform:  translate(0.5em, -($arrow-border / 2));
+          }
+        }
+      }
+      
+//Inner banner
+.inner-banner{
+    height:rem(464);
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+        background-repeat:no-repeat; background-position: 0 0;
+    background-size: cover;
+    .row{
+        height: 100%;
+    }
+    h1{
+        font-family: 'Playfair Display', serif;
+        font-size:rem(60); font-weight: 700; color: $whiteColor;
+    }
+
+    h2{
+        font-family: 'DINProBold', serif;
+        font-size:rem(13); color: $whiteColor; margin:0; padding:0;
+    }
+}
+
+
+//Inner Sub linke
+.inner-sub-link{
+    background:$white; padding:rem(20) 0;
+    ul{
+        margin:0; padding:0; list-style: none;
+        li{
+            display: inline-block; width:19.5%; box-sizing: border-box;   font-family: 'DINProBold',serif; font-size:rem(13); text-transform:uppercase;
+            a{
+                color:$defaultBlue;
+            }
+        }
+    }
+}
+

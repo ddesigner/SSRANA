@@ -1,0 +1,16 @@
+.stylish-select{float:left; width:100%; position:relative; z-index:1; width:100%;  }
+.stylish-select-left{   float:left; position:absolute; z-index:1; width:100%; box-sizing:border-box; outline:none; overflow:hidden}
+ 
+.stylish-select-right{padding:0; font-family: 'Playfair Display', serif;  border-bottom:solid $activeColor 2px; float:left; height:50px; margin:0; line-height:45px; width:100%; cursor:pointer;  color:#fff;  outline:none; }
+
+ul.listing{  background:#fff; border: 1px solid #CCCCCC; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); display: none; left: 0px; list-style-type: none; margin: 0; padding: 0px 0 0 0; position: absolute; top:50px;  z-index: 100;  overflow:hidden;  width:100%; cursor:pointer; }
+ul.listing li{ padding:15px 10px; display:block; color:#000; line-height:20px; cursor:pointer; outline:none; box-sizing:border-box; font-size:18px; border-bottom:solid #e1e1e1 1px; text-transform: capitalize;}
+ul.listing li:last-child{border-bottom:none;}
+ul.listing li:hover{color:#000; background:#0c3b73; color:#fff; cursor:pointer;}
+.main{ margin: 0 auto 0px; min-height:50px; position: relative; width:100%}
+.stylish-select-left::after {border-bottom: 2px solid #dbbb68;border-right: 2px solid #dbbb68;content: "";
+  display: block;height:7px;margin-top: -4px;pointer-events: none;position: absolute;right: 12px;top:46%;transform: rotate(45deg); -moz-transform: rotate(45deg); -webkit-transform: rotate(45deg);transform-origin: 66% 66% 0; -moz-transform-origin: 66% 66% 0; -webkit-transform-origin: 66% 66% 0;transition: all 0.15s ease-in-out 0s; -webkit-transition: all 0.15s ease-in-out 0s; -moz-transition: all 0.15s ease-in-out 0s;width:7px;}
+
+.stylish-select-left.open::after {transform: rotate(-135deg);-moz-transform: rotate(-135deg);-webkit-transform: rotate(-135deg);}
+
+ 

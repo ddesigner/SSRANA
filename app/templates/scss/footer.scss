@@ -1,0 +1,188 @@
+footer{
+    position: relative;
+    .footer-spacer{height:rem(145); background: $defaultBlue; width:100%; position: absolute;}
+    .award{
+          padding:rem(22) 0 rem(20) 0;
+        .img{
+            width: rem(78); height:rem(103); background: url(../images/awards.png) no-repeat 0 0;
+            background-size:cover;
+            margin:0 rem(15); float: left;
+
+            &:first-child(){
+                margin-left: 0
+            }
+            
+            &:last-child(){
+                margin-right: 0
+            }
+            &:nth-child(2){
+                background-position: -109px 0;
+            }
+            &:nth-child(3){
+                background-position: -219px 0;
+            }
+            &:nth-child(4){
+                background-position: -329px 0;
+            }
+            &:nth-child(5){
+                background-position: -438px 0;
+            }
+            &:nth-child(6){
+                background-position: -546px 0;
+            }
+            &:nth-child(7){
+                background-position:-656px 0;
+            }
+        }
+    }
+
+    .footer-link{
+        padding:rem(55) 0;
+        h3{
+            font-family: 'DINProMedium', serif; font-size:rem(14); color:#2f2f2f; 
+            padding-bottom:0; 
+        }
+        ul{
+            margin:0; padding: 0; list-style-type: none;
+            li{
+                padding:5px 0;
+            }
+            a{
+                color:$defaultBlue; font-size: rem(15);
+                &:hover{
+                    color:$activeColor;
+                }
+            }
+        }
+    }
+    
+    .subscribe-bx{
+        background:$subscriptbxBg; box-shadow:4px 4px 4px 0 rgba(0, 0, 0, 0.2);
+        padding:rem(30) rem(45);
+
+        h3{
+            font-family: 'DINProBold',serif; font-size: 14px;
+             text-transform: uppercase; margin:0; padding: 0;
+           
+        }
+        p{
+            font-family: 'Playfair Display', serif; font-size: rem(30); color:$defaultBlue;
+            padding-bottom: rem(20);
+        }
+        label{
+            font-size: rem(14); color:#737c83; margin: 0;
+            sup{
+                color:#e94757;
+            }
+        }
+        input{
+            border-radius: 0; border:none; border-bottom: solid $grayColor 1px; background: transparent;
+            color: $grayColor;
+        }
+        .stylish-select-right{border-bottom:solid $grayColor 1px; color: $grayColor; font-family: 'DINProRegular'}
+        .btn-primary{
+            box-shadow: none; background: $defaultBlue; font-size: rem(20);
+            display: inline-block;
+            width: 100%;
+            color:$whiteColor; font-family: 'DINProRegular'
+        }
+    }
+
+    .certificate{
+        padding:rem(22) 0 rem(20) 0;
+        width: 91.5%;
+        float: right;
+      .img{
+          width: rem(165); height:rem(85); background: url(../images/iso-certificate.png) no-repeat -12px -6px;
+        
+          margin:0 rem(2); float: left;
+
+          &:first-child(){
+              margin-left: 0
+          }
+          
+          &:last-child(){
+              margin-right: 0
+          }
+          &:nth-child(2){
+              background-position:-187px -6px;
+          }
+          &:nth-child(3){
+              background-position: -359px -6px;
+          }
+          &:nth-child(4){
+              background-position: -535px -6px;
+          }
+          &:nth-child(5){
+              background-position:-713px -6px;
+          }
+          &:nth-child(6){
+              background-position: -546px 0;
+          }
+          &:nth-child(7){
+              background-position:-656px 0;
+          }
+      }
+  }
+
+  .connect-bx{
+    h3{
+        font-family: 'DINProMedium', serif; font-size:rem(14); color:$grayColor; 
+        padding-bottom:0; text-transform: uppercase;
+    }
+    ul{
+        list-style: none; margin:0; padding: 0;
+        li{
+            display:inline-block;
+
+            a{
+                color:$defaultBlue; font-size: rem(27);  margin: 0 rem(2);
+                background: url(../images/sprite.png) no-repeat  -147px -5px; width: 28px; height:28px;
+                display:inline-block;
+                &:hover{
+                    background-position: -147px -36px;
+                    }
+                
+                &.twitter{
+                    background-position: -181px -5px;
+                    &:hover{
+                        background-position: -181px -36px;
+                    }
+                }
+                &.youtube{
+                    background-position: -212px -5px;
+                    &:hover{
+                        background-position: -212px -36px;
+                    }
+                }
+                &.square{
+                    background-position: -243px -5px;
+                    &:hover{
+                        background-position: -244px -36px;
+                    }
+                }
+               
+            }
+        }
+    }
+  }
+
+  .copyright{
+      background: #d2aa35; padding: rem(10) 0;
+      font-size: rem(16); color: $whiteColor;
+      a{
+          color: $whiteColor; margin: 0 5px;
+      }
+      .pull-right{text-align: right;}
+  }
+
+  .disclaimer{ text-align: center; padding:rem(40) 0; font-size: rem(16); color:#5c5c5c; 
+    h3{
+        font-family: 'DINProMedium', serif; font-size:rem(20); color:$grayColor; padding-bottom: 0;
+       
+    }
+    p{
+        padding-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+ 
+@font-face {
+    font-family: 'DINProRegular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('DINProRegular'), url('../fonts/DINPro.woff') format('woff');
+    }
+    
+
+    @font-face {
+        font-family: 'DINProBold';
+        font-style: normal;
+        font-weight: normal;
+        src: local('DINProBold'), url('../fonts/DINPro-Bold.woff') format('woff');
+        }
+
+        @font-face {
+            font-family: 'DINProMedium';
+            font-style: normal;
+            font-weight: normal;
+            src: local('DINProMedium'), url('../fonts/DINPro-Medium.woff') format('woff');
+            }
+            
+        
+@font-face {
+    font-family: 'DINProLight';
+    font-style: normal;
+    font-weight: normal;
+    src: local('DIN Pro Light'), url('../fonts/DINPro-Light.woff') format('woff');
+    }

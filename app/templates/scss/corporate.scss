@@ -1,0 +1,103 @@
+.corporate-wraper{
+    .leadership .screenDivider{
+        top:0;
+    }
+    
+}
+.corporate-law{
+    background:$defaultBlue;
+    color:$whiteColor;
+
+    .corporate-tp{
+        width:80%; margin:auto;  text-align: center; padding:rem(30) 0;
+        h3,p{
+            color:$whiteColor;
+        }
+    }
+
+
+    .corporte-detail{
+     .bx{
+         padding-bottom:rem(90); 
+        h3,p{
+            color:$whiteColor;
+        }
+        h3{
+            padding-bottom: rem(15); margin: 0; line-height: 1;
+        }
+        p{
+            padding-bottom:rem(20); margin:0;
+        }
+          .icon-set{ position: relative; margin-bottom:rem(20);
+           @media screen and (min-width:$ipad){
+            margin-bottom:rem(50);
+        }
+        .screenDivider-hr {
+           position: absolute; position: absolute;
+           right: 0;
+           top: 50%;
+          }
+        .icon{
+            width:60px; height:63px; display: inline-block; 
+            //  background:url(../images/sprite.png) no-repeat 4px -23px;
+            &.tax{
+                width: 50px;
+                height: 63px;
+                background-position: -146px -64px;
+               
+            }
+            &.company{
+                width: 50px;
+                height: 63px;
+                background-position: -146px -64px;
+            }
+            &.bank{
+                width: 78px;
+                height: 63px;
+                background-position:-56px 3px;
+            }
+            &.consumer{
+                width: 78px;
+                height: 63px;
+                background-position:-56px 3px;
+            }
+            &.game{
+                width: 78px;
+                height: 63px;
+                background-position:-56px 3px;
+            }
+            &.insurance{
+                width: 78px;
+                height: 63px;
+                background-position:-56px 3px;
+            }
+            &.contact{
+                width: 78px;
+                height: 63px;
+                background-position:-56px 3px;
+            }
+            &.media{
+                width: 78px;
+                height: 63px;
+                background-position:-56px 3px;
+            }
+            &.info{
+                width: 78px;
+                height: 63px;
+                background-position:-56px 3px;
+            }
+        }
+    }
+
+        .detail{
+            padding-bottom:rem(40);
+            @media screen and (min-width:$ipad){
+                padding-bottom:0
+            }
+
+        }
+
+        
+    }
+  }
+}

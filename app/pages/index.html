@@ -1,0 +1,16 @@
+<!-- index.nunjucks -->
+{% extends "app/templates/layout.html" %}
+{% block content %} 
+<style>
+    body{padding:50px;}
+    li{list-style: none; display:inline-block;}
+    li a{background:#0c3a73; text-transform: uppercase; color: #fff; padding:20px 30px }
+    li a:hover{color:#fff}
+</style>
+<ul>
+    <li><a href="home.html" target="_blank">Home</a></li>
+    <li><a href="corporate-law-landing.html" target="_blank">Corporate Law</a></li>
+    <li><a href="info.html" target="_blank">Information Technology</a></li>
+</ul>
+
+{% endblock %}

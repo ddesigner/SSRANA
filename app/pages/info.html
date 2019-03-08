@@ -1,0 +1,23 @@
+{% extends "app/templates/layout.html" %}
+
+{% block content %} 
+{% include "app/templates/partials/nav.html" %}
+<section class="inner-banner" style="background-image:url(images/info-banner.jpg)"  >
+    <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                        <h2>Corporate Laws</h2>
+                         <h1>Information Technology</h1>
+
+                </div>
+            </div>
+        </div> 
+</section>
+{% include "app/templates/partials/inner-sub-links.html"  %} 
+<section class="info-wraper">
+ 
+{% include "app/templates/partials/leadership.html" %}
+</section> 
+
+{% include "app/templates/partials/footer.html" %}
+{% endblock %}
