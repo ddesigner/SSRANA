@@ -15,18 +15,18 @@ $(document).ready(function(){
      });
 
 
-     $('.accordion ul li a').on('click',function(){
-      
+     $('.accordion ul li i').on('click',function(e){
+      e.preventDefault();
       //  $(this).toggleClass('expanded');
         if($(this).hasClass('expanded')){
              $(this).removeClass('expanded');
-             $(this).next().slideUp();
+             $(this).parent().next().slideUp();
          }
          else{
-            $('.accordion ul li a').removeClass('expanded');
+            $('.accordion ul li i').removeClass('expanded');
             $('.accordion ul li div').slideUp();
             $(this).addClass('expanded');
-            $(this).next().slideDown();
+            $(this).parent().next().slideDown();
          }
         
       });

@@ -1,15 +1,32 @@
 .faq-wraper{
-    border-bottom:solid $subscriptbxBg 4px;
+   
 .accordion{
     > ul  
     > li {
         border-bottom: solid #e6ebf1 4px;
+        >div{
+            background: $lightBlue; padding:rem(40);
+            ul{
+                background: $lightBlue; margin-top: 0; padding-top: 0;
+            }
+        }
         > a{
-            background: $whiteColor; text-transform: inherit; font-size: rem(17);
+            background: $whiteColor; text-transform: inherit; font-size: rem(23);
+            padding:rem(20) rem(17) rem(20) rem(50);
+            span{
+                font-size: rem(14); display:block; font-family: 'DINProBold', serif; padding:0.5rem 0;
+            } 
+
+            i{
+                &.expanded{
+                    background:$lightBlue;
+                }
+            }
         }
     }
    p{
-       padding:rem(20);
+    //    padding:rem(20); 
+        margin-bottom: 0; padding-bottom: rem(30);
    }
    .learn-more-bl{
     padding: 2rem 0;
@@ -20,6 +37,58 @@
 
 }
 
-.sort-by{
-    padding:1rem;
+.sort-wrap{
+     font-family: 'DINProBold', serif;  font-size: rem(13);text-transform: uppercase;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 1rem 0 3rem 0;
+    width: 100%;
+    .total-result, .stylish-select-right{
+       color: $grayColor; float: left; 
+    }
+    .total-result{ padding:1rem 0;}
+    .sort-by{
+      width: 10rem; float: right; 
+
+      span{
+        width:38%;
+        float: left; padding:1rem 0;
+      }
+
+      .main{
+          width:60%; text-transform: uppercase; float: left;
+          ul.listing li{
+         font-family: 'DINProBold', serif;    font-size: rem(13);
+          }
+      }
+
+      .stylish-select-right{
+        font-family: 'DINProBold', serif;  font-size: rem(13);text-transform: uppercase; border:none;
+        height: 45px;
+           line-height: 50px;
+
+           
+      }
+
+          .stylish-select-left{
+            &:after{
+                width: 0;
+                height: 0;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                content: '';
+                border-top: 5px solid $defaultBlue;
+                position: absolute;
+                right: 0;
+                top: 48%;
+                border-bottom: none;
+                transform: rotate(0deg);
+                -webkit-transform: rotate(0deg);
+                -ms-webkit-transform: rotate(0deg);
+                -moz-webkit-transform: rotate(0deg);
+               }
+          }
+    }
+
+   
 }
