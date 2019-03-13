@@ -12,6 +12,10 @@ html{font-size:16px!important;}
 a{
     transition: all 0.5s ease-in-out;
 }
+
+a:focus{
+    text-decoration:none;
+}
     .learn-more-br{
         color:$learnMore;
         font-size:rem(14); text-transform: uppercase; font-family: 'DINProMedium', serif;
@@ -303,6 +307,9 @@ a{
                             display: inline-block;  
                             width: 1em;  
                             margin-left: -1em;  
+                            font-size:1.2rem;
+                            position: relative;
+                            top:2px;
                         }
                     }
                     

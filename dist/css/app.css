@@ -6245,6 +6245,9 @@ html {
 a {
   transition: all 0.5s ease-in-out; }
 
+a:focus {
+  text-decoration: none; }
+
 .learn-more-br {
   color: #dbbb68;
   font-size: 0.875rem;
@@ -6518,7 +6521,10 @@ p {
           font-weight: bold;
           display: inline-block;
           width: 1em;
-          margin-left: -1em; }
+          margin-left: -1em;
+          font-size: 1.2rem;
+          position: relative;
+          top: 2px; }
 
 .logo {
   position: relative;
