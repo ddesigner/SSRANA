@@ -1,0 +1,25 @@
+.faq-wraper{
+    border-bottom:solid $subscriptbxBg 4px;
+.accordion{
+    > ul  
+    > li {
+        border-bottom: solid #e6ebf1 4px;
+        > a{
+            background: $whiteColor; text-transform: inherit; font-size: rem(17);
+        }
+    }
+   p{
+       padding:rem(20);
+   }
+   .learn-more-bl{
+    padding: 2rem 0;
+    display: inline-block;
+   
+    }
+}
+
+}
+
+.sort-by{
+    padding:1rem;
+}

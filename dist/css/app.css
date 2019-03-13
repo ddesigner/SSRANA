@@ -6385,11 +6385,11 @@ p {
 .inner-banner {
   height: 29rem;
   display: flex;
-  display: flex;
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
   background-position: 0 0;
+  position: relative;
   background-size: cover; }
   .inner-banner .row {
     height: 100%; }
@@ -6397,13 +6397,17 @@ p {
     font-family: 'Playfair Display', serif;
     font-size: 3.75rem;
     font-weight: 700;
-    color: #fff; }
+    color: #fff;
+    position: relative;
+    z-index: 5; }
   .inner-banner h2 {
     font-family: 'DINProBold', serif;
     font-size: 0.8125rem;
     color: #fff;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    position: relative;
+    z-index: 5; }
 
 .inner-sub-link {
   background: #f8f8f8;
@@ -6525,6 +6529,38 @@ p {
           font-size: 1.2rem;
           position: relative;
           top: 2px; }
+
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%; }
+
+.page-search {
+  background: #0c3a73;
+  width: 100%;
+  display: flex;
+  padding: 2rem;
+  box-shadow: 5px 5px 3px 0 rgba(0, 0, 0, 0.4);
+  position: relative;
+  top: -4rem; }
+  .page-search input[type=text] {
+    background: none;
+    border: 0;
+    width: 100%;
+    color: #fff;
+    font-size: 26px;
+    padding: 1rem 1rem 0.5rem 1rem;
+    border-bottom: solid #dbbb68 1px;
+    margin-right: 2rem; }
+    .page-search input[type=text]:focus {
+      outline: none; }
+    .page-search input[type=text]::placeholder {
+      color: #fff; }
 
 .logo {
   position: relative;
@@ -7279,3 +7315,20 @@ footer {
   padding: 2rem 0;
   display: inline-block;
   float: right; }
+
+.faq-wraper {
+  border-bottom: solid #f6f6f6 4px; }
+  .faq-wraper .accordion > ul > li {
+    border-bottom: solid #e6ebf1 4px; }
+    .faq-wraper .accordion > ul > li > a {
+      background: #fff;
+      text-transform: inherit;
+      font-size: 1.0625rem; }
+  .faq-wraper .accordion p {
+    padding: 1.25rem; }
+  .faq-wraper .accordion .learn-more-bl {
+    padding: 2rem 0;
+    display: inline-block; }
+
+.sort-by {
+  padding: 1rem; }
