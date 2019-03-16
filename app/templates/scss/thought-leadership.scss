@@ -1,0 +1,21 @@
+.thought-leadership{
+    @media screen and (min-width: $ipad){
+
+        .leadership {
+            padding:0rem 0 6.25rem 0;
+        }
+    }
+    .screenDivider{
+        display: none;
+    }
+}
+
+.leadership-search{
+    padding:0;
+
+    .search-inner{
+        padding:1.8rem 2rem 1.8rem 2rem;
+        width: 100%;
+        display: flex;
+    }
+}

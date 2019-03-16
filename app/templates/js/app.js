@@ -30,6 +30,16 @@ $(document).ready(function(){
          }
         
       });
+
+      $('.filter-btn').on('click',function(){
+        $(this).toggleClass('open');
+        if($(this).hasClass('open')){
+            $('.filter').slideDown();
+        }
+        else{
+            $('.filter').slideUp();
+        }
+    });
  
 
 });

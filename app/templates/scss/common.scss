@@ -388,7 +388,7 @@ a:focus{
         color: $whiteColor;
         font-size: 26px;
         padding: 1rem 0rem 0.5rem 0rem;
-        border-bottom:solid $activeColor 1px;
+        border-bottom:solid $activeColor 2px;
         margin-right:2rem;
 
         &:focus{
@@ -398,8 +398,48 @@ a:focus{
             color: $whiteColor;
           }
     }
+
+    .filter-btn{
+      
+        background: url(../images/sprite.png) no-repeat -412px 51px;
+        display: inline-block;
+        width: 111px;
+
+        &.open{
+            background-color: #04254e;
+        }
+       
+    }
 }
 
+.filter{
+    background: #04254e; padding:2rem;
+    position: absolute;
+    width: 97.6%;
+    z-index:100;
+    box-shadow: 5px 5px 3px 0 rgba(0, 0, 0, 0.4); display: none;
+    .stylish-select-right{
+        font-size: rem(13);   font-family: 'DINProBold', serif; text-transform: uppercase;
+    }
+    
+    input[type=text]{
+        background: none;
+        border: 0;
+        width: 100%;
+        color: $whiteColor;
+        font-size: 26px;
+        padding: 1rem 0rem 0.8rem 0rem;
+        border-bottom:solid $activeColor 2px;
+         font-size: rem(13);   font-family: 'DINProBold', serif; text-transform: uppercase;
+        &:focus{
+            outline: none;
+        }
+        &::placeholder {
+            color: $whiteColor;
+          }
+    }
+
+}
 .divder{
     width: 100%; height:4px; background: $lightGray; clear: both; margin:2rem 0;
 }

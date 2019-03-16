@@ -1,0 +1,52 @@
+{% extends "app/templates/layout.html" %} {% block content %} {% include "app/templates/partials/nav.html" %}
+<section class="inner-banner" style="background-image:url(images/thought-leadership-banner.jpg)">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Thought Leadership</h1>
+            </div>
+        </div>
+    </div>
+    <div class="overlay"></div>
+</section>
+{% include "app/templates/partials/leadership-page-search.html" %}
+<section class="thought-leadership">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="sort-wrap">
+                    <div class="total-result">
+                        1245 Articles
+                    </div>
+                    <div class="sort-by title">
+                        <span>Sort By:</span>
+                        <select class="csel">
+                            <option>Title</option>
+                            <option>Title 2</option>
+
+                        </select>
+                    </div>
+                    <div class="sort-by location">
+                        <span>Location:</span>
+                        <select class="csel">
+                            <option>Delhi</option>
+                            <option>Mumbai</option>
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+               
+                    {% include "app/templates/partials/leadership.html" %}
+              
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% include "app/templates/partials/footer.html" %} {% endblock %}
