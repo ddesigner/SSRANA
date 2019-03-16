@@ -351,8 +351,8 @@ var cbpHorizontalMenu = (function() {
         current = -1;
 
     function init() {
-        $menuItems.on('click', open);
-        $listItems.on('click', function(event) {
+        $menuItems.on('mouseover', open);
+        $listItems.on('mouseover', function(event) {
             event.stopPropagation();
         });
     }
@@ -395,16 +395,16 @@ var cbpHorizontalMenu = (function() {
 
 })();
 
-$(window).scroll(function(){
-	var sticky = $('.nav'),
-		scroll = $(window).scrollTop();
+// $(window).scroll(function(){
+// 	var sticky = $('.nav'),
+// 		scroll = $(window).scrollTop();
   
-	if (scroll >= $('.nav').outerHeight(true)){
-		sticky.addClass('fixedHeader');
+// 	if (scroll >= $('.nav').outerHeight(true)){
+// 		sticky.addClass('fixedHeader');
 	 
-	}
-	else sticky.removeClass('fixedHeader');
-  });
+// 	}
+// 	else sticky.removeClass('fixedHeader');
+//   });
 /* Copyright 2014 Georgia-Pacific LP All Rights Reserved 
 
 ScaleRemFonts:
