@@ -56,38 +56,7 @@ footer{
         }
     }
     
-    .subscribe-bx{
-        background:$subscriptbxBg; box-shadow:4px 4px 4px 0 rgba(0, 0, 0, 0.2);
-        padding:rem(30) rem(45);
-
-        h3{
-            font-family: 'DINProBold',serif; font-size: 14px;
-             text-transform: uppercase; margin:0; padding: 0;
-           
-        }
-        p{
-            font-family: 'Playfair Display', serif; font-size: rem(30); color:$defaultBlue;
-            padding-bottom: rem(20);
-        }
-        label{
-            font-size: rem(14); color:#737c83; margin: 0;
-            sup{
-                color:#e94757;
-            }
-        }
-        input{
-            border-radius: 0; border:none; border-bottom: solid $grayColor 1px; background: transparent;
-            color: $grayColor;
-        }
-        .stylish-select-right{border-bottom:solid $grayColor 1px; color: $grayColor; font-family: 'DINProRegular'}
-        .btn-primary{
-            box-shadow: none; background: $defaultBlue; font-size: rem(20);
-            display: inline-block;
-            width: 100%;
-            color:$whiteColor; font-family: 'DINProRegular'
-        }
-    }
-
+    
     .certificate{
         padding:rem(22) 0 rem(20) 0;
         width: 91.5%;
@@ -185,4 +154,46 @@ footer{
         padding-bottom: 0;
     }
   }
+}
+
+.subscribe-bx{
+    background:$subscriptbxBg; box-shadow:4px 4px 4px 0 rgba(0, 0, 0, 0.2);
+    padding:rem(30) rem(45);
+
+    h3{
+        font-family: 'DINProBold',serif; font-size: 14px;
+         text-transform: uppercase; margin:0; padding: 0;
+       
+    }
+    p{
+        font-family: 'Playfair Display', serif; font-size: rem(30); color:$defaultBlue;
+        padding-bottom: rem(20);
+    }
+    label{
+        font-size: rem(14); color:#737c83; margin: 0;
+        sup{
+            color:#e94757;
+        }
+    }
+    input{
+        border-radius: 0; border:none; border-bottom: solid $grayColor 1px; background: transparent;
+        color: $grayColor;
+    }
+    .stylish-select-right{border-bottom:solid $grayColor 1px; color: $grayColor; font-family: 'DINProRegular'}
+    .btn-primary{
+        box-shadow: none; background: $defaultBlue; font-size: rem(20);
+        display: inline-block;
+        width: 100%;
+        color:$whiteColor; font-family: 'DINProRegular';
+        &:hover{
+            background:$activeColor;
+        }   
+    }
+
+    .call{
+        font-family: 'DINProMedium', serif; color:$black; font-size: rem(20); padding:rem(30) 0 0 0; text-align:center;
+        span{
+            display:block; text-transform: uppercase;
+        }
+    }
 }

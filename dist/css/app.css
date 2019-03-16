@@ -6603,6 +6603,10 @@ p {
   clear: both;
   margin: 2rem 0; }
 
+.header-spacer {
+  width: 100%;
+  height: 5.625rem; }
+
 .logo {
   position: relative;
   top: 0.5rem; }
@@ -6613,7 +6617,8 @@ p {
   box-shadow: 0 0 3px #ccc;
   z-index: 50;
   position: fixed;
-  width: 100%; }
+  width: 100%;
+  top: 0; }
   @media screen and (min-width: 786px) {
     .nav {
       display: block; } }
@@ -6877,45 +6882,6 @@ footer {
         font-size: 0.9375rem; }
         footer .footer-link ul a:hover {
           color: #dbbb68; }
-  footer .subscribe-bx {
-    background: #f6f6f6;
-    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.2);
-    padding: 1.875rem 2.8125rem; }
-    footer .subscribe-bx h3 {
-      font-family: 'DINProBold',serif;
-      font-size: 14px;
-      text-transform: uppercase;
-      margin: 0;
-      padding: 0; }
-    footer .subscribe-bx p {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.875rem;
-      color: #0c3a73;
-      padding-bottom: 1.25rem; }
-    footer .subscribe-bx label {
-      font-size: 0.875rem;
-      color: #737c83;
-      margin: 0; }
-      footer .subscribe-bx label sup {
-        color: #e94757; }
-    footer .subscribe-bx input {
-      border-radius: 0;
-      border: none;
-      border-bottom: solid #414141 1px;
-      background: transparent;
-      color: #414141; }
-    footer .subscribe-bx .stylish-select-right {
-      border-bottom: solid #414141 1px;
-      color: #414141;
-      font-family: 'DINProRegular'; }
-    footer .subscribe-bx .btn-primary {
-      box-shadow: none;
-      background: #0c3a73;
-      font-size: 1.25rem;
-      display: inline-block;
-      width: 100%;
-      color: #fff;
-      font-family: 'DINProRegular'; }
   footer .certificate {
     padding: 1.375rem 0 1.25rem 0;
     width: 91.5%;
@@ -6998,6 +6964,57 @@ footer {
       padding-bottom: 0; }
     footer .disclaimer p {
       padding-bottom: 0; }
+
+.subscribe-bx {
+  background: #f6f6f6;
+  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.2);
+  padding: 1.875rem 2.8125rem; }
+  .subscribe-bx h3 {
+    font-family: 'DINProBold',serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0; }
+  .subscribe-bx p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.875rem;
+    color: #0c3a73;
+    padding-bottom: 1.25rem; }
+  .subscribe-bx label {
+    font-size: 0.875rem;
+    color: #737c83;
+    margin: 0; }
+    .subscribe-bx label sup {
+      color: #e94757; }
+  .subscribe-bx input {
+    border-radius: 0;
+    border: none;
+    border-bottom: solid #414141 1px;
+    background: transparent;
+    color: #414141; }
+  .subscribe-bx .stylish-select-right {
+    border-bottom: solid #414141 1px;
+    color: #414141;
+    font-family: 'DINProRegular'; }
+  .subscribe-bx .btn-primary {
+    box-shadow: none;
+    background: #0c3a73;
+    font-size: 1.25rem;
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+    font-family: 'DINProRegular'; }
+    .subscribe-bx .btn-primary:hover {
+      background: #dbbb68; }
+  .subscribe-bx .call {
+    font-family: 'DINProMedium', serif;
+    color: #000;
+    font-size: 1.25rem;
+    padding: 1.875rem 0 0 0;
+    text-align: center; }
+    .subscribe-bx .call span {
+      display: block;
+      text-transform: uppercase; }
 
 .banner {
   height: 43.75rem; }
@@ -7465,3 +7482,65 @@ footer {
       -webkit-transform: rotate(0deg);
       -ms-webkit-transform: rotate(0deg);
       -moz-webkit-transform: rotate(0deg); }
+
+.contact-wrap {
+  padding: 0; }
+  .contact-wrap address {
+    padding-bottom: 6.125rem; }
+    .contact-wrap address h3 {
+      font-family: 'DINProMedium', serif;
+      color: #000;
+      font-size: 1.5rem;
+      margin: 0;
+      padding: 0 0 0.625rem 0; }
+    .contact-wrap address p {
+      font-family: 'DINProLight', serif;
+      font-size: 1.125rem;
+      margin: 0;
+      padding: 0 0 0.3125rem 0;
+      line-height: 1.875rem; }
+      .contact-wrap address p span {
+        font-family: 'DINProMedium', serif; }
+    .contact-wrap address a {
+      color: #fff; }
+    .contact-wrap address .view-map {
+      font-family: 'DINProMedium', serif;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      margin-top: 15px;
+      display: inline-block; }
+      .contact-wrap address .view-map span {
+        margin-right: 0.9375rem; }
+      .contact-wrap address .view-map:hover {
+        text-decoration: underline;
+        color: #dbbb68; }
+
+.register-office {
+  background: #0c3a73; }
+  .register-office address {
+    padding-top: 6.125rem; }
+    .register-office address h3 {
+      color: #fff;
+      font-size: 1.875rem; }
+    .register-office address p {
+      color: #fff; }
+  .register-office .subscribe-bx {
+    padding: 1.875rem 2.375rem;
+    position: relative;
+    top: -4.875rem; }
+
+.other-offices {
+  padding: 2.8125rem 0; }
+  .other-offices h2 {
+    font-family: 'DINProMedium', serif;
+    font-size: 1.875rem;
+    color: #0c3a73;
+    padding-bottom: 2.8125rem; }
+  .other-offices address h3 {
+    color: #0c3a73; }
+  .other-offices address p span {
+    color: #0c3a73; }
+  .other-offices address a {
+    color: #000; }
+  .other-offices address .view-map {
+    color: #0c3a73; }
