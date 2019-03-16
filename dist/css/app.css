@@ -6661,6 +6661,12 @@ p {
     .sort-wrap .sort-by.location {
       width: 12rem; }
 
+.clear {
+  clear: both;
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+
 .logo {
   position: relative;
   top: 0.5rem; }
@@ -7590,3 +7596,53 @@ footer {
   .job-apply .learn-more-bl {
     display: inherit;
     margin-top: 1.25rem; }
+
+.job-details {
+  padding: 2.8125rem 0; }
+  .job-details .btn-primary {
+    display: inline-block;
+    background: #0c3a73;
+    color: #fff;
+    padding: 0.9375rem 2.1875rem;
+    box-shadow: none; }
+    .job-details .btn-primary:hover {
+      background: #dbbb68; }
+  .job-details .job-name {
+    border-bottom: solid #e6ebf1 4px;
+    padding: 0 0 1.5625rem 0;
+    margin: 0 0 2.8125rem 0; }
+    .job-details .job-name h2 {
+      font-size: 2.5rem;
+      padding-bottom: 0;
+      width: 82%;
+      float: left; }
+    .job-details .job-name .learn-more-bl {
+      float: right;
+      top: 0; }
+      .job-details .job-name .learn-more-bl::before {
+        background-position: 0px -120px; }
+      .job-details .job-name .learn-more-bl:hover::before {
+        background-position: -23px -120px; }
+  .job-details .job-des {
+    padding-bottom: 1.875rem; }
+    .job-details .job-des h3 {
+      font-family: 'DINProMedium', serif;
+      font-size: 1.5rem;
+      display: block;
+      text-transform: uppercase;
+      color: #0c3a73;
+      padding-bottom: 0.3125rem; }
+    .job-details .job-des p {
+      padding-bottom: 1.875rem; }
+
+.apply-now {
+  display: inline-block;
+  text-align: center; }
+  .apply-now img {
+    position: relative;
+    top: -15px;
+    z-index: 1; }
+  .apply-now .btn-primary {
+    display: block;
+    position: relative;
+    z-index: 2; }

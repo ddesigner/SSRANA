@@ -38,3 +38,67 @@
         margin-top:rem(20);
     }
 }
+
+
+// ######## Job Details style #########
+.job-details{
+    padding:rem(45) 0;
+
+    .btn-primary{
+        display:inline-block;
+        background:$defaultBlue;
+        color: $whiteColor;
+        padding:rem(15) rem(35);
+        box-shadow:none;
+        &:hover{
+            background:$activeColor;
+            
+        }
+    }
+    .job-name{
+        border-bottom: solid #e6ebf1 4px;  padding:0 0 rem(25) 0; margin: 0 0 rem(45) 0 ;
+        h2{
+            font-size:rem(40); padding-bottom: 0; width: 82%; float: left;
+        }
+
+        .learn-more-bl{
+            float: right;
+            top: 0;
+
+            &::before{
+                background-position:0px -120px;
+            }
+            &:hover{
+               
+                &::before{
+                    background-position:-23px -120px;
+                } 
+            }
+        }
+    }
+
+    .job-des{
+        padding-bottom: rem(30);
+        h3{
+            font-family: 'DINProMedium', serif;  font-size: rem(24);  display: block; text-transform: uppercase;
+            color:$defaultBlue; padding-bottom: rem(5);
+        }
+
+        p{
+            padding-bottom: rem(30);
+        }
+        
+    }
+}
+
+.apply-now {
+    display: inline-block;
+    text-align: center;
+    img{
+        position: relative;
+        top: -15px; z-index:1;
+    }
+    .btn-primary{
+        display: block;  position: relative; z-index: 2;
+    }
+}
