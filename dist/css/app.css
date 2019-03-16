@@ -6625,7 +6625,7 @@ p {
   .nav .cbp-hrmenu {
     width: auto;
     position: relative;
-    float: left; }
+    float: right; }
     .nav .cbp-hrmenu ul {
       margin: 0;
       padding: 0;
@@ -6726,14 +6726,14 @@ p {
 /* Examples for media queries */
 .nav-right {
   color: #0c3a73;
-  padding: 1.875rem 0 1.75rem 0;
+  padding: 2rem 0 1.75rem 0;
   font-size: 1.125rem;
-  margin: 0;
+  margin: 0 0 0 1.5625rem;
   float: right; }
   .nav-right li {
     list-style: none;
     display: inline-block;
-    margin: 0 0.3125rem; }
+    margin: 0 0.625rem; }
     .nav-right li a {
       color: #0c3a73; }
       .nav-right li a.serchBtn {
@@ -7078,7 +7078,7 @@ footer {
 
 .services .search-section {
   background: #0c3b73;
-  padding: 1.875rem;
+  padding: 2.5rem 1.875rem;
   display: block;
   color: #fff;
   position: relative;
@@ -7093,8 +7093,11 @@ footer {
     margin: 0; }
     @media screen and (min-width: 786px) {
       .services .search-section .select-wrap {
-        width: 18.0625rem;
+        width: 23.4375rem;
         margin: 0 1.5625rem; } }
+    @media screen and (min-width: 786px) {
+      .services .search-section .select-wrap:nth-child(2) {
+        width: 12.5rem; } }
     .services .search-section .select-wrap select {
       background: none;
       border: none;
@@ -7112,7 +7115,9 @@ footer {
     @media screen and (min-width: 786px) {
       .services .search-section .btn {
         float: right;
-        margin-left: 1.3125rem; } }
+        margin-left: 1.3125rem;
+        margin-top: 0;
+        margin-bottom: 0; } }
 
 .services .service-detail {
   text-align: center;

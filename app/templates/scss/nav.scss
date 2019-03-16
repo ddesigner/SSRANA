@@ -16,7 +16,7 @@
 	.cbp-hrmenu {
 		width:auto;
 		position: relative;
-		float: left;
+		float: right;
 		ul{
 			margin: 0;
 			padding: 0;
@@ -141,14 +141,14 @@
  
 .nav-right{
 	color:$defaultBlue;
-	padding:rem(30) 0 rem(28) 0;
+	padding:rem(32) 0 rem(28) 0;
 	font-size: rem(18);
-	margin: 0;
+	margin:0 0 0 rem(25);
 	float:right;
 	li{
 		list-style: none;
 		display:inline-block;
-		margin:0 rem(5);
+		margin:0 rem(10);
 		a{
 			color:$defaultBlue;
 			&.serchBtn{
