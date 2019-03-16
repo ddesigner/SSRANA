@@ -3,20 +3,22 @@
 	top:0.5rem;
 }
 .nav{
-	background: #fff;
+	background:$whiteColor;
 	height: rem(90);
 	box-shadow:0 0 3px #ccc;
 	z-index:50;
 	position: fixed;
 	width:100%;
 	top:0;
- 	@media screen and (min-width:$ipad) {
-		display: block;
-   }
+ 	
 	.cbp-hrmenu {
 		width:auto;
 		position: relative;
 		float: right;
+		display:none;
+		@media screen and (min-width:$ipad) {
+			display: block;
+	   }
 		ul{
 			margin: 0;
 			padding: 0;

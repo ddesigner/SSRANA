@@ -6581,14 +6581,14 @@ p {
   padding: 2rem;
   box-shadow: 5px 5px 3px 0 rgba(0, 0, 0, 0.4);
   position: relative;
-  top: -4rem; }
+  margin-top: -4rem; }
   .page-search input[type=text] {
     background: none;
     border: 0;
     width: 100%;
     color: #fff;
     font-size: 26px;
-    padding: 1rem 1rem 0.5rem 1rem;
+    padding: 1rem 0rem 0.5rem 0rem;
     border-bottom: solid #dbbb68 1px;
     margin-right: 2rem; }
     .page-search input[type=text]:focus {
@@ -6607,6 +6607,60 @@ p {
   width: 100%;
   height: 5.625rem; }
 
+.sort-wrap {
+  font-family: 'DINProBold', serif;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 1.5rem 0 1rem 0;
+  width: 100%; }
+  .sort-wrap .total-result, .sort-wrap .stylish-select-right {
+    color: #414141;
+    float: left; }
+  .sort-wrap .total-result {
+    padding: 1rem 3rem 1rem 0; }
+  .sort-wrap .sort-by {
+    width: 10rem;
+    float: right; }
+    .sort-wrap .sort-by span {
+      width: 38%;
+      float: left;
+      padding: 1rem 0; }
+    .sort-wrap .sort-by .main {
+      width: 60%;
+      text-transform: uppercase;
+      float: left; }
+      .sort-wrap .sort-by .main ul.listing li {
+        font-family: 'DINProBold', serif;
+        font-size: 0.8125rem; }
+    .sort-wrap .sort-by .stylish-select-right {
+      font-family: 'DINProBold', serif;
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+      border: none;
+      height: 45px;
+      line-height: 50px; }
+    .sort-wrap .sort-by .stylish-select-left:after {
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      content: '';
+      border-top: 5px solid #0c3a73;
+      position: absolute;
+      right: 0;
+      top: 61%;
+      border-bottom: none;
+      transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -ms-webkit-transform: rotate(0deg);
+      -moz-webkit-transform: rotate(0deg); }
+    .sort-wrap .sort-by.title {
+      float: left; }
+    .sort-wrap .sort-by.location {
+      width: 12rem; }
+
 .logo {
   position: relative;
   top: 0.5rem; }
@@ -6619,13 +6673,14 @@ p {
   position: fixed;
   width: 100%;
   top: 0; }
-  @media screen and (min-width: 786px) {
-    .nav {
-      display: block; } }
   .nav .cbp-hrmenu {
     width: auto;
     position: relative;
-    float: right; }
+    float: right;
+    display: none; }
+    @media screen and (min-width: 786px) {
+      .nav .cbp-hrmenu {
+        display: block; } }
     .nav .cbp-hrmenu ul {
       margin: 0;
       padding: 0;
@@ -7438,56 +7493,6 @@ footer {
   padding: 2rem 0;
   display: inline-block; }
 
-.sort-wrap {
-  font-family: 'DINProBold', serif;
-  font-size: 0.8125rem;
-  text-transform: uppercase;
-  text-transform: uppercase;
-  display: inline-block;
-  padding: 1rem 0 3rem 0;
-  width: 100%; }
-  .sort-wrap .total-result, .sort-wrap .stylish-select-right {
-    color: #414141;
-    float: left; }
-  .sort-wrap .total-result {
-    padding: 1rem 0; }
-  .sort-wrap .sort-by {
-    width: 10rem;
-    float: right; }
-    .sort-wrap .sort-by span {
-      width: 38%;
-      float: left;
-      padding: 1rem 0; }
-    .sort-wrap .sort-by .main {
-      width: 60%;
-      text-transform: uppercase;
-      float: left; }
-      .sort-wrap .sort-by .main ul.listing li {
-        font-family: 'DINProBold', serif;
-        font-size: 0.8125rem; }
-    .sort-wrap .sort-by .stylish-select-right {
-      font-family: 'DINProBold', serif;
-      font-size: 0.8125rem;
-      text-transform: uppercase;
-      border: none;
-      height: 45px;
-      line-height: 50px; }
-    .sort-wrap .sort-by .stylish-select-left:after {
-      width: 0;
-      height: 0;
-      border-left: 5px solid transparent;
-      border-right: 5px solid transparent;
-      content: '';
-      border-top: 5px solid #0c3a73;
-      position: absolute;
-      right: 0;
-      top: 48%;
-      border-bottom: none;
-      transform: rotate(0deg);
-      -webkit-transform: rotate(0deg);
-      -ms-webkit-transform: rotate(0deg);
-      -moz-webkit-transform: rotate(0deg); }
-
 .contact-wrap {
   padding: 0; }
   .contact-wrap address {
@@ -7549,3 +7554,39 @@ footer {
     color: #000; }
   .other-offices address .view-map {
     color: #0c3a73; }
+
+.job-list {
+  border-bottom: solid #e6ebf1 4px;
+  padding: 0 0 2.8125rem 0;
+  margin: 0 0 2.8125rem 0; }
+
+.job-name h2 {
+  font-family: 'DINProMedium', serif;
+  font-size: 1.4375rem;
+  display: block; }
+  .job-name h2 span {
+    font-family: 'DINProBold', serif;
+    font-size: 0.8125rem;
+    line-height: 2rem;
+    display: block; }
+
+.job-des p {
+  padding: 0;
+  margin: 0; }
+
+.job-apply {
+  text-align: center;
+  width: auto;
+  display: inline;
+  float: right; }
+  .job-apply .btn-primary {
+    display: inline-block;
+    background: #0c3a73;
+    color: #fff;
+    padding: 0.9375rem 2.1875rem;
+    box-shadow: none; }
+    .job-apply .btn-primary:hover {
+      background: #dbbb68; }
+  .job-apply .learn-more-bl {
+    display: inherit;
+    margin-top: 1.25rem; }

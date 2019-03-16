@@ -1,0 +1,40 @@
+.job-list{
+    border-bottom: solid #e6ebf1 4px;  padding:0 0 rem(45) 0; margin: 0 0 rem(45) 0 
+}
+
+.job-name{
+    h2{
+        font-family: 'DINProMedium', serif;  font-size: rem(23);  display: block;
+        span{
+            font-family: 'DINProBold', serif;  font-size: rem(13); line-height: rem(32); display: block;
+        }
+       
+    }
+}
+
+.job-des{
+    p{padding:0; margin: 0}
+}
+
+.job-apply{
+    text-align: center;
+    width: auto;
+    display: inline;
+    float: right;
+    .btn-primary{
+        display:inline-block;
+        background:$defaultBlue;
+        color: $whiteColor;
+        padding:rem(15) rem(35);
+        box-shadow:none;
+        &:hover{
+            background:$activeColor;
+            
+        }
+    }
+
+    .learn-more-bl{
+        display:inherit;
+        margin-top:rem(20);
+    }
+}

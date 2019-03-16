@@ -380,14 +380,14 @@ a:focus{
     width: 100%; display: flex; padding:2rem;
     box-shadow: 5px 5px 3px 0 rgba(0, 0, 0, 0.4);
     position: relative;
-    top: -4rem;
+    margin-top: -4rem;
     input[type=text]{
         background: none;
         border: 0;
         width: 100%;
         color: $whiteColor;
         font-size: 26px;
-        padding: 1rem 1rem 0.5rem 1rem;
+        padding: 1rem 0rem 0.5rem 0rem;
         border-bottom:solid $activeColor 1px;
         margin-right:2rem;
 
@@ -408,3 +408,71 @@ a:focus{
     width: 100%;
     height:rem(90);
 }
+
+
+
+.sort-wrap{
+    font-family: 'DINProBold', serif;  font-size: rem(13);text-transform: uppercase;
+   text-transform: uppercase;
+   display: inline-block;
+   padding: 1.5rem 0 1rem 0;
+   width: 100%;
+   .total-result, .stylish-select-right{
+      color: $grayColor; float: left; 
+   }
+   .total-result{ padding:1rem 3rem 1rem 0;}
+   .sort-by{
+     width: 10rem; float: right; 
+
+     span{
+       width:38%;
+       float: left; padding:1rem 0;
+     }
+
+     .main{
+         width:60%; text-transform: uppercase; float: left;
+         ul.listing li{
+        font-family: 'DINProBold', serif;    font-size: rem(13);
+         }
+     }
+
+     .stylish-select-right{
+       font-family: 'DINProBold', serif;  font-size: rem(13);text-transform: uppercase; border:none;
+       height: 45px;
+          line-height: 50px;
+
+          
+     }
+
+         .stylish-select-left{
+           &:after{
+               width: 0;
+               height: 0;
+               border-left: 5px solid transparent;
+               border-right: 5px solid transparent;
+               content: '';
+               border-top: 5px solid $defaultBlue;
+               position: absolute;
+               right: 0;
+               top:61%;
+               border-bottom: none;
+               transform: rotate(0deg);
+               -webkit-transform: rotate(0deg);
+               -ms-webkit-transform: rotate(0deg);
+               -moz-webkit-transform: rotate(0deg);
+              }
+         }
+
+         &.title{
+             float:left;
+         }
+
+         &.location{
+            width: 12rem;
+         }
+   }
+
+  
+}
+
+
