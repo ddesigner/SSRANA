@@ -6701,6 +6701,59 @@ p {
   margin: 0;
   padding: 0; }
 
+.error-msg, .invalidZipError {
+  color: #cc0000;
+  font-size: 13px;
+  text-align: left !important;
+  top: 110% !important;
+  padding-bottom: 10px;
+  position: absolute;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 0.2rem;
+  display: none;
+  box-shadow: 0 0 5px #000;
+  background: #fff;
+  z-index: 10; }
+  .error-msg:before, .invalidZipError:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    top: -10px;
+    position: absolute; }
+
+.GPformBlackout {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  z-index: 10000; }
+
+.GPformBlackout .submittingMsg {
+  position: absolute;
+  padding: 2rem;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+  box-shadow: 3px 3px 5px #666;
+  color: #666; }
+
+.formValid {
+  border: solid 1px #00D936 !important;
+  background-color: #E3FBE9 !important;
+  color: #00D936 !important; }
+
+.form-group {
+  position: relative; }
+
 .logo {
   position: relative;
   top: 0.5rem; }
@@ -6913,7 +6966,7 @@ p {
   height: 80px;
   background: #003666;
   border-top: 1px solid #000;
-  position: absolute;
+  position: fixed;
   width: 100%;
   z-index: 6;
   top: 0; }

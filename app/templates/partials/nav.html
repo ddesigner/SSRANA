@@ -344,15 +344,16 @@
     </div>
 </div>
 </section>
-<div class="searchContainer" >
+<div class="searchContainer globalSearch" data-submiturl="/UtilityForms/email-check-opt-in" data-successurl="/paper-towel-coupons/registration">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 col-xs-12">
 					<ul>
 							<li class="searchInput">
-									<input type="text" placeholder="Search by keyword" id="headpredictivesearch">
+									<input type="text" placeholder="Search by keyword" validation="required" name="name"  id="headpredictivesearch">
+									<div class="error-msg"></div>
 								</li>
-						<li class="searchIcon"><a href="javascript:void(0);" id="headersearch"> <i class="fas fa-search"></i></a></li>
+						<li class="searchIcon"><a href="javascript:void(0);" class="GPformButtonSubmit" id="headersearch"> <i class="fas fa-search"></i></a></li>
 						
 					</ul>
 				</div>

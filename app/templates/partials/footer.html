@@ -67,24 +67,27 @@
                     <p>Help me with my request</p>
 
 
-                    <form>
+                    <form class="validateform" data-submiturl="/UtilityForms/email-check-opt-in" data-successurl="/paper-towel-coupons/registration">
                             <div class="form-group">
                               <label for="name">Name<sup>*</sup></label>
-                              <input type="text" class="form-control" >
-                           
+                              <input type="text" validation="required" name="name" class="form-control" >
+                              <div class="error-msg"></div>
                             </div>
                             <div class="form-group">
                               <label for="Phone">Phone</label>
-                              <input type="text" class="form-control"  >
+                              <input type="text"  validation="phone" name="phone" class="form-control"  >
+                              <div class="error-msg"></div>
                             </div>
                             <div class="form-group">
-                                    <select class="csel">
-                                    <option>how to patent a logo</option>
-                                    <option>how to patent a logo</option>
-                                    <option>how to patent a logo</option>
+                                    <select class="csel"  validation="select" id="select" name="logo">
+                                        <option value="0" selected="selected">how to patent a logo</option>
+                                        <option value="1">how to patent a logo</option>
+                                        <option value="2">how to patent a logo</option>
                                     </select>
+                                    <div class="error-msg"></div>
                             </div>
-                            <button type="submit" class="btn btn-primary">Subscribe Now</button>
+                            <!-- <button type="submit" class="btn btn-primary GPformButtonSubmit">Subscribe Now</button> -->
+                                <a href="javascript:void(0);"  class="btn btn-primary GPformButtonSubmit">Subscribe Now</a>
                           </form>
              </div>
          </div>

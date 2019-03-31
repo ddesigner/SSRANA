@@ -27,6 +27,7 @@
   <script src="js/scalefont.js"></script>
   <script src="js/slick.js"></script>
   <script src="js/edyCustomSelectBox-1.3.js"></script>
+  <script src="js/validation.js"></script>
   <script>
 
     $(function () {
@@ -52,6 +53,20 @@
 
         });
       }
+
+  // SUBMIT THE FORM 
+jQuery(document).on('click', '.validateform .GPformButtonSubmit', function () { 
+ //   submitForm();
+    $('.validateform').submitForm();
+    return false;
+});
+
+jQuery(document).on('click', '.globalSearch .GPformButtonSubmit', function () { 
+ //   submitForm();
+    $('.globalSearch').submitForm();
+    return false;
+});
+ 
     });
   </script>
 </body>
