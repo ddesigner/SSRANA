@@ -41,5 +41,7 @@ $(document).ready(function(){
         }
     });
  
-
+    $('.movbile-nav').click(function(){
+		$(this).toggleClass('open');
+	});
 });
