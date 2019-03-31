@@ -157,7 +157,7 @@
     .knowledge-rt{
         padding:rem(50) 0;  color:$whiteColor;
         @media screen and (min-width:$ipad){
-            padding:rem(370) 0 rem(70) 0;
+            padding:rem(370) 0 rem(70) rem(40);
         }
         h3, p{color:$whiteColor} 
         h3{
@@ -307,6 +307,12 @@
               }
            }
          
+       }
+
+       .large{
+           p{
+               font-size: rem(40); line-height: 1;
+           }
        }
 }
 
