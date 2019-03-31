@@ -1,16 +1,21 @@
 .banner{
-    height:rem(700);
-    
+    height:rem(376);
+    @media screen and (min-width:$ipad) {
+        height:rem(700);
+    }
     .banner-inner{
         display:flex;  color:$whiteColor; position:relative;  
        
         .container{
-            top: 50%; @include transform(translateY(-50%)); z-index: 2;
+            //@media screen and (min-width:$ipad) {
+              top: 50%; @include transform(translateY(-50%)); z-index: 2; position: relative;
+           // }
         }
         .banner-content{
             width:100%; position: relative;  z-index: 2;
-            @media screen and (min-width:767px) {
-                width:44%
+            text-align:center;
+            @media screen and (min-width:$ipad) {
+                width:44%; text-align: left;
             }
         }
         .item{
@@ -18,18 +23,27 @@
             background-size:cover;
             width: 100%;
             padding:rem(30);
-            @media screen and(min-width:767px){
+            height:rem(376); 
+            @media screen and(min-width:$ipad){
                 height:rem(700); padding:0;
             }
             p{
                 margin:0;
-                padding:0;  font-family: 'DINProBold',serif;
+                padding:0 0 rem(10) 0;  font-family: 'DINProBold',serif;
                 font-size:rem(14); color:$whiteColor;
+                @media screen and(min-width:$ipad){
+                    margin:0;
+                    padding:0;
+                }
             }
             h1{
                 font-family: 'Playfair Display', serif;
-                font-size:rem(60);
+                font-size:rem(28);
                 font-weight: normal;
+                padding-bottom: rem(25);
+                @media screen and(min-width:$ipad){
+                    font-size:rem(60);  padding-bottom: 0;
+                }
                 span{
                     display: block;
                     font-weight: 700;
@@ -49,6 +63,12 @@
  
 
 .services{
+    .container{
+        @media screen and (max-width:$mobileEnd)
+        {
+           padding:0;
+        }
+    }
     form{
         position: relative;
         .screenDivider {
@@ -62,22 +82,23 @@
 
 .search-section{
     background:#0c3b73;
-    padding:rem(40) rem(30);
+    padding:rem(30) rem(25);
     display: block; color: $whiteColor;
     position: relative;
-    top: rem(-60);
-    box-shadow: 5px 5px 3px 0 rgba(0, 0, 0, 0.4);
+    box-shadow:0px 5px 3px 0 rgba(0, 0, 0, 0.4);
+
     @media screen and (min-width:$ipad)
-    {
-        display: flex;
+    { box-shadow: 5px 5px 3px 0 rgba(0, 0, 0, 0.4);
+        display: flex; top: rem(-60);  padding:rem(40) rem(30);
     }
+   
     .select-wrap{
-        font-size: rem(30);
+        font-size: rem(24);
         width:100%;
-        margin:0; 
+        margin:0 0 rem(35) 0; 
         @media screen and (min-width:$ipad){
             width:rem(375);
-            margin:0 rem(25); 
+            margin:0 rem(25) 0 rem(25);   font-size: rem(30);
         }
 
         &:nth-child(2){
@@ -97,15 +118,15 @@
 
     }
     .text{
-        font-size:rem(30); margin:rem(10) 0;
+        font-size:rem(26); margin:rem(0) 0; line-height: 1;
          @media screen and (min-width:767px){
-            margin:0;
+            margin:0; line-height:rem(46);  font-size:rem(30);
         }
     }
     .btn{
-       margin:rem(20) 0;
+       margin:rem(20) 0; width:100%; display:inline-block;
         @media screen and (min-width:$ipad){
-            float: right;
+            float: right; width: inherit;
             margin-left:rem(21);
             margin-top:0; margin-bottom: 0;
         }
@@ -119,7 +140,7 @@
         padding:rem(100) rem(150);   
     }
     h2{
-        padding:0;
+        padding:0 0 rem(20) 0;
         @media screen and (min-width:$ipad){
             padding:0 rem(50) rem(40) rem(50);
         }

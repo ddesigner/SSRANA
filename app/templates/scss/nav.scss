@@ -10,7 +10,11 @@
 	position: fixed;
 	width:100%;
 	top:0;
- 	
+ 	> .container{
+		@media screen and (max-width:767px) {
+			width: 100%;
+		}
+	 }
 	.cbp-hrmenu {
 		width:auto;
 		position: relative;
@@ -321,7 +325,13 @@
 
 /* Icon 1 */
 
-.movbile-nav{
+.movbile-nav
+{
+	display:inline-block!important;
+	@media screen and (min-width:$ipad){
+		display: none!important;
+	}
+a{
   width:20px;
   height:20px;
   position: relative;
@@ -336,6 +346,8 @@
   transition: .5s ease-in-out;
   cursor: pointer;
   display:inline-block;
+ 
+}
 }
 
 .movbile-nav  span {

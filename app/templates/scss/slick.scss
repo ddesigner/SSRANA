@@ -100,8 +100,10 @@
 }
 
 .slick-dots{position: absolute;
-    top: 50%; @include transform(translateY(-50%));
-    right: rem(150); z-index: 5; overflow: hidden;
+    top:rem(15); right: rem(15); z-index: 5; overflow: hidden;
+    @media screen and (min-width:$ipad){
+        top: 50%; @include transform(translateY(-50%));  right: rem(150); 
+    }
     li{
         list-style: none;
         &.slick-active{

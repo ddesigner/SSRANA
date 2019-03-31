@@ -88,9 +88,27 @@ a:focus{
         
     }
 
-    h2{ color:$defaultBlue; font-size: rem(50); font-family: 'Playfair Display', serif; padding-bottom:40px;}
-    h3{ color:$grayColor; font-size: rem(24); line-height:rem(35);  font-family: 'DINProMedium', serif; padding-bottom:30px;}
-    p{color:$grayColor; font-size: rem(18); line-height:rem(26);  font-family: 'DINProLight', serif;  padding-bottom:40px;}
+    h2{ 
+        color:$defaultBlue; font-size: rem(30); font-family: 'Playfair Display', serif;
+         padding-bottom:rem(30);
+        @media screen and (min-width:$ipad){
+            font-size: rem(50);  padding-bottom:rem(40);
+        }
+    }
+    h3{ 
+        color:$grayColor; font-size: rem(20); line-height:rem(25);  font-family: 'DINProMedium', serif;
+        padding-bottom:rem(10);
+        @media screen and (min-width:$ipad){
+            font-size: rem(24);line-height:rem(35);   padding-bottom:30px;
+        }
+    }
+    p{
+        color:$grayColor; font-size: rem(16); line-height:rem(26);  font-family: 'DINProLight', serif;  
+        padding-bottom:rem(0);
+        @media screen and (min-width:$ipad){
+            font-size: rem(18); line-height:rem(26); padding-bottom:rem(40);
+        }
+    }
 
     .screenDivider {
         width: 2px;
