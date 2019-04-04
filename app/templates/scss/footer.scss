@@ -43,7 +43,10 @@ footer{
             padding-bottom:0; 
         }
         ul{
-            margin:0; padding: 0; list-style-type: none;
+            margin:0; padding: 0 0 rem(20) 0; list-style-type: none;
+            @media screen and (min-width:$ipad){
+                margin:0; padding: 0; 
+               }
             li{
                 padding:5px 0;
             }
@@ -59,13 +62,18 @@ footer{
     
     .certificate{
         padding:rem(22) 0 rem(20) 0;
-        width: 91.5%;
+        width:100%;
         float: right;
+        @media screen and (min-width:$ipad){
+            width: 91.5%;     padding:rem(22) 0 rem(20) 0;
+           }
       .img{
           width: rem(165); height:rem(85); background: url(../images/iso-certificate.png) no-repeat -12px -6px;
         
-          margin:0 rem(2); float: left;
-
+          margin:0 rem(2) rem(2) rem(2); float: left;
+          @media screen and (min-width:$ipad){
+            margin:0 rem(2);
+          }
           &:first-child(){
               margin-left: 0
           }
@@ -95,6 +103,9 @@ footer{
   }
 
   .connect-bx{
+    @media screen and (max-width:$mobileEnd){
+        padding-top: rem(20);
+       }
     h3{
         font-family: 'DINProMedium', serif; font-size:rem(14); color:$grayColor; 
         padding-bottom:0; text-transform: uppercase;
@@ -138,11 +149,19 @@ footer{
 
   .copyright{
       background: #d2aa35; padding: rem(10) 0;
-      font-size: rem(16); color: $whiteColor;
+      font-size: rem(16); color: $whiteColor;  text-align:center;
+      @media screen and (min-width:$ipad){
+          text-align: left;
+      }
       a{
           color: $whiteColor; margin: 0 5px;
       }
-      .pull-right{text-align: right;}
+      .pull-right{
+          text-align: center;
+          @media screen and (min-width:$ipad){
+            text-align: right;
+         }
+        }
   }
 
   .disclaimer{ text-align: center; padding:rem(40) 0; font-size: rem(16); color:#5c5c5c; 

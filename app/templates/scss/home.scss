@@ -154,29 +154,40 @@
     padding:rem(0) rem(0) rem(0) rem(0);
     background:#2f2f2f url(../images/knowledge-bg.jpg) no-repeat 0 0;
     
+    > .container{
+        @media screen and (max-width:$ipad){
+           padding:0;
+        }
+    }
      .knowledge-lt{
         color:$whiteColor; background:$defaultBlue; padding:rem(70) rem(40);
         box-shadow:5px 5px 3px 0 rgba(0, 0, 0, 0.4);
         position: relative;  
-
+        padding:rem(30) rem(25);
         @media screen and (min-width:$ipad){
-            position: relative; top:rem(-20);
+            position: relative; top:rem(-20); padding:rem(70) rem(40);
             height: 95%;
         }
 
         .screenDivider-hr{
            position: absolute;
              right:rem(-55);
-            top:rem(104);
-           
+            top:rem(104);  display:none;
+            @media screen and (min-width:$ipad){
+                display:block;
+            }
         }
         h2,p{ color:$whiteColor; }
-
+        h2{
+            @media screen and (max-width:$mobileEnd){
+                padding-bottom: rem(10);
+            }
+        }
        
     }
 
     .knowledge-rt{
-        padding:rem(50) 0;  color:$whiteColor;
+        padding:rem(50) rem(25);  color:$whiteColor;
         @media screen and (min-width:$ipad){
             padding:rem(370) 0 rem(70) rem(40);
         }
@@ -213,6 +224,10 @@
                position: absolute; position: absolute;
                right: 0;
                top: 50%;
+               display: none;
+               @media screen and (min-width:$ipad){
+                display: block;
+               }
               }
             .icon{
                 width:60px; height:63px; display: inline-block; 
@@ -275,6 +290,19 @@
             }
           }
         }
+
+        .knowledge-bx{
+            @media screen and (max-width:$mobileEnd){
+                border-bottom: solid $activeColor 2px; margin-bottom:rem(40);
+            }
+        }
+
+        .col-sm-4{
+            &:last-child{
+                .knowledge-bx{border:none; padding-bottom:0; margin-bottom:0;}
+                
+            }
+        }
     }
 }
 
@@ -292,19 +320,31 @@
            }
        }
        .screenDivider {
-           position: absolute; top:rem(-30); left: 0; right: 0;
+           position: absolute; top:rem(-30); left: 0; right: 0; display: block;
+       }
+
+       h2{
+        @media screen and (max-width:$mobileEnd){
+            padding-top:rem(30);
+        }
        }
 
        .row > .col-sm-12 > .row{
            display:flex;
        }
        .row > .col-sm-12 > .row .col-sm-4{
-           margin-bottom:rem(50);
+           margin-bottom:rem(20);
+           @media screen and (min-width:$ipad){
+            margin-bottom: rem(50);  
+         }
        }
        .bx{
            border:solid #ededed 1px; padding:rem(35)  rem(35) rem(20)  rem(35); text-align: left;
            box-shadow:3px 3px 3px 0 rgba(0, 0, 0, 0.2);
-            height: 100%; margin-bottom: rem(50);  
+            height: 100%; margin-bottom: rem(20);  
+            @media screen and (min-width:$ipad){
+                margin-bottom: rem(50);  
+             }
            h3{
             font-family: 'DINProBold',serif;
             font-size:rem(14); text-transform: uppercase; border-bottom:solid $activeColor 2px;

@@ -58,16 +58,29 @@ a:focus{
         color:$defaultBlue;
         font-size:rem(14); text-transform: uppercase; font-family: 'DINProMedium', serif;
         &:before{
-            content:'';
-            background:url(../images/sprite.png) no-repeat -22px 0;
-            width:21px; height:21px; display:inline-block;
-            position: relative;
-            top: 5px;
-            margin-right:rem(10);
+            @media screen and (min-width:$ipad){
+                content:'';
+                background:url(../images/sprite.png) no-repeat -22px 0;
+                width:21px; height:21px; display:inline-block;
+                position: relative;
+                top: 5px;
+                margin-right:rem(10);
+            }
+        }
+
+        &:after{
+            @media screen and (max-width:$mobileEnd){
+                content:'';
+                background:url(../images/sprite.png) no-repeat -22px 0;
+                width:21px; height:21px; display:inline-block;
+                position: relative;
+                top: 5px;
+                margin-left:rem(10);
+            }
         }
 
         &:hover{
-            &:before{
+            &:before,   &:after{
                 background-position:1px 0;
            }
            color:$activeColor;
