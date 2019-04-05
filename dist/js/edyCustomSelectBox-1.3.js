@@ -31,7 +31,7 @@ $.fn.edyCustomSelectBox = function (options) {
     var settings = $.extend({}, defaults, options);
     var keyinterval;
     var currindex = -1;
-    var zindexno = 8;
+    var zindexno = 50;
     $(this).each(function (i) {
        // debugger;
         var selid = $(this).attr("id");

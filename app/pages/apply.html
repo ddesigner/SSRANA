@@ -1,0 +1,589 @@
+{% extends "app/templates/layout.html" %} {% block content %} {% include "app/templates/partials/nav.html" %}
+<section class="inner-banner" style="background-image:url(images/faq-banner.jpg)">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Apply Job</h1>
+            </div>
+        </div>
+    </div>
+    <div class="overlay"></div>
+</section>
+
+<section class="apply-wraper">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="job-details">
+
+                    <div class="job-name">
+                        <h2>Associate Jr Lawyer
+                            <span>New Delhi</span>
+                        </h2>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="apply-form">
+            <p>The firm invites applications from well qualified deserving candidates for various openings.</p>
+            <form class="form-style" id="apply">
+            <div class="field-section">
+                <h3>Fill in you details to apply.</h3>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="apply-for">Apply For
+                                <sup>*</sup>
+                            </label>
+                            <select class="csel" validation="select" name="apply" id="apply-for">
+                                <option>Apply For</option>
+                                <option value="1">Associate Jr Lawyer</option>
+                                <option value="2">Associate Jr Lawyer</option>
+                                <option value="3">Jr Lawyer 2</option>
+                                <option value="other">Others</option>
+                            </select>
+                            <div class="error-msg"></div>
+                            <input type="text" class="form-control" id="others" aria-describedby="others">
+                          
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="apply-for">Department
+                                <sup>*</sup>
+                            </label>
+                            <select class="csel"  validation="select"  name="department"  id="department">
+                                <option>Department</option>
+                                <option>Associate Jr Lawyer</option>
+                                <option>Associate Jr Lawyer</option>
+                                <option>Jr Lawyer 2</option>
+                                
+                            </select>
+                            <div class="error-msg"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label for="apply-for">From Date
+                                        <sup>*</sup>
+                                    </label>
+                                    <div class='input-group date' id='datetimepicker1'>
+                                        <input type='text' validation="required"  name="From"   class="form-control" placeholder="From" />
+                                        <span class="input-group-addon">
+                                            <i class="fas fa-calendar-week"></i>
+                                        </span>
+                                        <div class="error-msg"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="apply-for">To Date
+                                        <sup>*</sup>
+                                    </label>
+                                    <div class='input-group date' id='datetimepicker2'>
+                                        <input type='text' class="form-control" validation="required"   name="To" placeholder="To" />
+                                        <span class="input-group-addon">
+                                            <i class="fas fa-calendar-week"></i>
+                                        </span>
+                                        <div class="error-msg"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="field-section">
+                <!-- Personal Details -->
+                <h3>Personal Details</h3>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="firstname">First Name
+                                        <sup>*</sup>
+                                    </label>
+                                    <input type="text" class="form-control" id="firstname"  validation="required" name="First Name" placeholder="First Name" aria-describedby="firstname">
+                                    <div class="error-msg"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="middlename">Middle Name
+                                        <sup></sup>
+                                    </label>
+                                    <input type="text" class="form-control" id="middlename" placeholder="Middle Name" aria-describedby="middlename">
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="lastname">Last Name
+                                        <sup></sup>
+                                    </label>
+                                    <input type="text" class="form-control" id="lastname" placeholder="Last Name" aria-describedby="lastname">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="apply-for">Gender
+                                <sup>*</sup>
+                            </label>
+                            <select class="csel"  validation="select"  name="gender" id="gender">
+                                <option>Select Gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                            </select>
+                            <div class="error-msg"></div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-6">
+                            <div class="form-group">
+                        <label for="dob">Date of Birth
+                            <sup>*</sup>
+                        </label>
+                        <div class='input-group dob' id='datetimepicker2'>
+                            <input type='text' class="form-control" placeholder="DOB"  validation="required"  name="DOB" id="dob" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                            <div class="error-msg"></div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="email">Email
+                                <sup>*</sup>
+                            </label>
+                            <input type="email" class="form-control" id="email" validation="email"   name="Email" placeholder="Email" aria-describedby="email">
+                            <div class="error-msg"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="mobile">Mobile
+                                <sup>*</sup>
+                            </label>
+                            <input type="text" class="form-control" id="mobile" validation="required" name="Mobile" placeholder="Mobile" aria-describedby="mobile">
+                            <div class="error-msg"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="landline">Landline</label>
+                            <input type="text" class="form-control" id="landline" placeholder="Landline" aria-describedby="landline">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="apply-for">Country
+                                <sup>*</sup>
+                            </label>
+                            <select class="csel" validation="select" name="Country" id="country">
+                                <option>Select Country</option>
+                                <option>India</option>
+                                <option>Australia</option>
+                                <option>Canada</option>
+                            </select>
+                            <div class="error-msg"></div>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="state">state
+                                <sup>*</sup>
+                            </label>
+                            <input type="text" class="form-control" id="state"  validation="required" name="state"  placeholder="State" aria-describedby="state">
+                            <div class="error-msg"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="landline">City
+                                <sup>*</sup>
+                            </label>
+                            <input type="City" class="form-control" id="City" placeholder="City" validation="required" name="city" aria-describedby="City">
+                            <div class="error-msg"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="area">Area/Location
+                                <sup>*</sup>
+                            </label>
+                            <textarea  id="area" validation="required" name="area"></textarea>
+                            <div class="limit">Character limit 100</div>
+                            <div class="error-msg"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field-section">
+                <!-- Educational Details -->
+                <h3>Educational Details</h3>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="apply-for">Graduation
+                                <sup>*</sup>
+                            </label>
+                            <select class="csel"  validation="select" name="graduation">
+                                <option>Science</option>
+                                <option>Art</option>
+                                <option>Commerce</option>
+                            </select>
+                            <div class="error-msg"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="apply-for">Current Studing Year
+                                <sup>*</sup>
+                            </label>
+                            <select class="csel" validation="select" name="current-year">
+                                <option>2019</option>
+                                <option>2018</option>
+                                <option>2017</option>
+                            </select>
+                            <div class="error-msg"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="specialization">Specialization<sup>*</sup></label>
+                            <textarea   id="area" placeholder="Area" validation="required" name="specialization"></textarea>
+                            <div class="note">Character limit 100</div>
+                            <div class="error-msg"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="apply-for">Year of Passing<sup>*</sup></label>
+                            <select class="csel" id="pass-year"  validation="select" name="specialization">
+                                <option>2019</option>
+                                <option>2018</option>
+                                <option>2017</option>
+                            </select>
+                            <div class="error-msg"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="university">University<sup>*</sup></label>
+                            <input type="text" class="form-control" id="university"  validation="required" name="university" placeholder="University" aria-describedby="university">
+                            <div class="error-msg"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="college">College/Institue
+                                <sup>*</sup>
+                            </label>
+                            <input type="text" class="form-control" id="college" validation="required" name="College" placeholder="College" aria-describedby="college">
+                            <div class="error-msg"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="post-graduation">Post Graduation</label>
+                            <select class="csel">
+                                <option>Science</option>
+                                <option>Art</option>
+                                <option>Commerce</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="current-year">Current Studing Year </label>
+                            <select class="csel">
+                                <option>2019</option>
+                                <option>2018</option>
+                                <option>2017</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="specialization">Specialization</label>
+                             <textarea id="area" placeholder="Area" ></textarea>
+                            <div class="note">Character limit 100</div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="apply-for">Year of Passing </label>
+                            <select class="csel">
+                                <option>2019</option>
+                                <option>2018</option>
+                                <option>2017</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="university">University</label>
+                            <input type="text" class="form-control" id="university" placeholder="University" aria-describedby="university">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="college">College/Institue </label>
+                            <input type="text" class="form-control" id="college" placeholder="College"  aria-describedby="college">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="field-section">
+                <!-- Professional Details -->
+                <h3>Professional Details</h3>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="skill">Key Skill</label>
+                            <textarea   id="skill" placeholder="Skil"  ></textarea>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="language">Known Language</label>
+                                    <select class="csel"  >
+                                        <option>Hindi</option>
+                                        <option>English</option>
+                                        <option>Others</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="language">&nbsp;</label>
+                                    <select class="csel">
+                                        <option>Hindi</option>
+                                        <option>English</option>
+                                        <option>Others</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="language">&nbsp;</label>
+                                    <select class="csel">
+                                        <option>Hindi</option>
+                                        <option>English</option>
+                                        <option>Others</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="language">Experience Details</label>
+                            <select class="csel">
+                                <option>Fresher</option>
+                                <option>Experience</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12">
+                        <div class="experience-details">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <label for="language">Work Experience</label>
+                                            <div class="form-group">
+                                                <label for="language">Year</label>
+                                                <select class="csel"  id="work-ex"  validation="select"  name="Year">
+                                                    <option>2019</option>
+                                                    <option>2018</option>
+                                                </select>
+                                                <div class="error-msg"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="language">&nbsp;</label>
+                                            <div class="form-group">
+                                                <label for="apply-for">Month
+                                                    <sup>*</sup>
+                                                </label>
+                                                <select class="csel"  validation="select" name="Year">
+                                                    <option>2019</option>
+                                                    <option>2018</option>
+                                                </select>
+                                                <div class="error-msg"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="current-employer">Current Employer
+                                <sup>*</sup>
+                            </label>
+                            <input type="text" class="form-control" id="current-employer"  validation="required" name="Employer" placeholder="Current Employer"   aria-describedby="current-employer">
+                            <div class="error-msg"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="designation">Current Designation
+                                <sup>*</sup>
+                            </label>
+                            <input type="text" class="form-control" id="designation" validation="required" name="Designation"  placeholder="Current Designation"  aria-describedby="designation">
+                            <div class="error-msg"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="designation">Current Salary (INR)
+                                <sup>*</sup>
+                            </label>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <select class="csel" validation="select" name="salary">
+                                            <option>1 Lakh</option>
+                                            <option>2 Lakh</option>
+                                            <option>3 Lakh</option>
+                                        </select>
+                                        <div class="error-msg"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-1">
+                                    <label>to</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <select class="csel" validation="select" name="salary">
+                                            <option>1 Lakh</option>
+                                            <option>2 Lakh</option>
+                                            <option>3 Lakh</option>
+                                        </select>
+                                        <div class="error-msg"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label>per annum </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="reason">Reason for change </label>
+                            <textarea    id="reason" validation="required" name="Reason" placeholder="Reason"></textarea>
+                            <div class="error-msg"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="designation">Expected Salary (INR)
+                                <sup>*</sup>
+                            </label>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <select class="csel" validation="select" name="ex-salary">
+                                            <option>1 Lakh</option>
+                                            <option>2 Lakh</option>
+                                            <option>3 Lakh</option>
+                                        </select>
+                                        <div class="error-msg"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-1">
+                                    <label>to</label>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <select class="csel" validation="select" name="ex-salary">
+                                            <option>1 Lakh</option>
+                                            <option>2 Lakh</option>
+                                            <option>3 Lakh</option>
+                                        </select>
+                                        <div class="error-msg"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label>per annum </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="reason">Are you scheduled to appear for any other interview of have recently appeared for an interview
+                                in last 2 months in other firm/company?
+                                <sup>*</sup>
+                            </label>
+                            <select class="csel" id="firm" validation="select" name="firm">
+                                <option>Select</option>
+                                <option>Experience</option>
+
+                            </select>
+                            <div class="error-msg"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="job-offer">Do you currently have or anticipation a job offer from any other firm/company?
+                                <sup>*</sup>
+                            </label>
+                            <select class="csel" id="job-offer" validation="select" name="job-offer">
+                                <option>Select</option>
+                                <option>Job offer</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for="resume">Select Reusme
+                                <sup>*</sup>
+                            </label>
+                            <input type="file" class="form-control"  id="resume" validation="select" name="resume" placeholder="Resume" aria-describedby="resume">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p align="center"><a href="javascript:void(0);" class="btn btn-primary GPformButtonSubmit">Submit</a></p>
+            </form>
+        </div>
+    </div>
+
+    </div>
+
+</section>
+
+{% include "app/templates/partials/footer.html" %} {% endblock %}

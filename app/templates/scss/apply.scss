@@ -1,0 +1,113 @@
+.apply-wraper{
+    padding:rem(0) 0 rem(50) 0;
+
+    .job-details .job-name{
+        width: 100%; float: left;
+    }
+    p{
+        padding-bottom: 0;
+    }
+    h3{color:$defaultBlue; margin-bottom:rem(10); padding-bottom:rem(10); border-bottom: solid $lightGray 2px; }
+
+    .field-section{
+        padding:rem(20) 0;
+    }
+}
+
+.form-style{
+    color:$black;
+
+    .field-section{
+        padding: 20px;
+        background:$lightGray;
+        margin-bottom: 30px;
+        box-shadow:0 3px 3px -3px rgba(0, 0, 0, 0.4);
+    }
+
+   .form-control {
+        background: transparent;
+        border:  0;
+        color:$black;
+        outline: none !important;
+        width: 100%;
+        border-bottom: solid #e6ebf1 2px;
+        height: 50px;
+        line-height: 45px;
+        padding: 0;
+        background: $whiteColor;
+
+        &.formError {
+            border-bottom: solid #cc0000 1px;
+            background: #ffe6e6;
+        }
+      }
+     .form-group{
+         margin-bottom: rem(20);
+         label{
+             font-weight:600; color:$grayColor; display:block; width: 100%;
+             margin-bottom: 0;
+         }
+         sup {
+            top: -0.2em;
+            color: #cc0000;
+        }
+        textarea{
+            border: none;
+            border-bottom: solid #e6ebf1 2px;
+            width:100%;
+            padding:rem(5);
+
+            &.formError {
+                border-bottom: solid #cc0000 1px;
+                background: #ffe6e6;
+            }
+
+        }
+     } 
+     #others{
+         display: none;
+     }
+    .stylish-select-right{
+        color:$black; border-color:#e6ebf1; 
+        font-family: 'DINProRegular';
+    }
+    .stylish-select-left{background:$whiteColor}
+    .input-group-addon{
+        
+        border:none;
+    }
+
+    .form-control, textarea{
+        &:focus{
+            outline: none;
+        }
+    }
+    .limit{
+        color:#999;
+    }
+
+    ::-webkit-input-placeholder { /* Edge */
+        color:#999;
+        opacity: 0.5;
+      }
+      
+      :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color:#999;
+        opacity: 0.5;
+      }
+      
+      ::placeholder {
+        color:#999;
+        opacity: 0.5;
+      }
+
+    .btn-primary{
+        color:$whiteColor;
+        box-shadow: none; background: $defaultBlue; font-size: rem(20);
+        display: inline-block;
+        color:$whiteColor; font-family: 'DINProRegular';
+        &:hover{
+            background:$activeColor;
+        }   
+    }
+}

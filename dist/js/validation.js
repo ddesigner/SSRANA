@@ -230,14 +230,14 @@ function formValidate(thisElement) {
 
 
 // AS-YOU-TYPE VALIDATION
-$(document).on('keyup', '.validateform input ', function () {
+$(document).on('keyup', '.validateform input, #apply input, #apply textarea ', function () {
 
     var thisElement = $(this);
     formValidate(thisElement);
     return false;
 });
 
-$(document).on('change', '.validateform select', function () {
+$(document).on('change', '.validateform select, #apply select', function () {
     var thisElement = $(this);
     formValidate(thisElement);
     return false;
