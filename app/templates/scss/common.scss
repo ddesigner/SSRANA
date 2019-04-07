@@ -217,7 +217,7 @@ a:focus{
                 color:$defaultBlue;
                 position: relative;
                 display: block;
-               
+                padding-left:rem(30);
         
         &:after, &:before {
           content: "";
@@ -225,10 +225,11 @@ a:focus{
           position: absolute;
           transition: all 0.5s ease-in-out;
           color: $arrow-color;
+          left:0;
         }
         &:before {
           top: 50%;
-          right: $arrow-size;
+          left:4px;
           width: $arrow-size;
           height: $arrow-size;
           transform-origin: 50% 50%;
@@ -594,3 +595,11 @@ a:focus{
 .formValid {  border: solid 1px #00D936 !important; background-color: #E3FBE9 !important;   color: #00D936 !important;}
 .form-group{position: relative;}
  
+
+body{
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+  perspective: 2px;
+}

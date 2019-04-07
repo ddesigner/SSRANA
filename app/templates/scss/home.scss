@@ -97,13 +97,13 @@
         width:100%;
         margin:0 0 rem(35) 0; 
         @media screen and (min-width:$ipad){
-            width:rem(375);
+            width:rem(358);
             margin:0 rem(25) 0 rem(25);   font-size: rem(30);
         }
 
         &:nth-child(2){
             @media screen and (min-width:$ipad){
-                width:rem(200);
+                width:rem(300);
                 
             }
         }
@@ -137,7 +137,7 @@
     text-align: center; padding: rem(30);
 
     @media screen and (min-width:$ipad){
-        padding:rem(100) rem(150);   
+        padding:rem(100) rem(150) rem(70) rem(150);   
     }
     h2{
         padding:0 0 rem(20) 0;
@@ -152,7 +152,22 @@
 
 .knowledge-wraper{
     padding:rem(0) rem(0) rem(0) rem(0);
-    background:#2f2f2f url(../images/knowledge-bg.jpg) no-repeat 0 0;
+     background:url(../images/knowledge-bg2.jpg) no-repeat 0 rem(340);
+     background-size: cover;
+    position: relative;  overflow: hidden;
+    &:after{
+        content: " ";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left:-5px;
+        transform: translateZ(-1px) scale(1.5);
+        background-size: 100%;
+        z-index: -1;
+        background:#2f2f2f url(../images/knowledge-bg.jpg) no-repeat -80px rem(-650);
+        background-size: cover;
+    }
     
     > .container{
         @media screen and (max-width:$ipad){

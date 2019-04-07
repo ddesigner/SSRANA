@@ -6458,16 +6458,18 @@ p {
       .inner-sub-link ul li a {
         color: #0c3a73;
         position: relative;
-        display: block; }
+        display: block;
+        padding-left: 1.875rem; }
         .inner-sub-link ul li a:after, .inner-sub-link ul li a:before {
           content: "";
           display: block;
           position: absolute;
           transition: all 0.5s ease-in-out;
-          color: #dbbb68; }
+          color: #dbbb68;
+          left: 0; }
         .inner-sub-link ul li a:before {
           top: 50%;
-          right: 10px;
+          left: 4px;
           width: 10px;
           height: 10px;
           transform-origin: 50% 50%;
@@ -6786,6 +6788,13 @@ p {
 
 .form-group {
   position: relative; }
+
+body {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+  perspective: 2px; }
 
 .logo {
   position: relative;
@@ -7423,12 +7432,12 @@ footer {
     margin: 0 0 2.1875rem 0; }
     @media screen and (min-width: 768px) {
       .services .search-section .select-wrap {
-        width: 23.4375rem;
+        width: 22.375rem;
         margin: 0 1.5625rem 0 1.5625rem;
         font-size: 1.875rem; } }
     @media screen and (min-width: 768px) {
       .services .search-section .select-wrap:nth-child(2) {
-        width: 12.5rem; } }
+        width: 18.75rem; } }
     .services .search-section .select-wrap select {
       background: none;
       border: none;
@@ -7461,7 +7470,7 @@ footer {
   padding: 1.875rem; }
   @media screen and (min-width: 768px) {
     .services .service-detail {
-      padding: 6.25rem 9.375rem; } }
+      padding: 6.25rem 9.375rem 4.375rem 9.375rem; } }
   .services .service-detail h2 {
     padding: 0 0 1.25rem 0; }
     @media screen and (min-width: 768px) {
@@ -7470,7 +7479,22 @@ footer {
 
 .knowledge-wraper {
   padding: 0rem 0rem 0rem 0rem;
-  background: #2f2f2f url(../images/knowledge-bg.jpg) no-repeat 0 0; }
+  background: url(../images/knowledge-bg2.jpg) no-repeat 0 21.25rem;
+  background-size: cover;
+  position: relative;
+  overflow: hidden; }
+  .knowledge-wraper:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: -5px;
+    transform: translateZ(-1px) scale(1.5);
+    background-size: 100%;
+    z-index: -1;
+    background: #2f2f2f url(../images/knowledge-bg.jpg) no-repeat -80px -40.625rem;
+    background-size: cover; }
   @media screen and (max-width: 768px) {
     .knowledge-wraper > .container {
       padding: 0; } }
