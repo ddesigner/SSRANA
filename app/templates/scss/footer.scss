@@ -4,10 +4,12 @@ footer{
     .award{
           padding:rem(22) 0 rem(20) 0;
         .img{
-            width: rem(78); height:rem(103); background: url(../images/awards.png) no-repeat 0 0;
-            background-size:cover;
+            width: rem(78); height:rem(103);
+             
             margin:0 rem(15); float: left;
-
+            img{
+                max-width: 100%;
+            }
             &:first-child(){
                 margin-left: 0
             }
@@ -62,14 +64,14 @@ footer{
     
     .certificate{
         padding:rem(22) 0 rem(20) 0;
-        width:100%;
+        
         float: right;
         @media screen and (min-width:$ipad){
-            width: 91.5%;     padding:rem(22) 0 rem(20) 0;
+              padding:rem(22) 0 rem(20) 0;
            }
       .img{
-          width: rem(165); height:rem(85); background: url(../images/iso-certificate.png) no-repeat -12px -6px;
-        
+          width: rem(165); height:rem(85);
+           
           margin:0 rem(2) rem(2) rem(2); float: left;
           @media screen and (min-width:$ipad){
             margin:0 rem(2);
@@ -194,10 +196,64 @@ footer{
             color:#e94757;
         }
     }
-    input{
-        border-radius: 0; border:none; border-bottom: solid $grayColor 1px; background: transparent;
-        color: $grayColor;
+   
+
+  
+    .form-group{
+        input{
+            border-radius: 0; border:none; border-bottom: solid $grayColor 1px; background: transparent;
+            color: $grayColor;
+            -webkit-appearance: none;
+            padding-left: 0; padding-right: 0;
+           &:focus+span {
+                background: none;
+                outline: none;
+                color: #0077FF;
+                top: -13px;
+            }
+    
+            &:focus+span+.border {
+                width: 100%;
+            }
+            &:not(:placeholder-shown)+span {
+                top: -13px;
+            }
+            &.formValid {
+                border:none !important;
+                border-bottom: solid 1px #00D936 !important;
+                background:none !important;
+                color: #00D936 !important;
+            }
+        }
+     
+        
+    .label {
+        position: absolute;
+        top: 11px;
+        left: 0;
+        font-size: 13px;
+        color: #9098A9;
+        font-weight: 500;
+        transform-origin: 0 0;
+        transition: all .2s ease;
+        sup{
+            color:#cc0000; top: -0.2em;
+        }
     }
+
+     .border {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 1px;
+        width: 0;
+        background: #0077FF;
+        transition: all .15s ease;
+    }
+   
+ 
+}
+    
     .stylish-select-right{border-bottom:solid $grayColor 1px; color: $grayColor; font-family: 'DINProRegular'}
     .btn-primary{
         box-shadow: none; background: $defaultBlue; font-size: rem(20);
