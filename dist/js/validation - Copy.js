@@ -37,7 +37,7 @@ $.fn.submitForm = function () {
                 $(this).addClass('formError');
                 errorCount++;
                 errorString += 'ERROR: ' + $(this).attr('name').toUpperCase() + ' - Required field missing. ';
-                $(this).parent().find('.error-msg').show().text($(this).attr('name').toUpperCase() + ' - Required field missing. ');
+                $(this).next('.error-msg').text($(this).attr('name').toUpperCase() + ' - Required field missing. ');
 
             }
 
@@ -51,7 +51,7 @@ $.fn.submitForm = function () {
                 $(this).addClass('formError');
                 errorCount++;
                 errorString += 'ERROR: ' + $(this).attr('name').toUpperCase() + ' - Required checkbox not checked. ';
-                $(this).parent().find('.error-msg').text($(this).attr('name').toUpperCase() + ' - Required checkbox not checked. ');
+                $(this).parent().next('.error-msg').text($(this).attr('name').toUpperCase() + ' - Required checkbox not checked. ');
 
             }
 
@@ -63,13 +63,13 @@ $.fn.submitForm = function () {
                     $(this).removeClass('formError');
                 }
                 else if ($(this).attr('name', 'Email').val() == '') {
-                    $(this).parent().find('.error-msg').show().text($(this).attr('name').toUpperCase() + ' - Required field missing');
+                    $(this).next('.error-msg').text($(this).attr('name').toUpperCase() + ' - Required field missing');
                 }
                 else {
                     $(this).addClass('formError');
                     errorCount++;
                     errorString += 'ERROR: ' + $(this).attr('name').toUpperCase() + ' - Email isn\'t valid. ';
-                    $(this).parent().find('.error-msg').show().text('Email isn\'t valid. ');
+                    $(this).next('.error-msg').text('Email isn\'t valid. ');
 
                 }
             }
@@ -79,10 +79,12 @@ $.fn.submitForm = function () {
             if ($(this).attr('validation').indexOf('phone') !== -1) {
                 if ($(this).val() == '') {
                     errorCount++;
-                    $(this).parent().find('.error-msg').show().text($(this).attr('name').toUpperCase() + ' - Required field missing');
+                    $(this).next('.error-msg').text($(this).attr('name').toUpperCase() + ' - Required field missing');
                 }
                 else {
-                   $(this).attr('maxlength', '10');
+
+
+                    $(this).attr('maxlength', '10');
                     $(this).val($(this).val().replace(/[^0-9.]/g, ''));
                     if ($(this).val().length < 10) {
                         $(this).addClass('formError');
@@ -99,22 +101,22 @@ $.fn.submitForm = function () {
 
 
 
-            if ($(this).attr('validation').indexOf('select') !== -1) {
-                if ($(this).prop('selectedIndex') == 0) {
-                    $(this).next('.error-msg').text($(this).attr('name').toUpperCase() + ' - Required field missing');
-                    $(this).next().find('.stylish-select-left').addClass('formError');
-                    $(this).next().find('.stylish-select-left').removeClass('formValid');
-                    errorCount++;
-                }
-                else {
-                    $(this).next().find('.stylish-select-left').removeClass('formError');
-                    $(this).next().find('.stylish-select-left').addClass('formValid');
-                }
-           }
+
+            if ($(this).prop('selectedIndex') == 0) {
+
+                $(this).next().find('.stylish-select-left').addClass('formError');
+                $(this).next().find('.stylish-select-left').removeClass('formValid');
+                errorCount++;
+            }
+            else {
+                $(this).next().find('.stylish-select-left').removeClass('formError');
+                $(this).next().find('.stylish-select-left').addClass('formValid');
+            }
+
 
 
         }
-      //      $(this).parent().find('.error-msg').show();
+        $(this).next('.error-msg').show();
     });
 
     // NO ERRORS...SUBMIT THE FORM
@@ -164,13 +166,13 @@ function formValidate(thisElement) {
         if (thisElement.attr('validation').indexOf('required') !== -1 && (thisElement.val() == '' || thisElement.checked == false || thisElement.index < 0)) {
             thisElement.addClass('formError');
             thisElement.removeClass('formValid');
-            thisElement.parent().find('.error-msg').text($(this).attr('name') + ' - Required field missing');
+            thisElement.next('.error-msg').text($(this).attr('name') + ' - Required field missing');
             errorCount++;
         } else {
             thisElement.next('.error-msg').text('');
             thisElement.addClass('formValid');
             thisElement.removeClass('formError');
-            thisElement.parent().find('.error-msg').hide();
+            thisElement.next('.error-msg').hide();
         }
 
         // EMAIL VALIDATION
@@ -180,13 +182,13 @@ function formValidate(thisElement) {
                 thisElement.removeClass('formError');
             }
             else if (thisElement.attr('validation').indexOf('required') !== -1 && (thisElement.val() == '')) {
-                thisElement.parent().find('.error-msg').text($(this).attr('name') + ' - Required field missing');
+                thisElement.next('.error-msg').text($(this).attr('name') + ' - Required field missing');
             }
             else {
 
                 thisElement.addClass('formError');
                 thisElement.removeClass('formValid');
-                thisElement.parent().find('.error-msg').show().text('Email isn\'t valid.');
+                thisElement.next('.error-msg').text('Email isn\'t valid.');
                 errorCount++;
 
             }
@@ -196,7 +198,7 @@ function formValidate(thisElement) {
         if (thisElement.attr('validation').indexOf('phone') !== -1) {
             thisElement.attr('maxlength', '10');
             thisElement.val(thisElement.val().replace(/[^0-9.]/g, ''));
-            thisElement.parent().find('.error-msg').show().text('Please enter valid phone no.');
+            thisElement.next('.error-msg').show().text('Please enter valid phone no.');
             if (thisElement.val().length < 10) {
                 thisElement.addClass('formError');
                 thisElement.removeClass('formValid');
@@ -210,13 +212,25 @@ function formValidate(thisElement) {
         }
 
 
-        
+        // EMAIL (CONFIRM) VALIDATION
+        if (thisElement.attr('validation').indexOf('emailconfirm') !== -1) {
+            if (thisElement.val() == document.getElementsByName('Email')[0].value) {
+                thisElement.removeClass('formError');
+                thisElement.addClass('formValid');
+
+            } else {
+
+                thisElement.addClass('formError');
+                thisElement.removeClass('formValid');
+                errorCount++
+            }
+        }
     }
 }
 
 
 // AS-YOU-TYPE VALIDATION
-$(document).on('keyup', '.validateform input, #apply input, #apply textarea, .globalSearch input ', function () {
+$(document).on('keyup', '.validateform input, #apply input, #apply textarea ', function () {
 
     var thisElement = $(this);
     formValidate(thisElement);

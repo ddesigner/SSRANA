@@ -557,33 +557,35 @@ a:focus{
 
 .error-msg, .invalidZipError {
     color: #cc0000;
-    font-size: 13px;
+    font-size: 11px;
     text-align: left !important;
-    top:110% !important;
+    top:116% !important;
     padding-bottom: 10px;
     position: absolute;
     background: #fff;
-    padding: 1rem;
+    padding:0.5rem;
     border-radius: 0.2rem;
     display:none;
-    box-shadow: 0 0 5px #000;
-    background: #fff;
-    z-index: 10;
+    background:#fce4e4;
+    border:1px solid #cc0000;
+    z-index:60;
+     
     &:before{
         content: "";
         width: 0;
         height: 0;
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
-        border-bottom: 10px solid #fff;
-        top: -10px;
+        border-bottom: 10px solid #cc0000;
+        top: 6px;
         position: absolute;
+        top: -11px;
        
     }
 }
 
 .formError {
-    // border: solid 1px #FF2626 !important;
+     border-bottom: solid 1px #cc0000 !important;
     // background-color: #FFE9E9 !important;
 }
 

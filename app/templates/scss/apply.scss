@@ -36,16 +36,13 @@
         padding: 0;
         background: $whiteColor;
 
-        &.formError {
-            border-bottom: solid #cc0000 1px;
-            background: #ffe6e6;
-        }
+        
       }
      .form-group{
          margin-bottom: rem(20);
          label{
              font-weight:600; color:$grayColor; display:block; width: 100%;
-             margin-bottom: 0;
+            
          }
          sup {
             top: -0.2em;
@@ -57,10 +54,7 @@
             width:100%;
             padding:rem(5);
 
-            &.formError {
-                border-bottom: solid #cc0000 1px;
-                background: #ffe6e6;
-            }
+            
 
         }
      } 
@@ -110,4 +104,8 @@
             background:$activeColor;
         }   
     }
+}
+
+div#ulfirm, #uljob-offer {
+    width:rem(300);
 }

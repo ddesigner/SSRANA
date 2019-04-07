@@ -6732,27 +6732,31 @@ p {
 
 .error-msg, .invalidZipError {
   color: #cc0000;
-  font-size: 13px;
+  font-size: 11px;
   text-align: left !important;
-  top: 110% !important;
+  top: 116% !important;
   padding-bottom: 10px;
   position: absolute;
   background: #fff;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 0.2rem;
   display: none;
-  box-shadow: 0 0 5px #000;
-  background: #fff;
-  z-index: 10; }
+  background: #fce4e4;
+  border: 1px solid #cc0000;
+  z-index: 60; }
   .error-msg:before, .invalidZipError:before {
     content: "";
     width: 0;
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 10px solid #fff;
-    top: -10px;
-    position: absolute; }
+    border-bottom: 10px solid #cc0000;
+    top: 6px;
+    position: absolute;
+    top: -11px; }
+
+.formError {
+  border-bottom: solid 1px #cc0000 !important; }
 
 .GPformBlackout {
   position: fixed;
@@ -6791,7 +6795,7 @@ p {
   background: #fff;
   height: 6.5625rem;
   box-shadow: 0 0 3px #ccc;
-  z-index: 50;
+  z-index: 150;
   position: fixed;
   width: 100%;
   top: 0; }
@@ -8012,17 +8016,13 @@ footer {
     line-height: 45px;
     padding: 0;
     background: #fff; }
-    .form-style .form-control.formError {
-      border-bottom: solid #cc0000 1px;
-      background: #ffe6e6; }
   .form-style .form-group {
     margin-bottom: 1.25rem; }
     .form-style .form-group label {
       font-weight: 600;
       color: #414141;
       display: block;
-      width: 100%;
-      margin-bottom: 0; }
+      width: 100%; }
     .form-style .form-group sup {
       top: -0.2em;
       color: #cc0000; }
@@ -8031,9 +8031,6 @@ footer {
       border-bottom: solid #e6ebf1 2px;
       width: 100%;
       padding: 0.3125rem; }
-      .form-style .form-group textarea.formError {
-        border-bottom: solid #cc0000 1px;
-        background: #ffe6e6; }
   .form-style #others {
     display: none; }
   .form-style .stylish-select-right {
@@ -8069,3 +8066,6 @@ footer {
     font-family: 'DINProRegular'; }
     .form-style .btn-primary:hover {
       background: #dbbb68; }
+
+div#ulfirm, #uljob-offer {
+  width: 18.75rem; }
