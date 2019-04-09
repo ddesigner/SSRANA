@@ -1,0 +1,245 @@
+/*!
+ * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
+ * Copyright 2011-2017 The Bootstrap Authors
+ * Copyright 2011-2017 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+.banner{height:auto;}
+.banner h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.75rem;
+  font-weight: normal;
+}
+
+
+.learn-more-br a:before {
+  content: '';
+  background: url(../images/sprite.png) no-repeat 0 0;
+  width: 21px;
+  height: 21px;
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  margin-right: 0.625rem;
+}
+
+
+.news-banner {
+  height: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  position: relative;
+  background-size: cover; }
+  .inner-banner .row {
+    height: 100%; }
+
+
+
+    .wp-block-gallery .blocks-gallery-image figcaption, .wp-block-gallery .blocks-gallery-item figcaption{
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      max-height: 100%;
+      overflow: auto;
+      padding: 40px 10px 5px;
+      color: #fff;
+      text-align: center;
+      font-size: 13px;
+      background: linear-gradient(0deg,rgba(0,0,0,.7),rgba(0,0,0,.3) 60%,transparent);
+    }
+
+    
+    #WPGalleryModal{z-index:55}
+
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+
+
+    /* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#WPGalleryModalCaption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #WPGalleryModalCaption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+
+
+.subscribe-bxinput {
+  border-radius: 0!important;
+  border: none!important;
+  border-bottom: solid #414141 1px!important;
+  background: transparent!important;
+  color: #414141!important;
+}
+
+
+.inner-sub-link ul li a{
+  padding-left:25px;
+}
+.inner-sub-link ul li a:before {
+  left: 2px;
+  right:unset;  
+}
+.inner-sub-link ul li a:after {
+  left: 0px;
+  right:unset;  
+}
+
+.inner-sub-link>div>div>div{
+text-align: center;
+}
+.inner-sub-link ul{
+  display: initial;
+  text-align: left;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.nav {
+  box-shadow: none;
+}
+
+
+.services .service-detail {
+  padding: 2.5rem 9.375rem;
+}
+p {
+  padding-bottom: 25px;
+}
+h2 {
+  padding-bottom: 25px;
+}
+.knowledge-wraper .knowledge-rt {
+  padding: 23.125rem 0 4.375rem 1.5rem;
+}
+.knowledge-rt .col-sm-4{
+  padding-left:1.5rem;
+}
+
+.inner-sub-link {
+  padding: .75rem 0;
+}
+.inner-sub-link ul li {
+  margin: 0px 19px;
+  width: auto;
+}
+
+.corporate-law .corporte-detail .bx .icon-set {
+  margin-bottom: 1.125rem;
+}
+.services .search-section .select-wrap {
+  width: 27.7375rem;
+  font-size:2.375rem;
+}
+.services .search-section .select-wrap:nth-child(2) {
+  width: 13.5rem;
+}
+.select-wrap{
+  font-size:2.375rem;
+}
+.learn-more-br {
+  font-size: 0.975rem;
+  margin-top: 35px;
+  display: block;
+}
+.knowledge-wraper .knowledge-rt p {
+   min-height: 50px; 
+  padding-bottom: 1.0rem;
+}
+
+.inner-banner h2 {
+  font-size: 1.3125rem;
+}
+.inner-banner h1 {
+  font-family: 'DINProBold', serif;
+}
+
+.leadership {
+  padding: 4.25rem 9.375rem;
+}
+
+ 
+
+.banner-overlay {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0.5;
+}
