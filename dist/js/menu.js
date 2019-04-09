@@ -10,6 +10,7 @@ var cbpHorizontalMenu = (function() {
         $listItems.on('mouseover', function(event) {
             event.stopPropagation();
         });
+       // $listItems.on('mouseout', close);
     }
   
     function open(event) {
@@ -33,6 +34,8 @@ var cbpHorizontalMenu = (function() {
             
             current = idx;
             $body.off('click').on('click', close);
+            $body.off('mouseover').on('mouseover', close);
+
         }
 
         return false;
