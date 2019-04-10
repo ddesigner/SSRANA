@@ -6413,7 +6413,7 @@ p {
     transform: translate(0.5em, -0.5px); }
 
 .inner-banner {
-  height: 29rem;
+  height: 25rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6421,6 +6421,9 @@ p {
   background-position: 0 0;
   position: relative;
   background-size: cover; }
+  @media screen and (min-width: 768px) {
+    .inner-banner {
+      height: 29rem; } }
   .inner-banner .row {
     height: 100%; }
   .inner-banner h1 {
@@ -6429,7 +6432,11 @@ p {
     font-weight: 700;
     color: #fff;
     position: relative;
-    z-index: 5; }
+    z-index: 5;
+    padding-left: 2rem; }
+    @media screen and (min-width: 768px) {
+      .inner-banner h1 {
+        padding-left: 0; } }
   .inner-banner h2 {
     font-family: 'DINProBold', serif;
     font-size: 0.8125rem;
@@ -6847,6 +6854,10 @@ p {
   .close.fat::before, .close.fat::after {
     border-radius: 100%; }
 
+@media screen and (max-width: 767px) {
+  .container {
+    width: 100%; } }
+
 .logo {
   position: relative;
   top: 0.5rem; }
@@ -7194,15 +7205,19 @@ p {
 footer {
   position: relative; }
   footer .footer-spacer {
-    height: 9.0625rem;
+    height: 10rem;
     background: #0c3a73;
     width: 100%;
     position: absolute; }
+    @media screen and (min-width: 768px) {
+      footer .footer-spacer {
+        height: 9.0625rem; } }
+  footer .d-block {
+    padding: 0; }
   footer .award {
     padding: 1.375rem 0 1.25rem 0; }
     footer .award .img {
       width: 4.875rem;
-      height: 6.4375rem;
       margin: 0 0.9375rem;
       float: left; }
       footer .award .img img {
@@ -7224,7 +7239,10 @@ footer {
       footer .award .img:nth-child(7) {
         background-position: -656px 0; }
   footer .footer-link {
-    padding: 3.4375rem 0; }
+    padding: 1.25rem 0; }
+    @media screen and (min-width: 768px) {
+      footer .footer-link {
+        padding: 3.4375rem 0; } }
     footer .footer-link h3 {
       font-family: 'DINProMedium', serif;
       font-size: 0.875rem;
@@ -7275,9 +7293,6 @@ footer {
         background-position: -546px 0; }
       footer .certificate .img:nth-child(7) {
         background-position: -656px 0; }
-  @media screen and (max-width: 767px) {
-    footer .connect-bx {
-      padding-top: 1.25rem; } }
   footer .connect-bx h3 {
     font-family: 'DINProMedium', serif;
     font-size: 0.875rem;
@@ -7342,10 +7357,20 @@ footer {
     footer .disclaimer p {
       padding-bottom: 0; }
 
+.award-bg {
+  background: #0c3a73; }
+  @media screen and (min-width: 768px) {
+    .award-bg {
+      background: none; } }
+
 .subscribe-bx {
   background: #f6f6f6;
   box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.2);
-  padding: 1.875rem 2.8125rem; }
+  padding: 1.875rem 2.8125rem;
+  margin-bottom: 1.25rem; }
+  @media screen and (min-width: 768px) {
+    .subscribe-bx {
+      margin-bottom: 0; } }
   .subscribe-bx h3 {
     font-family: 'DINProBold',serif;
     font-size: 14px;
@@ -7582,13 +7607,21 @@ footer {
   overflow: hidden; }
   .knowledge-wraper .parallax-img {
     width: 100%;
-    height: 275px;
-    background: #2f2f2f url(../images/knowledge-bg.jpg) no-repeat 0px -45.5rem;
+    height: 11.875rem;
+    background: #2f2f2f url(../images/knowledge-bg.jpg) no-repeat 0px bottom;
     background-size: cover;
-    position: absolute;
-    top: 1.875rem; }
+    position: relative;
+    z-index: 1; }
+    @media screen and (min-width: 768px) {
+      .knowledge-wraper .parallax-img {
+        background-position: 0px -45.5rem;
+        position: absolute;
+        top: 1.875rem; } }
     .knowledge-wraper .parallax-img .overlay {
       background: rgba(0, 0, 0, 0.2); }
+      @media screen and (min-width: 768px) {
+        .knowledge-wraper .parallax-img .overlay {
+          height: 17.1875rem; } }
   @media screen and (max-width: 768px) {
     .knowledge-wraper > .container {
       padding: 0; } }
@@ -7598,7 +7631,8 @@ footer {
     padding: 4.375rem 2.5rem;
     box-shadow: 5px 5px 3px 0 rgba(0, 0, 0, 0.4);
     position: relative;
-    padding: 1.875rem 1.5625rem; }
+    padding: 1.875rem 1.5625rem;
+    z-index: 2; }
     @media screen and (min-width: 768px) {
       .knowledge-wraper .knowledge-lt {
         position: relative;
@@ -7738,10 +7772,10 @@ footer {
       padding-top: 1.875rem; } }
   .leadership .row > .col-sm-12 > .row {
     display: flex; }
-  .leadership .row > .col-sm-12 > .row .col-sm-4 {
+  .leadership .row > .col-sm-12 > .row .col-md-4 {
     margin-bottom: 1.25rem; }
     @media screen and (min-width: 768px) {
-      .leadership .row > .col-sm-12 > .row .col-sm-4 {
+      .leadership .row > .col-sm-12 > .row .col-md-4 {
         margin-bottom: 3.125rem; } }
   .leadership .bx {
     border: solid #ededed 1px;
@@ -7970,14 +8004,22 @@ footer {
 
 .contact-wrap {
   padding: 0; }
+  .contact-wrap .d-block {
+    padding: 0; }
   .contact-wrap address {
-    padding-bottom: 6.125rem; }
+    padding-top: 1.25rem; }
+    @media screen and (min-width: 768px) {
+      .contact-wrap address {
+        padding-top: 6.125rem; } }
     .contact-wrap address h3 {
       font-family: 'DINProMedium', serif;
       color: #000;
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       margin: 0;
       padding: 0 0 0.625rem 0; }
+      @media screen and (min-width: 768px) {
+        .contact-wrap address h3 {
+          font-size: 1.5rem; } }
     .contact-wrap address p {
       font-family: 'DINProLight', serif;
       font-size: 1.125rem;
@@ -8001,26 +8043,41 @@ footer {
         color: #dbbb68; }
 
 .register-office {
-  background: #0c3a73; }
-  .register-office address {
-    padding-top: 6.125rem; }
-    .register-office address h3 {
-      color: #fff;
-      font-size: 1.875rem; }
-    .register-office address p {
-      color: #fff; }
+  background: #0c3a73;
+  padding-bottom: 1.875rem; }
+  @media screen and (min-width: 768px) {
+    .register-office {
+      padding-bottom: 0; } }
+  .register-office address h3 {
+    color: #fff;
+    font-size: 1.25rem; }
+    @media screen and (min-width: 768px) {
+      .register-office address h3 {
+        font-size: 1.875rem; } }
+  .register-office address p {
+    color: #fff; }
   .register-office .subscribe-bx {
     padding: 1.875rem 2.375rem;
-    position: relative;
-    top: -4.875rem; }
+    position: relative; }
+    @media screen and (min-width: 768px) {
+      .register-office .subscribe-bx {
+        padding: 1.875rem 2.375rem;
+        top: -4.875rem; } }
 
 .other-offices {
-  padding: 2.8125rem 0; }
+  padding: 1.25rem 0; }
+  @media screen and (min-width: 768px) {
+    .other-offices {
+      padding: 2.8125rem 0; } }
   .other-offices h2 {
     font-family: 'DINProMedium', serif;
-    font-size: 1.875rem;
+    font-size: 1.5rem;
     color: #0c3a73;
-    padding-bottom: 2.8125rem; }
+    padding-bottom: 0rem; }
+    @media screen and (min-width: 768px) {
+      .other-offices h2 {
+        padding-bottom: 2.8125rem;
+        font-size: 1.875rem; } }
   .other-offices address h3 {
     color: #0c3a73; }
   .other-offices address p span {

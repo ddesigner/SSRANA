@@ -184,19 +184,28 @@ a:focus{
       
 //Inner banner
 .inner-banner{
-    height:rem(464);
+    height:rem(400);
     display: flex;
-      justify-content: center;
+    justify-content: center;
     align-items: center; 
-        background-repeat:no-repeat; background-position: 0 0;
-        position: relative;
+    background-repeat:no-repeat; background-position: 0 0;
+    position: relative;
     background-size: cover;
+
+      @media screen and (min-width:$ipad){
+        height:rem(464);
+        }
+
     .row{
         height: 100%;
     }
     h1{
         font-family: 'Playfair Display', serif;
         font-size:rem(60); font-weight: 700; color: $whiteColor; position: relative; z-index: 5;
+        padding-left:2rem;
+        @media screen and (min-width:$ipad){
+           padding-left:0;
+        }
     }
 
     h2{
@@ -675,5 +684,12 @@ a:focus{
       &::before, &::after {
         border-radius: 100%;
       }
+    }
+  }
+
+
+  .container{
+    @media screen and (max-width:$mobileEnd) {
+        width: 100%;
     }
   }

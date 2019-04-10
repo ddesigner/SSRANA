@@ -1,17 +1,26 @@
 footer{
     position: relative;
-    .footer-spacer{height:rem(145); background: $defaultBlue; width:100%; position: absolute;}
+    .footer-spacer{
+        height:rem(160); background: $defaultBlue; width:100%; position: absolute;
+        @media screen and (min-width:$ipad){
+            height:rem(145); 
+        }
+     }
+     .d-block{
+         padding:0;
+     }
     .award{
           padding:rem(22) 0 rem(20) 0;
         .img{
-            width: rem(78); height:rem(103);
+            width: rem(78);
+             
              
             margin:0 rem(15); float: left;
             img{
                 max-width: 100%;
             }
             &:first-child(){
-                margin-left: 0
+                margin-left:0
             }
             
             &:last-child(){
@@ -39,7 +48,10 @@ footer{
     }
 
     .footer-link{
-        padding:rem(55) 0;
+        padding:rem(20) 0;
+        @media screen and (min-width:$ipad){
+            padding:rem(55) 0;
+        }
         h3{
             font-family: 'DINProMedium', serif; font-size:rem(14); color:#2f2f2f; 
             padding-bottom:0; 
@@ -105,9 +117,7 @@ footer{
   }
 
   .connect-bx{
-    @media screen and (max-width:$mobileEnd){
-        padding-top: rem(20);
-       }
+    
     h3{
         font-family: 'DINProMedium', serif; font-size:rem(14); color:$grayColor; 
         padding-bottom:0; text-transform: uppercase;
@@ -177,10 +187,22 @@ footer{
   }
 }
 
+.award-bg{
+    background:$defaultBlue;
+    @media screen and (min-width:$ipad){
+        background:none;
+
+    }
+}
+
 .subscribe-bx{
     background:$subscriptbxBg; box-shadow:4px 4px 4px 0 rgba(0, 0, 0, 0.2);
-    padding:rem(30) rem(45);
+    padding:rem(30) rem(45); margin-bottom: rem(20);
+    @media screen and (min-width:$ipad){
+        margin-bottom: 0;
 
+    }
+   
     h3{
         font-family: 'DINProBold',serif; font-size: 14px;
          text-transform: uppercase; margin:0; padding: 0;
