@@ -42,18 +42,9 @@
 			text-transform: uppercase;
 			position: relative;
 			font-family: 'DINProBold';
-			&:after{
-				width: 0;
-				height: 0;
-				border-left:5px solid transparent;
-				border-right:5px solid transparent;
-				content: '';
-				border-top:5px solid $defaultBlue;
-				position: absolute;
-				right: 0;
-				top: 48%;
-			 
-		   }
+			
+
+		   
 			&:hover{
 				color: $activeColor ;
 				text-decoration: none;
@@ -61,6 +52,22 @@
 	   }
 		ul > li {
 			display: inline-block; position: relative;
+			&.has-dropmenu{
+				>a{
+				&:after{
+					width: 0;
+					height: 0;
+					border-left:5px solid transparent;
+					border-right:5px solid transparent;
+					content: '';
+					border-top:5px solid $defaultBlue;
+					position: absolute;
+					right: 0;
+					top: 48%;
+				 
+			   }
+			}
+			  }
 			&:after{
 				content: "";
 				border-bottom:solid $activeColor 4px;
@@ -187,7 +194,7 @@
 					width: 30px;
 					height:79px;
 					position: absolute;
-					right: 64px;
+					right: 63px;
 					z-index: 1;
 					top: 28px;	
 					
@@ -201,6 +208,23 @@
 					 position: relative;
 					 z-index: 10;
 					}
+					// .close{
+					// 	display:block;
+					// }
+			   }
+			   .close{
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				top: 39px;
+				z-index: 30;
+				background:#003666;
+				opacity: 1;
+				box-shadow: none;
+				display:none;
+				&:after, &:before{
+					background:$activeColor;
+				}
 			   }
 		   }
 			&.user{
