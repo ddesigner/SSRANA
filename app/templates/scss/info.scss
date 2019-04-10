@@ -22,14 +22,48 @@
     h3{
         color:#325989; font-size: rem(33);
     }
-    .accordion{
-        > ul  
-        > li {
-            border-bottom: solid #e6ebf1 4px;
-            > a{
-                background: $whiteColor; text-transform: inherit; font-size: rem(17);
+     
+        ul{
+             margin: 0 0 rem(30) rem(20);
+            padding: 0rem 0;
+            li{
+                font-size: rem(18); line-height:rem(26); list-style: none; color:$gray;
+                &:before{
+                    content: "\2022";  
+                    color: $activeColor; 
+                    font-weight: bold;  
+                    display: inline-block;  
+                    width: 1em;  
+                    margin-left: -1em;  
+                    font-size:1.2rem;
+                    position: relative;
+                    top:2px;
+                }
+                a{
+                    color:$defaultBlue;
+         
+                }
+                
             }
         }
+        
+    .accordion{
+        > ul  {
+            margin:0;
+            > li {
+                border-bottom: solid #e6ebf1 4px;
+                &:before{
+                    display:none;
+                }
+                > a{
+                    background: $whiteColor; text-transform: inherit; font-size: rem(17);
+                    &:before{
+                        display:none;
+                    }
+                }
+            }
+        }
+       
        p{
            padding:rem(20);
        }
@@ -42,3 +76,23 @@
   
 }
 
+.current_page_item > a, h3.current_page_item {
+    background:$defaultBlue!important;
+    color:$whiteColor!important;
+
+}
+
+.current_page_item > a{
+    i{
+        &:before, &:after{
+            background:$whiteColor!important;
+        }
+    }
+
+}
+
+.accordion div .current_page_item a{
+
+    color:$activeColor!important;
+    background:none!important;
+}
