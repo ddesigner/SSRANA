@@ -352,7 +352,7 @@
 		margin:0px;
 		padding: 0;
 		border: 0;
-		border-bottom: 1px solid $activeColor;
+		border-bottom: 1px solid $activeColor; display:flex;
 		li{
 			display: inline-block;
 			vertical-align: middle;
@@ -364,7 +364,7 @@
 			   }
 		   }
 			&.searchInput {
-				width:96%;
+				width:95%;
 				padding:1rem 1rem 0.5rem 1rem;
 				input{
 					background: none;
@@ -376,6 +376,8 @@
 						outline: none;
 				   }
 			   }
+
+			  
 		   }
 	   }
    }
@@ -385,6 +387,16 @@
 	a#headersearch {
 		font-size: 30px;
 		color: #fff;
+		background: url(../images/sprite.png) no-repeat -382px -9px;
+		width:32px;
+		height:30px;
+		display:inline-block;
+		top: 20px;
+		 position: relative;
+		 transition:none;
+		 &:hover{
+			background-position:-342px -9px;
+		 }
    }
 }
 

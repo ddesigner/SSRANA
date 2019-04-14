@@ -6235,7 +6235,7 @@ ul.listing li:hover {
     cursor: pointer; }
 
 body {
-  font-size: 1rem !important;
+  font-size: 16px;
   font-family: 'DINProRegular'; }
 
 html {
@@ -6368,13 +6368,14 @@ p {
 
 .screenDivider {
   width: 2px;
-  height: 70px;
+  height: 40px;
   background-color: #dbbb68;
   margin: 0 auto;
   display: none; }
   @media screen and (min-width: 768px) {
     .screenDivider {
-      display: block; } }
+      display: block;
+      height: 70px; } }
 
 .screenDivider-hr {
   background-color: #dbbb68;
@@ -6413,7 +6414,7 @@ p {
     transform: translate(0.5em, -0.5px); }
 
 .inner-banner {
-  height: 25rem;
+  height: 18.75rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6428,7 +6429,7 @@ p {
     height: 100%; }
   .inner-banner h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 3.75rem;
+    font-size: 2.0625rem;
     font-weight: 700;
     color: #fff;
     position: relative;
@@ -6436,7 +6437,8 @@ p {
     padding-left: 2rem; }
     @media screen and (min-width: 768px) {
       .inner-banner h1 {
-        padding-left: 0; } }
+        padding-left: 0;
+        font-size: 3.75rem; } }
   .inner-banner h2 {
     font-family: 'DINProBold', serif;
     font-size: 0.8125rem;
@@ -6444,29 +6446,41 @@ p {
     margin: 0;
     padding: 0;
     position: relative;
-    z-index: 5; }
+    z-index: 5;
+    padding-left: 2rem; }
+    @media screen and (min-width: 768px) {
+      .inner-banner h2 {
+        padding-left: 0; } }
 
 .inner-sub-link {
   background: #f8f8f8;
   padding: 1.25rem 0; }
   .inner-sub-link ul {
     margin: 0;
-    padding: 0;
+    padding: 0 5px;
     list-style: none; }
+    @media screen and (min-width: 548px) {
+      .inner-sub-link ul {
+        margin: 0;
+        padding: 0; } }
     .inner-sub-link ul li {
-      display: inline-block;
-      width: 19.5%;
       box-sizing: border-box;
       position: relative;
       padding: 0.625rem 0;
       font-family: 'DINProBold',serif;
       font-size: 0.8125rem;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      display: block; }
+      @media screen and (min-width: 548px) {
+        .inner-sub-link ul li {
+          width: auto;
+          display: inline-block;
+          padding: 0.625rem 0.625rem 0.625rem 0rem; } }
       .inner-sub-link ul li a {
         color: #0c3a73;
         position: relative;
         display: block;
-        padding-left: 1.875rem; }
+        padding-left: 1.25rem; }
         .inner-sub-link ul li a:after, .inner-sub-link ul li a:before {
           content: "";
           display: block;
@@ -6500,12 +6514,22 @@ p {
         content: "";
         border-bottom: solid #dbbb68 4px;
         position: absolute;
-        bottom: -5px;
-        width: 100%;
-        transition: all 0.5s ease-in-out; }
+        transition: all 0.5s ease-in-out;
+        bottom: -1px;
+        width: 50%;
+        left: 1.25rem; }
+        @media screen and (min-width: 548px) {
+          .inner-sub-link ul li.active:after, .inner-sub-link ul li.current_page_ancestor:after {
+            bottom: -5px;
+            width: 100%;
+            left: 0; } }
 
 .accordion {
-  font-family: 'DINProMedium', serif; }
+  font-family: 'DINProMedium', serif;
+  padding: 0 0.625rem; }
+  @media screen and (min-width: 768px) {
+    .accordion {
+      padding: 0; } }
   .accordion > ul {
     margin: 0;
     padding: 0;
@@ -6615,39 +6639,71 @@ p {
 .page-search {
   background: #0c3a73;
   width: 100%;
-  display: flex;
   padding: 2rem;
   box-shadow: 5px 5px 3px 0 rgba(0, 0, 0, 0.4);
   position: relative;
-  margin-top: -4rem; }
+  text-align: center; }
+  @media screen and (min-width: 548px) {
+    .page-search {
+      display: flex; } }
+  @media screen and (min-width: 768px) {
+    .page-search {
+      display: flex;
+      margin-top: -4rem; } }
+  @media screen and (max-width: 548px) {
+    .page-search .btn-primary {
+      display: inline-block;
+      width: 100%;
+      margin-top: 2.5rem; } }
   .page-search input[type=text] {
     background: none;
     border: 0;
     width: 100%;
     color: #fff;
     font-size: 26px;
-    padding: 1rem 0rem 0.5rem 0rem;
+    padding: 0rem 0rem 0.5rem 0rem;
     border-bottom: solid #dbbb68 2px;
     margin-right: 2rem; }
+    @media screen and (min-width: 548px) {
+      .page-search input[type=text] {
+        padding: 1rem 0rem 0.5rem 0rem; } }
     .page-search input[type=text]:focus {
       outline: none; }
     .page-search input[type=text]::placeholder {
       color: #fff; }
   .page-search .filter-btn {
-    background: url(../images/sprite.png) no-repeat -412px 51px;
-    display: inline-block;
+    background: url(../images/sprite.png) no-repeat -408px 43px;
+    position: absolute;
+    top: 85px;
+    right: 0;
+    z-index: 90;
+    height: 117px;
     width: 111px; }
+    @media screen and (min-width: 548px) {
+      .page-search .filter-btn {
+        background: url(../images/sprite.png) no-repeat -412px 51px;
+        display: inline-block;
+        width: 111px;
+        position: inherit;
+        top: inherit;
+        right: inherit;
+        height: inherit; } }
     .page-search .filter-btn.open {
       background-color: #04254e; }
 
 .filter {
   background: #04254e;
   padding: 2rem;
-  position: absolute;
-  width: 97.6%;
+  position: relative;
+  width: 100%;
   z-index: 100;
   box-shadow: 5px 5px 3px 0 rgba(0, 0, 0, 0.4);
-  display: none; }
+  display: none;
+  top: -2px; }
+  @media screen and (min-width: 768px) {
+    .filter {
+      width: 97.6%;
+      top: 0; } }
   .filter .stylish-select-right {
     font-size: 0.8125rem;
     font-family: 'DINProBold', serif;
@@ -6685,13 +6741,20 @@ p {
   text-transform: uppercase;
   text-transform: uppercase;
   display: inline-block;
-  padding: 1.5rem 0 1rem 0;
+  padding: 1.5rem 0.625rem 1rem 0.625rem;
   width: 100%; }
+  @media screen and (min-width: 768px) {
+    .sort-wrap {
+      padding: 1.5rem 0 1rem 0; } }
   .sort-wrap .total-result, .sort-wrap .stylish-select-right {
     color: #414141;
     float: left; }
   .sort-wrap .total-result {
     padding: 1rem 3rem 1rem 0; }
+    @media screen and (max-width: 767px) {
+      .sort-wrap .total-result {
+        display: block;
+        width: 100%; } }
   .sort-wrap .sort-by {
     width: 10rem;
     float: right; }
@@ -6699,6 +6762,11 @@ p {
       width: 38%;
       float: left;
       padding: 1rem 0; }
+      @media screen and (max-width: 767px) {
+        .sort-wrap .sort-by span {
+          display: block;
+          padding: 1rem 0 0rem 0;
+          width: 100%; } }
     .sort-wrap .sort-by .main {
       width: 60%;
       text-transform: uppercase;
@@ -7137,7 +7205,8 @@ p {
     margin: 0px;
     padding: 0;
     border: 0;
-    border-bottom: 1px solid #dbbb68; }
+    border-bottom: 1px solid #dbbb68;
+    display: flex; }
     .searchContainer ul li {
       display: inline-block;
       vertical-align: middle; }
@@ -7145,7 +7214,7 @@ p {
         font-size: 30px;
         color: #fff; }
       .searchContainer ul li.searchInput {
-        width: 96%;
+        width: 95%;
         padding: 1rem 1rem 0.5rem 1rem; }
         .searchContainer ul li.searchInput input {
           background: none;
@@ -7159,7 +7228,16 @@ p {
     display: block; }
   .searchContainer a#headersearch {
     font-size: 30px;
-    color: #fff; }
+    color: #fff;
+    background: url(../images/sprite.png) no-repeat -382px -9px;
+    width: 32px;
+    height: 30px;
+    display: inline-block;
+    top: 20px;
+    position: relative;
+    transition: none; }
+    .searchContainer a#headersearch:hover {
+      background-position: -342px -9px; }
 
 * {
   margin: 0;
@@ -7568,8 +7646,20 @@ footer {
       opacity: 0.3; }
 
 @media screen and (max-width: 767px) {
-  .services .container {
+  .services .container:first-child {
     padding: 0; } }
+
+@media screen and (max-width: 767px) {
+  .services .container:first-child .row {
+    margin: 0; } }
+
+@media screen and (max-width: 767px) {
+  .services .container:first-child .col-sm-12 {
+    padding: 0; } }
+
+@media screen and (max-width: 768px) {
+  .services .screenDivider {
+    display: block; } }
 
 .services form {
   position: relative; }
@@ -7666,8 +7756,14 @@ footer {
       @media screen and (min-width: 768px) {
         .knowledge-wraper .parallax-img .overlay {
           height: 17.1875rem; } }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     .knowledge-wraper > .container {
+      padding: 0; } }
+  @media screen and (max-width: 767px) {
+    .knowledge-wraper > .container .row {
+      margin: 0; } }
+  @media screen and (max-width: 767px) {
+    .knowledge-wraper > .container .col-sm-12 {
       padding: 0; } }
   .knowledge-wraper .knowledge-lt {
     color: #fff;
@@ -7795,11 +7891,13 @@ footer {
 
 .leadership {
   text-align: center;
-  padding: 1.875rem 0;
-  position: relative; }
+  padding: 1.875rem 0.625rem;
+  position: relative;
+  border-top: solid #f6f6f6 5px; }
   @media screen and (min-width: 768px) {
     .leadership {
-      padding: 6.25rem 9.375rem; } }
+      padding: 6.25rem 9.375rem;
+      border: none; } }
   .leadership p {
     padding: 0rem 0rem 2.5rem 0rem; }
     @media screen and (min-width: 768px) {
@@ -7807,10 +7905,14 @@ footer {
         padding: 0rem 3.125rem 2.5rem 3.125rem; } }
   .leadership .screenDivider {
     position: absolute;
-    top: -1.875rem;
     left: 0;
     right: 0;
-    display: block; }
+    display: block;
+    top: -5px; }
+    @media screen and (min-width: 768px) {
+      .leadership .screenDivider {
+        top: -1.875rem;
+        top: 0; } }
   @media screen and (max-width: 767px) {
     .leadership h2 {
       padding-top: 1.875rem; } }
@@ -7854,25 +7956,45 @@ footer {
     text-decoration: none; }
     .leadership a:hover .bx {
       box-shadow: inset 0 0 0 4px #dbbb68; }
-  .leadership .large p {
-    font-size: 2.5rem;
-    line-height: 1; }
+  @media screen and (min-width: 768px) {
+    .leadership .large p {
+      font-size: 2.5rem;
+      line-height: 1; } }
 
 .corporate-wraper .leadership .screenDivider {
-  top: 0; }
+  top: -5px; }
+  @media screen and (min-width: 768px) {
+    .corporate-wraper .leadership .screenDivider {
+      top: 0; } }
 
 .corporate-law {
   background: #0c3a73;
-  color: #fff; }
+  color: #fff;
+  padding: 0rem 0.625rem 3.125rem 0.625rem; }
+  @media screen and (min-width: 768px) {
+    .corporate-law {
+      padding: 0; } }
+  .corporate-law .screenDivider {
+    display: block; }
+    @media screen and (min-width: 768px) {
+      .corporate-law .screenDivider {
+        display: none; } }
   .corporate-law .corporate-tp {
-    width: 80%;
+    width: 100%;
     margin: auto;
     text-align: center;
     padding: 1.875rem 0; }
+    @media screen and (min-width: 768px) {
+      .corporate-law .corporate-tp {
+        height: 29rem;
+        width: 80%; } }
     .corporate-law .corporate-tp h3, .corporate-law .corporate-tp p {
       color: #fff; }
   .corporate-law .corporte-detail .bx {
-    padding-bottom: 5.625rem; }
+    padding-bottom: 1.25rem; }
+    @media screen and (min-width: 768px) {
+      .corporate-law .corporte-detail .bx {
+        padding-bottom: 5.625rem; } }
     .corporate-law .corporte-detail .bx h3, .corporate-law .corporte-detail .bx p {
       color: #fff; }
     .corporate-law .corporte-detail .bx h3 {
@@ -7889,7 +8011,6 @@ footer {
         .corporate-law .corporte-detail .bx .icon-set {
           margin-bottom: 3.125rem; } }
       .corporate-law .corporte-detail .bx .icon-set .screenDivider-hr {
-        position: absolute;
         position: absolute;
         right: 0;
         top: 50%; }
@@ -7940,12 +8061,19 @@ footer {
           padding-bottom: 0; } }
 
 .info-wrap {
-  padding: 3.125rem; }
+  padding: 3.125rem 0.625rem; }
+  @media screen and (min-width: 768px) {
+    .info-wrap {
+      padding: 3.125rem; } }
 
 .info-lt {
   font-family: 'DINProMedium', serif;
   font-size: 0.8125rem;
-  color: #0c3a73; }
+  color: #0c3a73;
+  display: none; }
+  @media screen and (min-width: 768px) {
+    .info-lt {
+      display: block; } }
   .info-lt h3 {
     background: #0c3a73;
     color: #fff;
@@ -7961,7 +8089,11 @@ footer {
 
 .info-rt h3 {
   color: #325989;
-  font-size: 2.0625rem; }
+  font-size: 1.5rem;
+  text-align: center; }
+  @media screen and (min-width: 768px) {
+    .info-rt h3 {
+      font-size: 2.0625rem; } }
 
 .info-rt ul {
   margin: 0 0 1.875rem 1.25rem;
@@ -8016,6 +8148,18 @@ footer {
   color: #dbbb68 !important;
   background: none !important; }
 
+@media screen and (max-width: 767px) {
+  .faq-wraper .container:first-child {
+    padding: 0; } }
+
+@media screen and (max-width: 767px) {
+  .faq-wraper .container:first-child .row {
+    margin: 0; } }
+
+@media screen and (max-width: 767px) {
+  .faq-wraper .container:first-child .col-sm-12 {
+    padding: 0; } }
+
 .faq-wraper .accordion > ul > li {
   border-bottom: solid #e6ebf1 4px; }
   .faq-wraper .accordion > ul > li > div {
@@ -8045,6 +8189,10 @@ footer {
 .faq-wraper .accordion .learn-more-bl {
   padding: 2rem 0;
   display: inline-block; }
+
+@media screen and (max-width: 767px) {
+  .divder {
+    display: none; } }
 
 .contact-wrap {
   padding: 0; }
@@ -8131,15 +8279,40 @@ footer {
   .other-offices address .view-map {
     color: #0c3a73; }
 
+@media screen and (max-width: 767px) {
+  .job-listing-wraper .container {
+    padding-bottom: 1.875rem; } }
+
+@media screen and (max-width: 767px) {
+  .job-listing-wraper .container:first-child {
+    padding: 0; } }
+
+@media screen and (max-width: 767px) {
+  .job-listing-wraper .container:first-child .row {
+    margin: 0; } }
+
+@media screen and (max-width: 767px) {
+  .job-listing-wraper .container:first-child .col-sm-12 {
+    padding: 0; } }
+
 .job-list {
   border-bottom: solid #e6ebf1 4px;
-  padding: 0 0 2.8125rem 0;
+  padding: 0 0.625rem 2.8125rem 0.625rem;
   margin: 0 0 2.8125rem 0; }
+  @media screen and (min-width: 768px) {
+    .job-list {
+      padding: 0 0 2.8125rem 0;
+      margin: 0 0 2.8125rem 0; } }
 
 .job-name h2 {
   font-family: 'DINProMedium', serif;
   font-size: 1.4375rem;
-  display: block; }
+  display: block;
+  padding-bottom: 0rem; }
+  @media screen and (min-width: 768px) {
+    .job-name h2 {
+      font-size: 1.4375rem;
+      padding-bottom: 2.5rem; } }
   .job-name h2 span {
     font-family: 'DINProBold', serif;
     font-size: 0.8125rem;
@@ -8151,10 +8324,15 @@ footer {
   margin: 0; }
 
 .job-apply {
-  text-align: center;
   width: auto;
-  display: inline;
-  float: right; }
+  display: block;
+  padding-top: 1.25rem; }
+  @media screen and (min-width: 768px) {
+    .job-apply {
+      float: right;
+      display: none;
+      text-align: center;
+      padding-top: 0rem; } }
   .job-apply .btn-primary {
     display: inline-block;
     background: #0c3a73;
@@ -8169,6 +8347,9 @@ footer {
 
 .job-details {
   padding: 2.8125rem 0; }
+  @media screen and (max-width: 768px) {
+    .job-details {
+      padding: 2.8125rem 1.875rem; } }
   .job-details .btn-primary {
     display: inline-block;
     background: #0c3a73;
@@ -8182,26 +8363,46 @@ footer {
     padding: 0 0 1.5625rem 0;
     margin: 0 0 2.8125rem 0; }
     .job-details .job-name h2 {
-      font-size: 2.5rem;
+      font-size: 1.875rem;
       padding-bottom: 0;
       width: 82%;
       float: left; }
+      @media screen and (min-width: 768px) {
+        .job-details .job-name h2 {
+          font-size: 2.5rem; } }
     .job-details .job-name .learn-more-bl {
-      float: right;
-      top: 0; }
-      .job-details .job-name .learn-more-bl::before {
-        background-position: 0px -120px; }
+      float: left;
+      margin-bottom: 1.25rem; }
+      @media screen and (min-width: 768px) {
+        .job-details .job-name .learn-more-bl {
+          float: right;
+          top: 1.5rem;
+          position: relative; } }
+      .job-details .job-name .learn-more-bl::after {
+        background: none; }
+      .job-details .job-name .learn-more-bl:before {
+        content: '';
+        background: url(../images/sprite.png) no-repeat 0px -120px;
+        width: 21px;
+        height: 21px;
+        display: inline-block;
+        position: relative;
+        top: 5px;
+        margin-right: 0.625rem; }
       .job-details .job-name .learn-more-bl:hover::before {
         background-position: -23px -120px; }
   .job-details .job-des {
     padding-bottom: 1.875rem; }
     .job-details .job-des h3 {
       font-family: 'DINProMedium', serif;
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       display: block;
       text-transform: uppercase;
       color: #0c3a73;
       padding-bottom: 0.3125rem; }
+      @media screen and (min-width: 768px) {
+        .job-details .job-des h3 {
+          font-size: 1.5rem; } }
     .job-details .job-des p {
       padding-bottom: 1.875rem; }
 
@@ -8217,28 +8418,51 @@ footer {
     position: relative;
     z-index: 2; }
 
-@media screen and (min-width: 768px) {
-  .thought-leadership .leadership {
-    padding: 0rem 0 6.25rem 0; }
-    .thought-leadership .leadership .col-sm-4, .thought-leadership .leadership .col-sm-8 {
-      margin-bottom: 1.875rem; }
-    .thought-leadership .leadership .bx {
-      margin-bottom: 0;
-      padding: 2.1875rem 2.1875rem 1.875rem 2.1875rem; } }
+@media screen and (max-width: 767px) {
+  .thought-leadership .container:first-child {
+    padding: 0; } }
+
+@media screen and (max-width: 767px) {
+  .thought-leadership .container:first-child .row {
+    margin: 0; } }
+
+@media screen and (max-width: 767px) {
+  .thought-leadership .container:first-child .col-sm-12 {
+    padding: 0; } }
+
+.thought-leadership .leadership {
+  padding: 2.5rem 0.3125rem 1.875rem 0.3125rem; }
+  .thought-leadership .leadership .col-md-4, .thought-leadership .leadership .col-sm-12 {
+    margin-bottom: 1.875rem; }
+  @media screen and (min-width: 768px) {
+    .thought-leadership .leadership {
+      padding: 0.3125rem 0 6.25rem 0.3125rem; }
+      .thought-leadership .leadership .bx {
+        margin-bottom: 0;
+        padding: 2.1875rem 2.1875rem 1.875rem 2.1875rem; } }
 
 .thought-leadership .screenDivider {
-  height: 6.5625rem; }
+  display: block; }
+  @media screen and (min-width: 768px) {
+    .thought-leadership .screenDivider {
+      height: 6.25rem; } }
 
 .thought-leadership h2 {
   text-align: center;
   padding: 2.5rem 0 1.25rem 0; }
 
 .leadership-search {
-  padding: 0; }
+  padding: 0;
+  text-align: left; }
   .leadership-search .search-inner {
     padding: 1.8rem 2rem 1.8rem 2rem;
-    width: 100%;
-    display: flex; }
+    width: 100%; }
+    @media screen and (min-width: 548px) {
+      .leadership-search .search-inner {
+        display: flex; } }
+    @media screen and (max-width: 767px) {
+      .leadership-search .search-inner .btn-primary {
+        width: auto; } }
 
 .apply-wraper {
   padding: 0rem 0 3.125rem 0; }

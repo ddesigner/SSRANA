@@ -1,5 +1,5 @@
 body{
-    font-size:rem(16)!important;
+    font-size:16px;
     font-family:'DINProRegular';
 }
 html{font-size:16px!important;}
@@ -125,12 +125,12 @@ a:focus{
 
     .screenDivider {
         width: 2px;
-        height:70px;
+        height:40px;
         background-color: $activeColor;
         margin: 0 auto;
         display:none;
         @media screen and (min-width:$ipad){
-            display:block;
+            display:block;  height:70px;
         }
     }
 
@@ -184,7 +184,7 @@ a:focus{
       
 //Inner banner
 .inner-banner{
-    height:rem(400);
+    height:rem(300);
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -201,16 +201,19 @@ a:focus{
     }
     h1{
         font-family: 'Playfair Display', serif;
-        font-size:rem(60); font-weight: 700; color: $whiteColor; position: relative; z-index: 5;
+        font-size:rem(33); font-weight: 700; color: $whiteColor; position: relative; z-index: 5;
         padding-left:2rem;
         @media screen and (min-width:$ipad){
-           padding-left:0;
+           padding-left:0;  font-size:rem(60); 
         }
     }
 
     h2{
         font-family: 'DINProBold', serif;
-        font-size:rem(13); color: $whiteColor; margin:0; padding:0;  position: relative; z-index: 5;
+        font-size:rem(13); color: $whiteColor; margin:0; padding:0;  position: relative; z-index: 5;   padding-left:2rem;
+        @media screen and (min-width:$ipad){
+            padding-left:0;
+         }
     }
 }
 
@@ -219,15 +222,22 @@ a:focus{
 .inner-sub-link{
     background:$lightGray; padding:rem(20) 0;
     ul{
-        margin:0; padding:0; list-style: none;
+        margin:0; padding:0 5px; list-style: none;
+        @media screen and (min-width:$portrait){
+            margin:0; padding:0;
+        }
         li{
-            display: inline-block; width:19.5%; box-sizing: border-box; position: relative; padding:rem(10) 0;   font-family: 'DINProBold',serif; font-size:rem(13); text-transform:uppercase;
+            box-sizing: border-box; position: relative; padding:rem(10) 0;   font-family: 'DINProBold',serif; font-size:rem(13); text-transform:uppercase;
+            display: block; 
+            @media screen and (min-width:$portrait){
+                width:auto; display: inline-block;  padding:rem(10) rem(10) rem(10) rem(0);  
+            }
             a{
                 color:$defaultBlue;
                 position: relative;
                 display: block;
-                padding-left:rem(30);
-        
+                padding-left:rem(20);
+               
         &:after, &:before {
           content: "";
           display: block;
@@ -267,14 +277,23 @@ a:focus{
             }
 
             &.active, &.current_page_ancestor{
-                &:after {
-                content: "";
-                border-bottom: solid #dbbb68 4px;
-                position: absolute;
-                bottom: -5px;
-                width:100%;
-                transition: all 0.5s ease-in-out;
-                }
+               
+                    &:after {
+                    content: "";
+                    border-bottom: solid #dbbb68 4px;
+                    position: absolute;
+                    transition: all 0.5s ease-in-out;
+                    bottom: -1px;
+                    width:50%;
+                    left:rem(20);
+                    @media screen and (min-width:$portrait){
+                        bottom: -5px;
+                        width:100%;
+                        left:0;
+                    }
+                 }
+
+                
             }
         }
     }
@@ -283,7 +302,10 @@ a:focus{
 
 
 .accordion{
-    font-family: 'DINProMedium', serif;
+    font-family: 'DINProMedium', serif; padding:0 rem(10);
+    @media screen and (min-width:$ipad){
+        padding:0;
+      }
     > ul{
         margin:0; padding:0;
         list-style: none;
@@ -418,20 +440,33 @@ a:focus{
 
 .page-search{
     background:$defaultBlue;
-    width: 100%; display: flex; padding:2rem;
+    width: 100%;  padding:2rem;
     box-shadow: 5px 5px 3px 0 rgba(0, 0, 0, 0.4);
     position: relative;
-    margin-top: -4rem;
+    text-align:center;
+    @media screen and (min-width:$portrait){
+        display: flex;   
+    }
+    @media screen and (min-width:$ipad){
+        display: flex;   margin-top: -4rem;
+    }
+    .btn-primary{
+        @media screen and (max-width:$portrait){
+           display:inline-block; width:100%; margin-top:rem(40);
+        } 
+    }
     input[type=text]{
         background: none;
         border: 0;
         width: 100%;
         color: $whiteColor;
         font-size: 26px;
-        padding: 1rem 0rem 0.5rem 0rem;
+        padding:0rem 0rem 0.5rem 0rem;
         border-bottom:solid $activeColor 2px;
         margin-right:2rem;
-
+        @media screen and (min-width:$portrait){
+            padding: 1rem 0rem 0.5rem 0rem;
+         } 
         &:focus{
             outline: none;
         }
@@ -442,9 +477,24 @@ a:focus{
 
     .filter-btn{
       
-        background: url(../images/sprite.png) no-repeat -412px 51px;
-        display: inline-block;
+    
+        background: url(../images/sprite.png) no-repeat -408px 43px;
+        position: absolute;
+        top: 85px;
+        right: 0;
+        z-index: 90;
+        height: 117px;
         width: 111px;
+        @media screen and (min-width:$portrait){
+            background: url(../images/sprite.png) no-repeat -412px 51px;
+            display: inline-block;
+            width: 111px;
+            position: inherit;;
+            top:inherit;
+            right:inherit;
+            height: inherit;
+    
+        }
 
         &.open{
             background-color: #04254e;
@@ -455,10 +505,14 @@ a:focus{
 
 .filter{
     background: #04254e; padding:2rem;
-    position: absolute;
-    width: 97.6%;
+    position: relative;
+    width:100%;
     z-index:100;
     box-shadow: 5px 5px 3px 0 rgba(0, 0, 0, 0.4); display: none;
+    top:-2px;
+    @media screen and (min-width:$ipad){
+        width: 97.6%; top:0;
+     } 
     .stylish-select-right{
         font-size: rem(13);   font-family: 'DINProBold', serif; text-transform: uppercase;
     }
@@ -496,18 +550,31 @@ a:focus{
     font-family: 'DINProBold', serif;  font-size: rem(13);text-transform: uppercase;
    text-transform: uppercase;
    display: inline-block;
-   padding: 1.5rem 0 1rem 0;
+   padding: 1.5rem rem(10) 1rem rem(10);
    width: 100%;
+   @media screen and (min-width:$ipad){
+    padding: 1.5rem 0 1rem 0;
+  }
    .total-result, .stylish-select-right{
       color: $grayColor; float: left; 
    }
-   .total-result{ padding:1rem 3rem 1rem 0;}
+   .total-result{
+        padding:1rem 3rem 1rem 0;
+        @media screen and (max-width:$mobileEnd){
+            display: block;
+            width: 100%;
+          }
+    }
    .sort-by{
      width: 10rem; float: right; 
 
      span{
        width:38%;
        float: left; padding:1rem 0;
+       @media screen and (max-width:$mobileEnd){
+        display: block; padding:1rem 0 0rem 0;
+        width: 100%;
+      }
      }
 
      .main{

@@ -64,10 +64,28 @@
 
 .services{
     .container{
-        @media screen and (max-width:$mobileEnd)
-        {
-           padding:0;
+        &:first-child{
+             @media screen and (max-width:$mobileEnd){
+                  padding:0;
+             }
+             .row{
+                 @media screen and (max-width:$mobileEnd){
+                     margin:0;
+                }
+                
+             }
+             .col-sm-12{
+                 @media screen and (max-width:$mobileEnd){
+                     padding:0;
+                }
+                
+             }
         }
+    }
+    .screenDivider {
+        @media screen and (max-width:$ipad){
+            display: block;
+       }
     }
     form{
         position: relative;
@@ -172,10 +190,23 @@
         }
       }
     
-    > .container{
-        @media screen and (max-width:$ipad){
-           padding:0;
-        }
+      > .container{
+             @media screen and (max-width:$mobileEnd){
+                  padding:0;
+             }
+             .row{
+                 @media screen and (max-width:$mobileEnd){
+                     margin:0;
+                }
+                
+             }
+             .col-sm-12{
+                 @media screen and (max-width:$mobileEnd){
+                     padding:0;
+                }
+                
+             }
+       
     }
      .knowledge-lt{
         color:$whiteColor; background:$defaultBlue; padding:rem(70) rem(40);
@@ -325,11 +356,11 @@
 }
 
 .leadership{
-       text-align: center; padding:rem(30) 0;
+       text-align: center; padding:rem(30) rem(10);
        position: relative;
-
+        border-top:solid $subscriptbxBg 5px;
        @media screen and (min-width:$ipad){
-        padding:rem(100) rem(150);
+         padding:rem(100) rem(150); border:none;
        }
        p{
         padding:rem(0) rem(0) rem(40) rem(0);
@@ -338,7 +369,10 @@
            }
        }
        .screenDivider {
-           position: absolute; top:rem(-30); left: 0; right: 0; display: block;
+           position: absolute; left: 0; right: 0; display: block; top:-5px;
+           @media screen and (min-width:$ipad){
+            top:rem(-30);  top:0;
+           }
        }
 
        h2{
@@ -389,8 +423,12 @@
        }
 
        .large{
+       
            p{
-               font-size: rem(40); line-height: 1;
+              
+               @media screen and (min-width:$ipad){
+                font-size: rem(40); line-height: 1;
+             }
            }
        }
 }

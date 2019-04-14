@@ -1,9 +1,16 @@
 .info-wrap{
-    padding:rem(50);
+    padding:rem(50) rem(10);
+    @media screen and (min-width:$ipad){
+        padding:rem(50);
+    }
 }
 
 .info-lt{
     font-family: 'DINProMedium', serif;  font-size:rem(13); color:$defaultBlue;
+    display: none;
+    @media screen and (min-width:$ipad){
+        display:block;
+    }
     h3{
         background:$defaultBlue; color:$whiteColor; text-transform: uppercase; 
        margin:0; padding:rem(20) rem(17); line-height: 1; font-size:rem(13); 
@@ -15,12 +22,17 @@
 
 
 .info-rt{
+
     p{
         padding-bottom: rem(30); margin-bottom: 0;
     }
 
     h3{
-        color:#325989; font-size: rem(33);
+        color:#325989; font-size: rem(24); text-align: center;
+        @media screen and (min-width:$ipad){
+            font-size: rem(33);
+        }
+        
     }
      
         ul{

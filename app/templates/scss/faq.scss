@@ -1,5 +1,25 @@
 .faq-wraper{
+ 
    
+   .container{
+       &:first-child{
+            @media screen and (max-width:$mobileEnd){
+                 padding:0;
+            }
+            .row{
+                @media screen and (max-width:$mobileEnd){
+                    margin:0;
+               }
+               
+            }
+            .col-sm-12{
+                @media screen and (max-width:$mobileEnd){
+                    padding:0;
+               }
+               
+            }
+       }
+   }
 .accordion{
     > ul  
     > li {
@@ -35,4 +55,10 @@
     }
 }
 
+}
+
+.divder{
+    @media screen and (max-width:$mobileEnd){
+    display: none;
+    }
 }

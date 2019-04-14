@@ -1,10 +1,41 @@
+.job-listing-wraper{
+    .container{
+        @media screen and (max-width:$mobileEnd){
+            padding-bottom:rem(30);
+        }
+        &:first-child{
+            @media screen and (max-width:$mobileEnd){
+                padding:0;
+            }
+            .row{
+                @media screen and (max-width:$mobileEnd){
+                    margin:0;
+                }
+                
+            }
+            .col-sm-12{
+                @media screen and (max-width:$mobileEnd){
+                    padding:0;
+                }
+                
+            }
+        }
+    }
+}
 .job-list{
-    border-bottom: solid #e6ebf1 4px;  padding:0 0 rem(45) 0; margin: 0 0 rem(45) 0 
+    border-bottom: solid #e6ebf1 4px;  padding:0 rem(10) rem(45) rem(10); margin: 0 0 rem(45) 0;
+    @media screen and (min-width:$ipad){
+        padding:0 0 rem(45) 0; margin: 0 0 rem(45) 0 
+    }
 }
 
 .job-name{
     h2{
-        font-family: 'DINProMedium', serif;  font-size: rem(23);  display: block;
+        font-family: 'DINProMedium', serif;  font-size: rem(23);  display: block; padding-bottom:rem(0);
+        @media screen and (min-width:$ipad){
+            font-size: rem(23); padding-bottom:rem(40);
+        }
+        
         span{
             font-family: 'DINProBold', serif;  font-size: rem(13); line-height: rem(32); display: block;
         }
@@ -17,10 +48,12 @@
 }
 
 .job-apply{
-    text-align: center;
+  
     width: auto;
-    display: inline;
-    float: right;
+    display: block; padding-top: rem(20);
+     @media screen and (min-width:$ipad){
+        float: right; display: none;  text-align: center; padding-top: rem(0);
+    }
     .btn-primary{
         display:inline-block;
         background:$defaultBlue;
@@ -43,7 +76,9 @@
 // ######## Job Details style #########
 .job-details{
     padding:rem(45) 0;
-
+    @media screen and (max-width:$ipad){
+        padding:rem(45) rem(30);
+    }
     .btn-primary{
         display:inline-block;
         background:$defaultBlue;
@@ -58,15 +93,30 @@
     .job-name{
         border-bottom: solid #e6ebf1 4px;  padding:0 0 rem(25) 0; margin: 0 0 rem(45) 0 ;
         h2{
-            font-size:rem(40); padding-bottom: 0; width: 82%; float: left;
+            font-size:rem(30); padding-bottom: 0; width: 82%; float: left;
+            @media screen and (min-width:$ipad){
+                font-size:rem(40);
+            }
         }
 
         .learn-more-bl{
-            float: right;
-            top: 0;
-
-            &::before{
-                background-position:0px -120px;
+            float: left;
+            margin-bottom: rem(20);
+            @media screen and (min-width:$ipad){
+                float: right;
+                top:rem(24); position: relative;
+            }
+            &::after{
+               background:none
+            }
+            &:before{
+                     content:'';
+                    background:url(../images/sprite.png) no-repeat 0px -120px;
+                    width:21px; height:21px; display:inline-block;
+                    position: relative;
+                    top: 5px;
+                    margin-right:rem(10);
+               
             }
             &:hover{
                
@@ -80,8 +130,11 @@
     .job-des{
         padding-bottom: rem(30);
         h3{
-            font-family: 'DINProMedium', serif;  font-size: rem(24);  display: block; text-transform: uppercase;
+            font-family: 'DINProMedium', serif;  font-size: rem(20);  display: block; text-transform: uppercase;
             color:$defaultBlue; padding-bottom: rem(5);
+            @media screen and (min-width:$ipad){
+                font-size: rem(24);
+            }
         }
 
         p{
