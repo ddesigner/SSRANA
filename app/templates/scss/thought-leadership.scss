@@ -1,19 +1,44 @@
 .thought-leadership{
-    @media screen and (min-width: $ipad){
+    .container{
+        &:first-child{
+             @media screen and (max-width:$mobileEnd){
+                  padding:0;
+             }
+             .row{
+                 @media screen and (max-width:$mobileEnd){
+                     margin:0;
+                }
+                
+             }
+             .col-sm-12{
+                 @media screen and (max-width:$mobileEnd){
+                     padding:0;
+                }
+                
+             }
+        }
+    }
+   
 
         .leadership {
-            padding:0rem 0 6.25rem 0;
+            padding:rem(40) rem(5) rem(30) rem(5);
 
-            .col-sm-4, .col-sm-8{
-            margin-bottom: rem(30);  
+            .col-md-4, .col-sm-12{
+              margin-bottom: rem(30);  
             }
+            @media screen and (min-width: $ipad){
+                padding:rem(5) 0 6.25rem rem(5);
             .bx{
                 margin-bottom:0;  padding:rem(35)  rem(35) rem(30)  rem(35); 
             }
         }
     }
     .screenDivider{
-      height:rem(105);
+        display: block; 
+        @media screen and (min-width: $ipad){
+            height:rem(100);
+        }
+
     }
     h2{
         text-align: center; padding:rem(40) 0 rem(20) 0 
@@ -22,10 +47,21 @@
 
 .leadership-search{
     padding:0;
-
+    text-align:left;
     .search-inner{
         padding:1.8rem 2rem 1.8rem 2rem;
         width: 100%;
-        display: flex;
+         
+        @media screen and (min-width: $portrait){
+            display: flex;
+        }
+
+        .btn-primary{
+            @media screen and (max-width: $mobileEnd){
+                width:auto;
+            }
+    
+        }
     }
+   
 }

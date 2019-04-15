@@ -1,10 +1,18 @@
 .contact-wrap{
     padding:0;
-
+    .d-block{
+        padding:0;
+    }
     address{
-        padding-bottom:rem(98);
+        padding-top:rem(20);
+         @media screen and (min-width:$ipad){
+            padding-top:rem(98);
+        }
         h3{
-            font-family: 'DINProMedium', serif; color:$black; font-size: rem(24); margin:0; padding:0 0 rem(10) 0;
+            font-family: 'DINProMedium', serif; color:$black; font-size: rem(20); margin:0; padding:0 0 rem(10) 0;
+            @media screen and (min-width:$ipad){
+                font-size: rem(24);
+            }
         }
         p{
             font-family: 'DINProLight', serif; font-size: rem(18);  margin:0; padding:0 0 rem(5) 0;
@@ -31,10 +39,17 @@
 }
  
 .register-office{
-    background:$defaultBlue; 
-    address{  padding-top:rem(98);
-        h3{
-            color:$whiteColor; font-size: rem(30);
+    background:$defaultBlue; padding-bottom:rem(30);
+     @media screen and (min-width:$ipad){
+       padding-bottom:0;
+     }
+    address{ 
+       
+      h3{
+            color:$whiteColor; font-size: rem(20);
+            @media screen and (min-width:$ipad){
+                font-size: rem(30);
+              }
         }
         p{
             color:$whiteColor;
@@ -42,15 +57,26 @@
     }
     .subscribe-bx{  
         padding:rem(30) rem(38); position: relative;
-        top: rem(-78);
+      
+        @media screen and (min-width:$ipad){
+            padding:rem(30) rem(38);  
+            top: rem(-78);
+        }
     }    
 }
 
 
 .other-offices{ 
-    padding:rem(45) 0;
+    padding:rem(20) 0;
+    @media screen and (min-width:$ipad){
+        padding:rem(45) 0;
+    }
     h2{
-        font-family: 'DINProMedium', serif; font-size: rem(30); color:$defaultBlue; padding-bottom:rem(45);
+        font-family: 'DINProMedium', serif; font-size: rem(24); color:$defaultBlue;
+         padding-bottom:rem(0);
+        @media screen and (min-width:$ipad){
+            padding-bottom:rem(45);  font-size: rem(30);
+        }
     }
 
     address{ 

@@ -6,10 +6,18 @@ var cbpHorizontalMenu = (function() {
         current = -1;
 
     function init() {
-        $menuItems.on('mouseover', open);
-        $listItems.on('mouseover', function(event) {
-            event.stopPropagation();
-        });
+        if($(window).width()>767){
+            $menuItems.on('mouseover', open);
+            $listItems.on('mouseover', function(event) {
+                event.stopPropagation();
+            });
+        }
+        else{
+            $menuItems.on('click', open);
+            $listItems.on('click', function(event) {
+                event.stopPropagation();
+            });
+        }
        // $listItems.on('mouseout', close);
     }
   
@@ -29,13 +37,19 @@ var cbpHorizontalMenu = (function() {
             var left =$item.offset().left;
             var top =$('.nav').outerHeight(true);
             var height =$(window).height();
-              $item.find('.cbp-hrsub').css({'width':$(window).width(), 'left':-left, 'top':top, 'max-height':height-top});
+            if($(window).width()>767){
+                $item.find('.cbp-hrsub').css({'width':$(window).width(), 'left':-left, 'top':top, 'max-height':height-top});
+            }
             $item.addClass('cbp-hropen');
             
             current = idx;
             $body.off('click').on('click', close);
-            $body.off('mouseover').on('mouseover', close);
-
+            if($(window).width()>767){
+                $body.off('mouseover').on('mouseover', close);
+            }
+            else{
+                $body.off('click').on('click', close);
+            }
         }
 
         return false;

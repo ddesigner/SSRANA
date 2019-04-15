@@ -1,15 +1,33 @@
 .corporate-wraper{
     .leadership .screenDivider{
-        top:0;
+        top:-5px;
+        @media screen and (min-width:$ipad){
+            top:0;
+        }
     }
     
 }
 .corporate-law{
     background:$defaultBlue;
-    color:$whiteColor;
+    color:$whiteColor; padding:rem(0) rem(10) rem(50) rem(10);
+    @media screen and (min-width:$ipad){
+      padding:0;
+    }
+
+    .screenDivider{
+        display: block;
+        @media screen and (min-width:$ipad){
+            display: none;
+          }
+    }
 
     .corporate-tp{
-        width:80%; margin:auto;  text-align: center; padding:rem(30) 0;
+        width:100%; margin:auto;  text-align: center; padding:rem(30) 0;
+        @media screen and (min-width:$ipad){
+            height:rem(464);
+            width:80%; 
+        }
+    
         h3,p{
             color:$whiteColor;
         }
@@ -18,7 +36,10 @@
 
     .corporte-detail{
      .bx{
-         padding-bottom:rem(90); 
+         padding-bottom:rem(20); 
+         @media screen and (min-width:$ipad){
+            padding-bottom:rem(90); 
+        }
         h3,p{
             color:$whiteColor;
         }
@@ -33,9 +54,10 @@
             margin-bottom:rem(50);
         }
         .screenDivider-hr {
-           position: absolute; position: absolute;
+           position: absolute; 
            right: 0;
            top: 50%;
+           
           }
         .icon{
             width:60px; height:63px; display: inline-block; 

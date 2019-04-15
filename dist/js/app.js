@@ -50,7 +50,16 @@ $(document).ready(function(){
     });
  
     $('.movbile-nav').click(function(){
-		$(this).toggleClass('open');
+         $(this).toggleClass('open');
+        if($(this).hasClass('open')){
+            $('.cbp-hrmenu').slideDown();
+            $('body, html').css('overflow','hidden');
+            $('.cbp-hrmenu').css('height',$(window).height()-$('.nav').height())
+        }
+        else{
+            $('.cbp-hrmenu').slideUp();
+            $('body, html').css('overflow','auto');
+        }
     });
     
     // $window = $(window);
