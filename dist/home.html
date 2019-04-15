@@ -543,7 +543,7 @@
 
                
                 </div>
-                <div class="screenDivider " >&nbsp;</div>
+               
               </form>
             </div>
             <div class="row">
@@ -977,11 +977,12 @@
       }).on('changeDate', function (ev) {
         $(this).datetimepicker('hide');
       });
-    });
-    $(window).on('resize orientationchange', function () {
+      $(window).on('resize orientationchange', function () {
       console.log('d');
       $('.slider').slick('resize');
     });
+    });
+   
   </script>
 </body>
 

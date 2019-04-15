@@ -11,6 +11,9 @@ footer{
      }
     .award{
           padding:rem(22) 0 rem(20) 0;
+          @media screen and (min-width:$ipad){
+           display: flex;
+        }
         .img{
             width: rem(78);
              
@@ -79,14 +82,16 @@ footer{
         
         float: right;
         @media screen and (min-width:$ipad){
-              padding:rem(22) 0 rem(20) 0;
-           }
+              padding:rem(22) 0 rem(20) 0; display: flex;
+        }
       .img{
           width: rem(165); height:rem(85);
-           
           margin:0 rem(2) rem(2) rem(2); float: left;
           @media screen and (min-width:$ipad){
-            margin:0 rem(2);
+            margin:0 rem(2); width: rem(155); 
+          }
+          @media screen and (min-width:$desktop){
+            width: rem(165); 
           }
           &:first-child(){
               margin-left: 0

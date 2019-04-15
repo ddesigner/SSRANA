@@ -51,10 +51,14 @@
 			background:$lightGray;
 			border-bottom: solid #dfdfdf 2px;
 			@media screen and (min-width:$ipad) {
-				display: inline-block; 	padding:rem(40) 1.4em;
+				display: inline-block; 	padding:rem(40) 1em;
 				background: none; border-bottom:none; 
 
 			}
+
+			@media screen and (min-width:$desktop){
+				padding:rem(40) 1.4em;
+			  }
 			 
 			&:hover{
 				color: $activeColor ;

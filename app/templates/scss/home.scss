@@ -83,9 +83,9 @@
         }
     }
     .screenDivider {
-        @media screen and (max-width:$ipad){
+      //  @media screen and (max-width:$ipad){
             display: block;
-       }
+       //}
     }
     form{
         position: relative;
@@ -94,7 +94,8 @@
             top:rem(60);
             position: absolute;
             left: 0;
-            right: 0;
+            right: 0; 
+            
         }
     }
 
@@ -107,7 +108,7 @@
 
     @media screen and (min-width:$ipad)
     { box-shadow: 5px 5px 3px 0 rgba(0, 0, 0, 0.4);
-        display: flex; top: rem(-60);  padding:rem(40) rem(30);
+        display: flex; margin-top: rem(-60);  padding:rem(40) rem(30);
     }
    
     .select-wrap{
@@ -180,7 +181,10 @@
         background-size: cover; position:relative;
         z-index: 1;
         @media screen and (min-width:$ipad){
-            background-position:0px rem(-728);   position: absolute;  top:rem(30);
+            background-position:0px bottom;   position: absolute;  top:rem(30);  height:rem(275);
+         }
+         @media screen and (min-width:$desktop){
+            background-position:0px rem(-728);   position: absolute;  top:rem(30);  height:rem(275);
          }
         .overlay{
             background: rgba(0, 0, 0, 0.2); 
@@ -360,8 +364,11 @@
        position: relative;
         border-top:solid $subscriptbxBg 5px;
        @media screen and (min-width:$ipad){
-         padding:rem(100) rem(150); border:none;
+         padding:rem(100) rem(90); border:none;
        }
+       @media screen and (min-width:$desktop){
+        padding:rem(100) rem(150); border:none;
+      }
        p{
         padding:rem(0) rem(0) rem(40) rem(0);
         @media screen and (min-width:$ipad){
@@ -394,9 +401,9 @@
            border:solid #ededed 1px; padding:rem(35)  rem(35) rem(20)  rem(35); text-align: left;
            box-shadow:3px 3px 3px 0 rgba(0, 0, 0, 0.2);
             height: 100%; margin-bottom: rem(20);  
-            @media screen and (min-width:$ipad){
-                margin-bottom: rem(50);  
-             }
+            // @media screen and (min-width:$ipad){
+            //     margin-bottom: rem(50);  
+            //  }
            h3{
             font-family: 'DINProBold',serif;
             font-size:rem(14); text-transform: uppercase; border-bottom:solid $activeColor 2px;

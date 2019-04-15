@@ -6374,7 +6374,6 @@ p {
   display: none; }
   @media screen and (min-width: 768px) {
     .screenDivider {
-      display: block;
       height: 70px; } }
 
 .screenDivider-hr {
@@ -6926,6 +6925,14 @@ p {
   .container {
     width: 100%; } }
 
+@media screen and (min-width: 768px) {
+  .container {
+    width: 100%; } }
+
+@media screen and (min-width: 992px) {
+  .container {
+    width: 95%; } }
+
 .logo {
   position: relative;
   top: 0.5rem; }
@@ -6981,9 +6988,12 @@ p {
       @media screen and (min-width: 768px) {
         .nav .cbp-hrmenu > ul > li > a {
           display: inline-block;
-          padding: 2.5rem 1.4em;
+          padding: 2.5rem 1em;
           background: none;
           border-bottom: none; } }
+      @media screen and (min-width: 1200px) {
+        .nav .cbp-hrmenu > ul > li > a {
+          padding: 2.5rem 1.4em; } }
       .nav .cbp-hrmenu > ul > li > a:hover {
         color: #dbbb68;
         text-decoration: none; }
@@ -7338,6 +7348,9 @@ footer {
     padding: 0; }
   footer .award {
     padding: 1.375rem 0 1.25rem 0; }
+    @media screen and (min-width: 768px) {
+      footer .award {
+        display: flex; } }
     footer .award .img {
       width: 4.875rem;
       margin: 0 0.9375rem;
@@ -7390,7 +7403,8 @@ footer {
     float: right; }
     @media screen and (min-width: 768px) {
       footer .certificate {
-        padding: 1.375rem 0 1.25rem 0; } }
+        padding: 1.375rem 0 1.25rem 0;
+        display: flex; } }
     footer .certificate .img {
       width: 10.3125rem;
       height: 5.3125rem;
@@ -7398,7 +7412,11 @@ footer {
       float: left; }
       @media screen and (min-width: 768px) {
         footer .certificate .img {
-          margin: 0 0.125rem; } }
+          margin: 0 0.125rem;
+          width: 9.6875rem; } }
+      @media screen and (min-width: 1200px) {
+        footer .certificate .img {
+          width: 10.3125rem; } }
       footer .certificate .img:first-child {
         margin-left: 0; }
       footer .certificate .img:last-child {
@@ -7657,9 +7675,8 @@ footer {
   .services .container:first-child .col-sm-12 {
     padding: 0; } }
 
-@media screen and (max-width: 768px) {
-  .services .screenDivider {
-    display: block; } }
+.services .screenDivider {
+  display: block; }
 
 .services form {
   position: relative; }
@@ -7680,7 +7697,7 @@ footer {
     .services .search-section {
       box-shadow: 5px 5px 3px 0 rgba(0, 0, 0, 0.4);
       display: flex;
-      top: -3.75rem;
+      margin-top: -3.75rem;
       padding: 2.5rem 1.875rem; } }
   .services .search-section .select-wrap {
     font-size: 1.5rem;
@@ -7748,9 +7765,16 @@ footer {
     z-index: 1; }
     @media screen and (min-width: 768px) {
       .knowledge-wraper .parallax-img {
+        background-position: 0px bottom;
+        position: absolute;
+        top: 1.875rem;
+        height: 17.1875rem; } }
+    @media screen and (min-width: 1200px) {
+      .knowledge-wraper .parallax-img {
         background-position: 0px -45.5rem;
         position: absolute;
-        top: 1.875rem; } }
+        top: 1.875rem;
+        height: 17.1875rem; } }
     .knowledge-wraper .parallax-img .overlay {
       background: rgba(0, 0, 0, 0.2); }
       @media screen and (min-width: 768px) {
@@ -7896,6 +7920,10 @@ footer {
   border-top: solid #f6f6f6 5px; }
   @media screen and (min-width: 768px) {
     .leadership {
+      padding: 6.25rem 5.625rem;
+      border: none; } }
+  @media screen and (min-width: 1200px) {
+    .leadership {
       padding: 6.25rem 9.375rem;
       border: none; } }
   .leadership p {
@@ -7930,9 +7958,6 @@ footer {
     box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.2);
     height: 100%;
     margin-bottom: 1.25rem; }
-    @media screen and (min-width: 768px) {
-      .leadership .bx {
-        margin-bottom: 3.125rem; } }
     .leadership .bx h3 {
       font-family: 'DINProBold',serif;
       font-size: 0.875rem;
