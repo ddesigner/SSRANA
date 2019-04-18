@@ -37,14 +37,14 @@ var cbpHorizontalMenu = (function() {
             var left =$item.offset().left;
             var top =$('.nav').outerHeight(true);
             var height =$(window).height();
-            if($(window).width()>767){
+            if($(window).width()>992){
                 $item.find('.cbp-hrsub').css({'width':$(window).width(), 'left':-left, 'top':top, 'max-height':height-top});
             }
             $item.addClass('cbp-hropen');
             
             current = idx;
             $body.off('click').on('click', close);
-            if($(window).width()>767){
+            if($(window).width()>992){
                 $body.off('mouseover').on('mouseover', close);
             }
             else{

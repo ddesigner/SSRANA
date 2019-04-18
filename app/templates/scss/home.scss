@@ -1,8 +1,9 @@
 .banner{
-    height:rem(376);
-    @media screen and (min-width:$ipad) {
-        height:rem(700);
-    }
+    //height:rem(376);\
+    // @media screen and (min-width:$ipad) {
+    //     height:rem(700);
+    // }
+    height:auto;
     .banner-inner{
         display:flex;  color:$whiteColor; position:relative;  
        
@@ -54,7 +55,7 @@
         .banner-overlay{
             @include overlay();
             background: rgba(0,0,0,0.5);
-            opacity: 0.3;
+            opacity: 0.5;
           }
       
     }
@@ -116,14 +117,13 @@
         width:100%;
         margin:0 0 rem(35) 0; 
         @media screen and (min-width:$ipad){
-            width:rem(358);
+            width:rem(336);
             margin:0 rem(25) 0 rem(25);   font-size: rem(30);
         }
 
         &:nth-child(2){
             @media screen and (min-width:$ipad){
-                width:rem(300);
-                
+                width:rem(220);
             }
         }
        select{
@@ -156,7 +156,10 @@
     text-align: center; padding: rem(30);
 
     @media screen and (min-width:$ipad){
-        padding:rem(100) rem(150) rem(70) rem(150);   
+        padding:rem(44) rem(50) rem(40) rem(50);   
+    }
+    @media screen and (min-width:$medium){
+        padding:rem(44) rem(150) rem(40) rem(150);   
     }
     h2{
         padding:0 0 rem(20) 0;
@@ -251,7 +254,9 @@
         p {
             padding-bottom: 0;
             @media screen and (min-width:$ipad){
-                min-height: 200px;   padding-bottom:rem(40);
+                padding-bottom:rem(16);
+                height:rem(108);
+                overflow: hidden;
             }
         }
         ul{
@@ -261,8 +266,12 @@
                padding:rem(5) 0;
                a{
                    color:$whiteColor;
+                   @media screen and (min-width:$ipad){
+                    width: 86%;
+                    display: inline-block;
+                   }
                    &:hover{
-                       color:$activeColor;
+                       color:$linkHover;
                    }
 
                  
@@ -364,10 +373,13 @@
        position: relative;
         border-top:solid $subscriptbxBg 5px;
        @media screen and (min-width:$ipad){
-         padding:rem(100) rem(90); border:none;
+         padding:rem(68) rem(30); border:none;
+       }
+        @media screen and (min-width:$medium){
+         padding:rem(68) rem(90); border:none;
        }
        @media screen and (min-width:$desktop){
-        padding:rem(100) rem(150); border:none;
+        padding:rem(68) rem(22); border:none;
       }
        p{
         padding:rem(0) rem(0) rem(40) rem(0);

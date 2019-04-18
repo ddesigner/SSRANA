@@ -5,11 +5,11 @@
 .nav{
 	background:$whiteColor;
 	height: rem(105);
-	box-shadow:0 0 3px #ccc;
-	z-index:150;
+ 	z-index:150;
 	position: fixed;
 	width:100%;
 	top:0;
+	z-index:9000;
  	> .container{
 		@media screen and (max-width:$mobileEnd) {
 			width: 100%;
@@ -25,7 +25,7 @@
 		height: 100%;
 		overflow: hidden;
 		overflow-y: scroll;
-		@media screen and (min-width:$ipad) {
+		@media screen and (min-width:$medium) {
 			width:auto; display: block; 	top:inherit; 	position: relative;float: right;
 			height: inherit; 	overflow: inherit;
 	   }
@@ -50,7 +50,7 @@
 			font-family: 'DINProBold';
 			background:$lightGray;
 			border-bottom: solid #dfdfdf 2px;
-			@media screen and (min-width:$ipad) {
+			@media screen and (min-width:$medium) {
 				display: inline-block; 	padding:rem(40) 1em;
 				background: none; border-bottom:none; 
 
@@ -79,7 +79,7 @@
 			display:block; position: relative;
 			 
 
-			@media screen and (min-width:$ipad) {
+			@media screen and (min-width:$medium) {
 				display: inline-block;
 
 			}
@@ -97,7 +97,7 @@
 					position: absolute;
 					right:rem(30);
 					top: 45%;
-					@media screen and (min-width:$ipad) {
+					@media screen and (min-width:$medium) {
 					 	border-top:5px solid $defaultBlue;
 						border-left:5px solid transparent;
 						border-right:5px solid transparent;
@@ -114,6 +114,7 @@
 				bottom: -5px;
 				  width:0;
 				  transition: all 0.5s ease-in-out;
+				  left:0;
 			}
 
 			li{
@@ -388,7 +389,7 @@
 	&.open{
 		display: block;
    }
-	a#headersearch {
+	#headersearch {
 		font-size: 30px;
 		color: #fff;
 		background: url(../images/sprite.png) no-repeat -382px -9px;
@@ -398,6 +399,7 @@
 		top: 20px;
 		 position: relative;
 		 transition:none;
+		 border:none;
 		 &:hover{
 			background-position:-342px -9px;
 		 }
@@ -416,7 +418,7 @@
 .movbile-nav
 {
 	display:inline-block!important;
-	@media screen and (min-width:$ipad){
+	@media screen and (min-width:$medium){
 		display: none!important;
 	}
 a{
@@ -504,3 +506,8 @@ a{
   top: 16px;
   left: 3px;
 }
+
+ 
+.nav .cbp-hrmenu > ul > li:last-child > a:after{
+	border:0px;
+  }

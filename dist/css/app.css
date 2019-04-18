@@ -6246,17 +6246,24 @@ html {
     width: 1240px;
     max-width: 100%; } }
 
+* {
+  box-sizing: border-box; }
+
 a {
   transition: all 0.5s ease-in-out; }
+  a:hover {
+    text-decoration: none; }
 
 a:focus {
   text-decoration: none; }
 
 .learn-more-br {
   color: #dbbb68;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   text-transform: uppercase;
-  font-family: 'DINProMedium', serif; }
+  font-family: 'DINProMedium', serif;
+  margin-top: 2.1875rem;
+  display: block; }
   .learn-more-br:before {
     content: '';
     background: url(../images/sprite.png) no-repeat 0 0;
@@ -6339,8 +6346,12 @@ h2 {
   padding-bottom: 1.875rem; }
   @media screen and (min-width: 768px) {
     h2 {
+      font-size: 2.5rem;
+      padding-bottom: 1.5625rem; } }
+  @media screen and (min-width: 992px) {
+    h2 {
       font-size: 3.125rem;
-      padding-bottom: 2.5rem; } }
+      padding-bottom: 1.5625rem; } }
 
 h3 {
   color: #414141;
@@ -6364,7 +6375,7 @@ p {
     p {
       font-size: 1.125rem;
       line-height: 1.625rem;
-      padding-bottom: 2.5rem; } }
+      padding-bottom: 1.5625rem; } }
 
 .screenDivider {
   width: 2px;
@@ -6420,44 +6431,51 @@ p {
   background-repeat: no-repeat;
   background-position: 0 0;
   position: relative;
-  background-size: cover; }
+  background-size: cover;
+  text-align: center; }
   @media screen and (min-width: 768px) {
     .inner-banner {
       height: 29rem; } }
   .inner-banner .row {
     height: 100%; }
   .inner-banner h1 {
-    font-family: 'Playfair Display', serif;
     font-size: 2.0625rem;
-    font-weight: 700;
     color: #fff;
     position: relative;
     z-index: 5;
-    padding-left: 2rem; }
+    padding-left: 2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 5.5px; }
     @media screen and (min-width: 768px) {
       .inner-banner h1 {
         padding-left: 0;
         font-size: 3.75rem; } }
   .inner-banner h2 {
-    font-family: 'DINProBold', serif;
-    font-size: 0.8125rem;
+    font-size: 1.3125rem;
     color: #fff;
     margin: 0;
     padding: 0;
     position: relative;
     z-index: 5;
-    padding-left: 2rem; }
+    padding-left: 2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 3.5px;
+    margin-bottom: 0.625rem; }
     @media screen and (min-width: 768px) {
       .inner-banner h2 {
         padding-left: 0; } }
 
 .inner-sub-link {
   background: #f8f8f8;
-  padding: 1.25rem 0; }
+  padding: 0.75rem 0; }
   .inner-sub-link ul {
     margin: 0;
     padding: 0 5px;
-    list-style: none; }
+    list-style: none;
+    display: initial;
+    text-align: left; }
     @media screen and (min-width: 548px) {
       .inner-sub-link ul {
         margin: 0;
@@ -6474,7 +6492,8 @@ p {
         .inner-sub-link ul li {
           width: auto;
           display: inline-block;
-          padding: 0.625rem 0.625rem 0.625rem 0rem; } }
+          padding: 0.625rem 0.625rem 0.625rem 0rem;
+          margin: 0px 0.625rem; } }
       .inner-sub-link ul li a {
         color: #0c3a73;
         position: relative;
@@ -6504,7 +6523,7 @@ p {
           transform: translate(0, -0.5px);
           background-color: #dbbb68; }
         .inner-sub-link ul li a:hover {
-          color: #dbbb68; }
+          color: #c39d39; }
           .inner-sub-link ul li a:hover:before {
             transform: translate(0.5em, -5px) rotate(45deg); }
           .inner-sub-link ul li a:hover:after {
@@ -6519,9 +6538,11 @@ p {
         left: 1.25rem; }
         @media screen and (min-width: 548px) {
           .inner-sub-link ul li.active:after, .inner-sub-link ul li.current_page_ancestor:after {
-            bottom: -5px;
+            bottom: 3px;
             width: 100%;
             left: 0; } }
+  .inner-sub-link > div > div > div {
+    text-align: center; }
 
 .accordion {
   font-family: 'DINProMedium', serif;
@@ -6626,7 +6647,7 @@ p {
           top: 2px; }
 
 .overlay {
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.3);
   position: absolute;
   left: 0;
   right: 0;
@@ -6927,11 +6948,15 @@ p {
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 100%; } }
+    width: 95%; } }
 
 @media screen and (min-width: 992px) {
   .container {
-    width: 95%; } }
+    width: 90%; } }
+
+@media screen and (min-width: 1100px) {
+  .container {
+    width: 85%; } }
 
 .logo {
   position: relative;
@@ -6940,11 +6965,11 @@ p {
 .nav {
   background: #fff;
   height: 6.5625rem;
-  box-shadow: 0 0 3px #ccc;
   z-index: 150;
   position: fixed;
   width: 100%;
-  top: 0; }
+  top: 0;
+  z-index: 9000; }
   @media screen and (max-width: 767px) {
     .nav > .container {
       width: 100%; } }
@@ -6958,7 +6983,7 @@ p {
     height: 100%;
     overflow: hidden;
     overflow-y: scroll; }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 992px) {
       .nav .cbp-hrmenu {
         width: auto;
         display: block;
@@ -6985,7 +7010,7 @@ p {
       font-family: 'DINProBold';
       background: #f8f8f8;
       border-bottom: solid #dfdfdf 2px; }
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 992px) {
         .nav .cbp-hrmenu > ul > li > a {
           display: inline-block;
           padding: 2.5rem 1em;
@@ -7005,7 +7030,7 @@ p {
     .nav .cbp-hrmenu ul > li {
       display: block;
       position: relative; }
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 992px) {
         .nav .cbp-hrmenu ul > li {
           display: inline-block; } }
       .nav .cbp-hrmenu ul > li.has-dropmenu > a:after {
@@ -7018,7 +7043,7 @@ p {
         position: absolute;
         right: 1.875rem;
         top: 45%; }
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 992px) {
           .nav .cbp-hrmenu ul > li.has-dropmenu > a:after {
             border-top: 5px solid #0c3a73;
             border-left: 5px solid transparent;
@@ -7031,7 +7056,8 @@ p {
         position: absolute;
         bottom: -5px;
         width: 0;
-        transition: all 0.5s ease-in-out; }
+        transition: all 0.5s ease-in-out;
+        left: 0; }
       .nav .cbp-hrmenu ul > li li {
         display: block; }
         .nav .cbp-hrmenu ul > li li a {
@@ -7236,7 +7262,7 @@ p {
             outline: none; }
   .searchContainer.open {
     display: block; }
-  .searchContainer a#headersearch {
+  .searchContainer #headersearch {
     font-size: 30px;
     color: #fff;
     background: url(../images/sprite.png) no-repeat -382px -9px;
@@ -7245,8 +7271,9 @@ p {
     display: inline-block;
     top: 20px;
     position: relative;
-    transition: none; }
-    .searchContainer a#headersearch:hover {
+    transition: none;
+    border: none; }
+    .searchContainer #headersearch:hover {
       background-position: -342px -9px; }
 
 * {
@@ -7256,7 +7283,7 @@ p {
 /* Icon 1 */
 .movbile-nav {
   display: inline-block !important; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 992px) {
     .movbile-nav {
       display: none !important; } }
   .movbile-nav a {
@@ -7334,6 +7361,9 @@ p {
   top: 16px;
   left: 3px; }
 
+.nav .cbp-hrmenu > ul > li:last-child > a:after {
+  border: 0px; }
+
 footer {
   position: relative; }
   footer .footer-spacer {
@@ -7350,7 +7380,9 @@ footer {
     padding: 1.375rem 0 1.25rem 0; }
     @media screen and (min-width: 768px) {
       footer .award {
-        display: flex; } }
+        display: flex;
+        overflow: hidden;
+        height: 7.8125rem; } }
     footer .award .img {
       width: 4.875rem;
       margin: 0 0.9375rem;
@@ -7531,12 +7563,14 @@ footer {
   .subscribe-bx .form-group input {
     border-radius: 0;
     border: none;
-    border-bottom: solid #414141 1px;
-    background: transparent;
-    color: #414141;
+    border-bottom: solid #414141 1px !important;
+    background: transparent !important;
+    color: #414141 !important;
     -webkit-appearance: none;
     padding-left: 0;
-    padding-right: 0; }
+    padding-right: 0;
+    border-radius: 0 !important;
+    border: none !important; }
     .subscribe-bx .form-group input:focus + span {
       background: none;
       outline: none;
@@ -7595,11 +7629,24 @@ footer {
       display: block;
       text-transform: uppercase; }
 
+footer .award .gallery-item {
+  width: 4.875rem;
+  height: 6.4375rem;
+  margin: 0 0.9375rem;
+  float: left; }
+
+footer .award .gallery-item img {
+  width: 100%;
+  height: 100%; }
+
+footer .certificate .gallery-item {
+  width: 10.3125rem;
+  height: 5.3125rem;
+  margin: 0 0.125rem;
+  float: left; }
+
 .banner {
-  height: 23.5rem; }
-  @media screen and (min-width: 768px) {
-    .banner {
-      height: 43.75rem; } }
+  height: auto; }
   .banner .banner-inner {
     display: flex;
     color: #fff;
@@ -7661,7 +7708,7 @@ footer {
       right: 0;
       top: 0;
       background: rgba(0, 0, 0, 0.5);
-      opacity: 0.3; }
+      opacity: 0.5; }
 
 @media screen and (max-width: 767px) {
   .services .container:first-child {
@@ -7705,12 +7752,12 @@ footer {
     margin: 0 0 2.1875rem 0; }
     @media screen and (min-width: 768px) {
       .services .search-section .select-wrap {
-        width: 22.375rem;
+        width: 21rem;
         margin: 0 1.5625rem 0 1.5625rem;
         font-size: 1.875rem; } }
     @media screen and (min-width: 768px) {
       .services .search-section .select-wrap:nth-child(2) {
-        width: 18.75rem; } }
+        width: 13.75rem; } }
     .services .search-section .select-wrap select {
       background: none;
       border: none;
@@ -7743,7 +7790,10 @@ footer {
   padding: 1.875rem; }
   @media screen and (min-width: 768px) {
     .services .service-detail {
-      padding: 6.25rem 9.375rem 4.375rem 9.375rem; } }
+      padding: 2.75rem 3.125rem 2.5rem 3.125rem; } }
+  @media screen and (min-width: 992px) {
+    .services .service-detail {
+      padding: 2.75rem 9.375rem 2.5rem 9.375rem; } }
   .services .service-detail h2 {
     padding: 0 0 1.25rem 0; }
     @media screen and (min-width: 768px) {
@@ -7831,8 +7881,9 @@ footer {
       padding-bottom: 0; }
       @media screen and (min-width: 768px) {
         .knowledge-wraper .knowledge-rt p {
-          min-height: 200px;
-          padding-bottom: 2.5rem; } }
+          padding-bottom: 1rem;
+          height: 6.75rem;
+          overflow: hidden; } }
     .knowledge-wraper .knowledge-rt ul {
       list-style: none;
       margin: 0;
@@ -7841,8 +7892,12 @@ footer {
         padding: 0.3125rem 0; }
         .knowledge-wraper .knowledge-rt ul li a {
           color: #fff; }
+          @media screen and (min-width: 768px) {
+            .knowledge-wraper .knowledge-rt ul li a {
+              width: 86%;
+              display: inline-block; } }
           .knowledge-wraper .knowledge-rt ul li a:hover {
-            color: #dbbb68; }
+            color: #c39d39; }
     .knowledge-wraper .knowledge-rt .icon-set {
       position: relative;
       margin-bottom: 1.25rem; }
@@ -7920,11 +7975,15 @@ footer {
   border-top: solid #f6f6f6 5px; }
   @media screen and (min-width: 768px) {
     .leadership {
-      padding: 6.25rem 5.625rem;
+      padding: 4.25rem 1.875rem;
+      border: none; } }
+  @media screen and (min-width: 992px) {
+    .leadership {
+      padding: 4.25rem 5.625rem;
       border: none; } }
   @media screen and (min-width: 1200px) {
     .leadership {
-      padding: 6.25rem 9.375rem;
+      padding: 4.25rem 1.375rem;
       border: none; } }
   .leadership p {
     padding: 0rem 0rem 2.5rem 0rem; }
@@ -8011,85 +8070,99 @@ footer {
     padding: 1.875rem 0; }
     @media screen and (min-width: 768px) {
       .corporate-law .corporate-tp {
-        height: 29rem;
-        width: 80%; } }
+        width: 95%; } }
     .corporate-law .corporate-tp h3, .corporate-law .corporate-tp p {
       color: #fff; }
-  .corporate-law .corporte-detail .bx {
+  .corporate-law .corporte-detail {
     padding-bottom: 1.25rem; }
-    @media screen and (min-width: 768px) {
-      .corporate-law .corporte-detail .bx {
-        padding-bottom: 5.625rem; } }
-    .corporate-law .corporte-detail .bx h3, .corporate-law .corporte-detail .bx p {
-      color: #fff; }
-    .corporate-law .corporte-detail .bx h3 {
-      padding-bottom: 0.9375rem;
-      margin: 0;
-      line-height: 1; }
-    .corporate-law .corporte-detail .bx p {
+    .corporate-law .corporte-detail > .row {
+      display: flex; }
+    .corporate-law .corporte-detail .bx {
       padding-bottom: 1.25rem;
-      margin: 0; }
-    .corporate-law .corporte-detail .bx .icon-set {
-      position: relative;
-      margin-bottom: 1.25rem; }
+      border: 1px solid transparent;
+      height: 100%; }
       @media screen and (min-width: 768px) {
-        .corporate-law .corporte-detail .bx .icon-set {
-          margin-bottom: 3.125rem; } }
-      .corporate-law .corporte-detail .bx .icon-set .screenDivider-hr {
-        position: absolute;
-        right: 0;
-        top: 50%; }
-      .corporate-law .corporte-detail .bx .icon-set .icon {
-        width: 60px;
-        height: 63px;
-        display: inline-block; }
-        .corporate-law .corporte-detail .bx .icon-set .icon.tax {
-          width: 50px;
+        .corporate-law .corporte-detail .bx {
+          padding: 2.1875rem 1.1875rem; } }
+      .corporate-law .corporte-detail .bx h3, .corporate-law .corporte-detail .bx p {
+        color: #fff; }
+      .corporate-law .corporte-detail .bx h3 {
+        padding-bottom: 0.9375rem;
+        margin: 0;
+        line-height: 1; }
+      .corporate-law .corporte-detail .bx p {
+        padding-bottom: 1.25rem;
+        margin: 0; }
+      .corporate-law .corporte-detail .bx .icon-set {
+        position: relative;
+        margin-bottom: 1.25rem; }
+        @media screen and (min-width: 768px) {
+          .corporate-law .corporte-detail .bx .icon-set {
+            margin-bottom: 1.125rem; } }
+        .corporate-law .corporte-detail .bx .icon-set .screenDivider-hr {
+          position: absolute;
+          right: 0;
+          top: 50%; }
+        .corporate-law .corporte-detail .bx .icon-set .icon {
+          width: 60px;
           height: 63px;
-          background-position: -146px -64px; }
-        .corporate-law .corporte-detail .bx .icon-set .icon.company {
-          width: 50px;
-          height: 63px;
-          background-position: -146px -64px; }
-        .corporate-law .corporte-detail .bx .icon-set .icon.bank {
-          width: 78px;
-          height: 63px;
-          background-position: -56px 3px; }
-        .corporate-law .corporte-detail .bx .icon-set .icon.consumer {
-          width: 78px;
-          height: 63px;
-          background-position: -56px 3px; }
-        .corporate-law .corporte-detail .bx .icon-set .icon.game {
-          width: 78px;
-          height: 63px;
-          background-position: -56px 3px; }
-        .corporate-law .corporte-detail .bx .icon-set .icon.insurance {
-          width: 78px;
-          height: 63px;
-          background-position: -56px 3px; }
-        .corporate-law .corporte-detail .bx .icon-set .icon.contact {
-          width: 78px;
-          height: 63px;
-          background-position: -56px 3px; }
-        .corporate-law .corporte-detail .bx .icon-set .icon.media {
-          width: 78px;
-          height: 63px;
-          background-position: -56px 3px; }
-        .corporate-law .corporte-detail .bx .icon-set .icon.info {
-          width: 78px;
-          height: 63px;
-          background-position: -56px 3px; }
-    .corporate-law .corporte-detail .bx .detail {
-      padding-bottom: 2.5rem; }
-      @media screen and (min-width: 768px) {
-        .corporate-law .corporte-detail .bx .detail {
-          padding-bottom: 0; } }
+          display: inline-block; }
+          .corporate-law .corporte-detail .bx .icon-set .icon.tax {
+            width: 50px;
+            height: 63px;
+            background-position: -146px -64px; }
+          .corporate-law .corporte-detail .bx .icon-set .icon.company {
+            width: 50px;
+            height: 63px;
+            background-position: -146px -64px; }
+          .corporate-law .corporte-detail .bx .icon-set .icon.bank {
+            width: 78px;
+            height: 63px;
+            background-position: -56px 3px; }
+          .corporate-law .corporte-detail .bx .icon-set .icon.consumer {
+            width: 78px;
+            height: 63px;
+            background-position: -56px 3px; }
+          .corporate-law .corporte-detail .bx .icon-set .icon.game {
+            width: 78px;
+            height: 63px;
+            background-position: -56px 3px; }
+          .corporate-law .corporte-detail .bx .icon-set .icon.insurance {
+            width: 78px;
+            height: 63px;
+            background-position: -56px 3px; }
+          .corporate-law .corporte-detail .bx .icon-set .icon.contact {
+            width: 78px;
+            height: 63px;
+            background-position: -56px 3px; }
+          .corporate-law .corporte-detail .bx .icon-set .icon.media {
+            width: 78px;
+            height: 63px;
+            background-position: -56px 3px; }
+          .corporate-law .corporte-detail .bx .icon-set .icon.info {
+            width: 78px;
+            height: 63px;
+            background-position: -56px 3px; }
+      .corporate-law .corporte-detail .bx .detail {
+        padding-bottom: 2.5rem; }
+        @media screen and (min-width: 768px) {
+          .corporate-law .corporte-detail .bx .detail {
+            padding-bottom: 0; } }
+      .corporate-law .corporte-detail .bx a:hover .bx {
+        border: solid #dbbb68 1px;
+        box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.6);
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box; }
 
 .info-wrap {
   padding: 3.125rem 0.625rem; }
   @media screen and (min-width: 768px) {
     .info-wrap {
       padding: 3.125rem; } }
+  .info-wrap .current_page_item > a {
+    background: unset;
+    color: unset; }
 
 .info-lt {
   font-family: 'DINProMedium', serif;
@@ -8460,11 +8533,8 @@ footer {
   .thought-leadership .leadership .col-md-4, .thought-leadership .leadership .col-sm-12 {
     margin-bottom: 1.875rem; }
   @media screen and (min-width: 768px) {
-    .thought-leadership .leadership {
-      padding: 0.3125rem 0 6.25rem 0.3125rem; }
-      .thought-leadership .leadership .bx {
-        margin-bottom: 0;
-        padding: 2.1875rem 2.1875rem 1.875rem 2.1875rem; } }
+    .thought-leadership .leadership .bx {
+      padding: 2.1875rem 1.1875rem 1.1875rem 1.1875rem; } }
 
 .thought-leadership .screenDivider {
   display: block; }

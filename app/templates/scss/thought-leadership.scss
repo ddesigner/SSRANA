@@ -26,12 +26,12 @@
             .col-md-4, .col-sm-12{
               margin-bottom: rem(30);  
             }
-            @media screen and (min-width: $ipad){
-                padding:rem(5) 0 6.25rem rem(5);
+          
             .bx{
-                margin-bottom:0;  padding:rem(35)  rem(35) rem(30)  rem(35); 
-            }
-        }
+                @media screen and (min-width: $ipad){
+                    padding:rem(35) rem(19) rem(19) rem(19);
+                 }
+             }
     }
     .screenDivider{
         display: block; 

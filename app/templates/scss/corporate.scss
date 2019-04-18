@@ -22,10 +22,10 @@
     }
 
     .corporate-tp{
-        width:100%; margin:auto;  text-align: center; padding:rem(30) 0;
+        width:100%; margin:auto;  text-align: center;
+         padding:rem(30) 0;
         @media screen and (min-width:$ipad){
-            height:rem(464);
-            width:80%; 
+             width:95%; 
         }
     
         h3,p{
@@ -35,10 +35,16 @@
 
 
     .corporte-detail{
+        padding-bottom:rem(20);
+       > .row{
+           display:flex;
+       } 
      .bx{
          padding-bottom:rem(20); 
+            border:1px solid transparent;
+            height:100%;
          @media screen and (min-width:$ipad){
-            padding-bottom:rem(90); 
+             padding:rem(35) rem(19);
         }
         h3,p{
             color:$whiteColor;
@@ -49,9 +55,10 @@
         p{
             padding-bottom:rem(20); margin:0;
         }
-          .icon-set{ position: relative; margin-bottom:rem(20);
+          .icon-set{ 
+           position: relative; margin-bottom:rem(20);
            @media screen and (min-width:$ipad){
-            margin-bottom:rem(50);
+            margin-bottom:rem(18);
         }
         .screenDivider-hr {
            position: absolute; 
@@ -119,6 +126,18 @@
 
         }
 
+        a{
+            &:hover{
+                .bx{
+                    border: solid $activeColor 1px;
+                    box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.6);
+                    box-sizing: border-box;
+                      -moz-box-sizing: border-box;
+                      -webkit-box-sizing: border-box;
+                }
+            }
+           
+        }
         
     }
   }

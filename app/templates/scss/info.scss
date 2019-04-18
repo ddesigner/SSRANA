@@ -3,6 +3,11 @@
     @media screen and (min-width:$ipad){
         padding:rem(50);
     }
+
+    .current_page_item > a{
+        background: unset;
+        color:unset;
+     }
 }
 
 .info-lt{
