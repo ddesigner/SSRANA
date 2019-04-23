@@ -113,12 +113,12 @@
       }).on('changeDate', function (ev) {
         $(this).datetimepicker('hide');
       });
-      $(window).on('resize orientationchange', function () {
-      console.log('d');
-      $('.slider').slick('resize');
-    });
+      
     });
    
+    $(window).on('resize orientationchange', function () {
+         $('.slider').slick('resize');
+     });
   </script>
 </body>
 

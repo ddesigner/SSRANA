@@ -68,6 +68,12 @@ footer{
                }
             li{
                 padding:5px 0;
+                &.current_page_item{
+                    a{
+                    background:none !important;
+                    color:$defaultBlue!important;
+                    }
+                }
             }
             a{
                 color:$defaultBlue; font-size: rem(15);
@@ -82,9 +88,9 @@ footer{
     .certificate{
         padding:rem(22) 0 rem(20) 0;
         
-        float: right;
+       
         @media screen and (min-width:$ipad){
-              padding:rem(22) 0 rem(20) 0; display: flex;
+              padding:rem(22) 0 rem(20) 0; display: flex;  float: right;
         }
       .img{
           width: rem(165); height:rem(85);
@@ -123,48 +129,6 @@ footer{
       }
   }
 
-  .connect-bx{
-    
-    h3{
-        font-family: 'DINProMedium', serif; font-size:rem(14); color:$grayColor; 
-        padding-bottom:0; text-transform: uppercase;
-    }
-    ul{
-        list-style: none; margin:0; padding: 0;
-        li{
-            display:inline-block;
-
-            a{
-                color:$defaultBlue; font-size: rem(27);  margin: 0 rem(2);
-                background: url(../images/sprite.png) no-repeat  -147px -5px; width: 28px; height:28px;
-                display:inline-block;
-                &:hover{
-                    background-position: -147px -36px;
-                    }
-                
-                &.twitter{
-                    background-position: -181px -5px;
-                    &:hover{
-                        background-position: -181px -36px;
-                    }
-                }
-                &.youtube{
-                    background-position: -212px -5px;
-                    &:hover{
-                        background-position: -212px -36px;
-                    }
-                }
-                &.square{
-                    background-position: -243px -5px;
-                    &:hover{
-                        background-position: -244px -36px;
-                    }
-                }
-               
-            }
-        }
-    }
-  }
 
   .copyright{
       background: #d2aa35; padding: rem(10) 0;
@@ -235,7 +199,7 @@ footer{
             -webkit-appearance: none;
             padding-left: 0; padding-right: 0;
             border-radius: 0!important;
-            border: none!important;
+            
          
            &:focus+span {
                 background: none;
@@ -309,19 +273,92 @@ footer{
 
  
 footer .award .gallery-item {
-    width: 4.875rem;
-    height: 6.4375rem;
+  
     margin: 0 0.9375rem;
     float: left;
+    @media screen and (min-width:$ipad){
+        width: 4.875rem;
+        height: 6.4375rem;
+
+    }
   }
-  footer .award .gallery-item img {
-    width: 100%;
-    height: 100%;
+  footer .award .gallery-item img, footer .certificate .slick-slide img {
+    max-width:100%;
+    width: auto;
+    height: auto;
   }
   
-  footer .certificate .gallery-item {
-    width: 10.3125rem;
-    height: 5.3125rem;
+ footer .certificate .gallery-item {
+ 
     margin: 0 0.125rem;
     float: left;
+    @media screen and (min-width:$ipad){
+        width: 10.3125rem;
+    height: 5.3125rem;
+
+    }
+  }
+
+  
+  .connect-bx{
+    
+    h3{
+        font-family: 'DINProMedium', serif; font-size:rem(14); color:$grayColor; 
+        padding-bottom:0; text-transform: uppercase;
+    }
+    ul{
+        list-style: none; margin:0; padding: 0;
+        li{
+            display:inline-block; margin-bottom:rem(10);
+
+            a{
+                color:$defaultBlue; font-size: rem(27);  margin: 0 rem(2);
+                background: url(../images/sprite.png) no-repeat  -147px -5px; width: 28px; height:28px;
+                display:inline-block; transition: none;
+                &:hover{
+                    background-position: -147px -35px;
+                    }
+                
+                &.twitter{
+                    background-position: -181px -5px;
+                    &:hover{
+                        background-position: -181px -35px;
+                    }
+                }
+                &.youtube{
+                    background-position: -212px -5px;
+                    &:hover{
+                        background-position: -212px -35px;
+                    }
+                }
+                &.square{
+                    background-position: -243px -5px;
+                    &:hover{
+                        background-position: -243px -35px;
+                    }
+                }
+
+                  &.facebook{
+                    background-position:1px -148px;
+                    &:hover{
+                        background-position:1px -178px;
+                    }
+                }
+                &.gplus{
+                    background-position:-32px -147px;
+                    &:hover{
+                        background-position:-32px -178px;
+                    }
+                }
+
+                &.blog{
+                    background-position:-70px -148px;
+                    &:hover{
+                        background-position:-70px -178px;
+                    }
+                }
+               
+            }
+        }
+    }
   }

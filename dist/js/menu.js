@@ -21,6 +21,11 @@ var cbpHorizontalMenu = (function() {
        // $listItems.on('mouseout', close);
     }
   
+    $listItems.each(function(){
+        if($(this).find('.cbp-hrsub').length>0){
+            $(this).addClass('has-dropmenu');
+        }
+    });
     function open(event) {
 
         if (current !== -1) {

@@ -112,10 +112,11 @@ a:focus{
     h2{ 
         color:$defaultBlue; font-size: rem(30); font-family: 'Playfair Display', serif;
          padding-bottom:rem(30);
-        @media screen and (min-width:$ipad){
+        
+        @media screen and (min-width:$medium){
             font-size: rem(40);  padding-bottom:rem(25);
         }
-        @media screen and (min-width:$medium){
+        @media screen and (min-width:$desktop){
             font-size: rem(50);  padding-bottom:rem(25);
         }
     }
@@ -149,7 +150,11 @@ a:focus{
         background-color: $activeColor;
         margin: 0 auto;
      
-         height:rem(2); width:rem(100);
+         height:rem(2); width:rem(50);
+         @media screen and (min-width:$medium){
+            width:rem(100);
+         }
+         
     }
 
 
@@ -293,7 +298,7 @@ a:focus{
             }
             }
 
-            &.active, &.current_page_ancestor{
+            &.active, &.current_page_item{
                
                     &:after {
                     content: "";
@@ -310,6 +315,10 @@ a:focus{
                     }
                  }
 
+                 a{
+                     background:none!important;
+                     color:$activeColor!important;
+                 }
                 
             }
         }
@@ -531,7 +540,7 @@ a:focus{
     box-shadow: 5px 5px 3px 0 rgba(0, 0, 0, 0.4); display: none;
     top:-2px;
     @media screen and (min-width:$ipad){
-        width: 97.6%; top:0;
+        top:0;
      } 
     .stylish-select-right{
         font-size: rem(13);   font-family: 'DINProBold', serif; text-transform: uppercase;
@@ -665,7 +674,7 @@ a:focus{
     display:none;
     background:#fce4e4;
     border:1px solid #cc0000;
-    z-index:60;
+    z-index:1000;
      
     &:before{
         content: "";

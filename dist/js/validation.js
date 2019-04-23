@@ -82,8 +82,8 @@ $.fn.submitForm = function () {
                     $(this).parent().find('.error-msg').show().text($(this).attr('name').toUpperCase() + ' - Required field missing');
                 }
                 else {
-                   $(this).attr('maxlength', '10');
-                    $(this).val($(this).val().replace(/[^0-9.]/g, ''));
+                   $(this).attr('maxlength', '15');
+                    $(this).val($(this).val().replace(/[^+\./0-9]/g, ''));
                     if ($(this).val().length < 10) {
                         $(this).addClass('formError');
                         $(this).removeClass('formValid');
@@ -194,18 +194,17 @@ function formValidate(thisElement) {
 
         // TELEPHONE NUMBER VALIDATION
         if (thisElement.attr('validation').indexOf('phone') !== -1) {
-            thisElement.attr('maxlength', '10');
-            thisElement.val(thisElement.val().replace(/[^0-9.]/g, ''));
-            thisElement.parent().find('.error-msg').show().text('Please enter valid phone no.');
+            thisElement.attr('maxlength', '15');
+            thisElement.val(thisElement.val().replace(/[^+\./0-9]/g, ''));
+             thisElement.parent().find('.error-msg').show().text('Please enter valid phone no.');
             if (thisElement.val().length < 10) {
                 thisElement.addClass('formError');
                 thisElement.removeClass('formValid');
-
-                errorCount++;
+             errorCount++;
             } else {
                 thisElement.addClass('formValid');
                 thisElement.removeClass('formError');
-                thisElement.next('.error-msg').hide()
+                thisElement.parent().find('.error-msg').hide()
             }
         }
 
