@@ -194,8 +194,8 @@ footer{
   
     .form-group{
         input{
-            border-radius: 0; border:none; border-bottom: solid $grayColor 1px!important; background: transparent!important;
-            color: $grayColor!important;
+            border-radius: 0; border:none; border-bottom: solid $grayColor 1px ; background: transparent ;
+            color: $grayColor ;
             -webkit-appearance: none;
             padding-left: 0; padding-right: 0;
             border-radius: 0!important;

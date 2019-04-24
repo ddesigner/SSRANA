@@ -6,7 +6,7 @@
     address{
         padding-top:rem(20);
          @media screen and (min-width:$ipad){
-            padding-top:rem(98);
+            padding-bottom:rem(98);
         }
         h3{
             font-family: 'DINProMedium', serif; color:$black; font-size: rem(20); margin:0; padding:0 0 rem(10) 0;
@@ -41,7 +41,7 @@
 .register-office{
     background:$defaultBlue; padding-bottom:rem(30);
      @media screen and (min-width:$ipad){
-       padding-bottom:0;
+       padding-bottom:0;  
      }
     address{ 
        
@@ -59,9 +59,70 @@
         padding:rem(30) rem(38); position: relative;
       
         @media screen and (min-width:$ipad){
-            padding:rem(30) rem(38);  
+            padding:rem(30) rem(38);  position: absolute;
             top: rem(-78);
         }
+
+        .two-field{
+            display: flex;
+
+            .form-group{
+                &:first-child{
+                    width:25%;
+                    margin-right:rem(15);
+                    .stylish-select-right{
+                        height: 37px;   
+                        margin: 0;
+                        line-height: 32px;
+                        font-size: 13px;
+                    }
+                    .main{
+                        min-height: 37px;
+                    }
+                    ul.listing{
+                        top:37px;
+                    }
+                  
+                }
+                &:nth-child(2){
+                    width:75%
+                }
+            }
+        }
+
+        textarea{
+            background:#e8e8e8; width:100%;  border:none; margin-top: rem(21);
+            padding:rem(5);
+            &:focus+span {
+                background: none;
+                outline: none;
+                color: #0077FF;
+                top: -13px;
+            }
+    
+            &:focus+span+.border {
+                width: 100%;
+            }
+           
+
+            &:focus{
+                 outline: none;
+            }
+            &.formValid {
+                border:none !important;
+                border-bottom: solid 1px #00D936 !important;
+                background:none !important;
+                color: #00D936 !important;
+            }
+        }
+
+        .captcha{
+            float:left; margin-right: rem(20);
+        }
+        .refress{
+            padding:rem(5);
+        }
+        
     }    
 }
 

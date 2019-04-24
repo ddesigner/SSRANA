@@ -7537,9 +7537,9 @@ footer {
   .subscribe-bx .form-group input {
     border-radius: 0;
     border: none;
-    border-bottom: solid #414141 1px !important;
-    background: transparent !important;
-    color: #414141 !important;
+    border-bottom: solid #414141 1px;
+    background: transparent;
+    color: #414141;
     -webkit-appearance: none;
     padding-left: 0;
     padding-right: 0;
@@ -8328,7 +8328,7 @@ footer .certificate .gallery-item {
     padding-top: 1.25rem; }
     @media screen and (min-width: 768px) {
       .contact-wrap address {
-        padding-top: 6.125rem; } }
+        padding-bottom: 6.125rem; } }
     .contact-wrap address h3 {
       font-family: 'DINProMedium', serif;
       color: #000;
@@ -8380,7 +8380,49 @@ footer .certificate .gallery-item {
     @media screen and (min-width: 768px) {
       .register-office .subscribe-bx {
         padding: 1.875rem 2.375rem;
+        position: absolute;
         top: -4.875rem; } }
+    .register-office .subscribe-bx .two-field {
+      display: flex; }
+      .register-office .subscribe-bx .two-field .form-group:first-child {
+        width: 25%;
+        margin-right: 0.9375rem; }
+        .register-office .subscribe-bx .two-field .form-group:first-child .stylish-select-right {
+          height: 37px;
+          margin: 0;
+          line-height: 32px;
+          font-size: 13px; }
+        .register-office .subscribe-bx .two-field .form-group:first-child .main {
+          min-height: 37px; }
+        .register-office .subscribe-bx .two-field .form-group:first-child ul.listing {
+          top: 37px; }
+      .register-office .subscribe-bx .two-field .form-group:nth-child(2) {
+        width: 75%; }
+    .register-office .subscribe-bx textarea {
+      background: #e8e8e8;
+      width: 100%;
+      border: none;
+      margin-top: 1.3125rem;
+      padding: 0.3125rem; }
+      .register-office .subscribe-bx textarea:focus + span {
+        background: none;
+        outline: none;
+        color: #0077FF;
+        top: -13px; }
+      .register-office .subscribe-bx textarea:focus + span + .border {
+        width: 100%; }
+      .register-office .subscribe-bx textarea:focus {
+        outline: none; }
+      .register-office .subscribe-bx textarea.formValid {
+        border: none !important;
+        border-bottom: solid 1px #00D936 !important;
+        background: none !important;
+        color: #00D936 !important; }
+    .register-office .subscribe-bx .captcha {
+      float: left;
+      margin-right: 1.25rem; }
+    .register-office .subscribe-bx .refress {
+      padding: 0.3125rem; }
 
 .other-offices {
   padding: 1.25rem 0; }
